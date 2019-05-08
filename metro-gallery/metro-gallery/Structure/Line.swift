@@ -16,6 +16,9 @@ class Line {
     
     let bgColor: Int32 = 0x000000
     
+    var stationInLines: [Line] = []
+    // Station class shallow-copy
+    
     func lineDisplayName() -> String {
         return generateDisplayName(self.lineId)
     }

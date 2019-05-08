@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24BDCE22828247001C7A8F /* DataInit.swift */; };
 		8A7952432282780B007DD187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7952422282780B007DD187 /* AppDelegate.swift */; };
 		8A7952452282780B007DD187 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7952442282780B007DD187 /* ViewController.swift */; };
 		8A79524722827810007DD187 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A79524622827810007DD187 /* Assets.xcassets */; };
@@ -16,23 +17,24 @@
 		8A79525922827C99007DD187 /* LineNameGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525822827C99007DD187 /* LineNameGenerator.swift */; };
 		8A79525B22827ED7007DD187 /* Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525A22827ED7007DD187 /* Entrance.swift */; };
 		8A79525D22827FA3007DD187 /* Toilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525C22827FA3007DD187 /* Toilet.swift */; };
-		8A79526022827FBE007DD187 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525F22827FBE007DD187 /* LanguageManager.swift */; };
+		8A79526022827FBE007DD187 /* SuperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525F22827FBE007DD187 /* SuperManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A24BDCE22828247001C7A8F /* DataInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInit.swift; sourceTree = "<group>"; };
+		8A24BDD02282849B001C7A8F /* metro-gallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "metro-gallery.entitlements"; sourceTree = "<group>"; };
 		8A79523F2282780B007DD187 /* metro-gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metro-gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7952422282780B007DD187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A7952442282780B007DD187 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8A79524622827810007DD187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8A79524922827810007DD187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A79524B22827810007DD187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8A79524C22827810007DD187 /* metro_gallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = metro_gallery.entitlements; sourceTree = "<group>"; };
 		8A795253228279C9007DD187 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		8A79525522827ACF007DD187 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
 		8A79525822827C99007DD187 /* LineNameGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineNameGenerator.swift; sourceTree = "<group>"; };
 		8A79525A22827ED7007DD187 /* Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrance.swift; sourceTree = "<group>"; };
 		8A79525C22827FA3007DD187 /* Toilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toilet.swift; sourceTree = "<group>"; };
-		8A79525F22827FBE007DD187 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
+		8A79525F22827FBE007DD187 /* SuperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +48,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A24BDCC2282821C001C7A8F /* Init */ = {
+			isa = PBXGroup;
+			children = (
+				8A24BDCE22828247001C7A8F /* DataInit.swift */,
+			);
+			path = Init;
+			sourceTree = "<group>";
+		};
 		8A7952362282780B007DD187 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +75,8 @@
 		8A7952412282780B007DD187 /* metro-gallery */ = {
 			isa = PBXGroup;
 			children = (
+				8A24BDD02282849B001C7A8F /* metro-gallery.entitlements */,
+				8A24BDCC2282821C001C7A8F /* Init */,
 				8A79525E22827FB4007DD187 /* Language */,
 				8A79525722827C8B007DD187 /* Utils */,
 				8A795252228279B2007DD187 /* Structure */,
@@ -73,7 +85,6 @@
 				8A79524622827810007DD187 /* Assets.xcassets */,
 				8A79524822827810007DD187 /* Main.storyboard */,
 				8A79524B22827810007DD187 /* Info.plist */,
-				8A79524C22827810007DD187 /* metro_gallery.entitlements */,
 			);
 			path = "metro-gallery";
 			sourceTree = "<group>";
@@ -100,7 +111,7 @@
 		8A79525E22827FB4007DD187 /* Language */ = {
 			isa = PBXGroup;
 			children = (
-				8A79525F22827FBE007DD187 /* LanguageManager.swift */,
+				8A79525F22827FBE007DD187 /* SuperManager.swift */,
 			);
 			path = Language;
 			sourceTree = "<group>";
@@ -137,6 +148,11 @@
 				TargetAttributes = {
 					8A79523E2282780B007DD187 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -179,10 +195,11 @@
 				8A795254228279C9007DD187 /* Line.swift in Sources */,
 				8A79525B22827ED7007DD187 /* Entrance.swift in Sources */,
 				8A79525D22827FA3007DD187 /* Toilet.swift in Sources */,
+				8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */,
 				8A7952452282780B007DD187 /* ViewController.swift in Sources */,
 				8A79525622827ACF007DD187 /* Station.swift in Sources */,
 				8A7952432282780B007DD187 /* AppDelegate.swift in Sources */,
-				8A79526022827FBE007DD187 /* LanguageManager.swift in Sources */,
+				8A79526022827FBE007DD187 /* SuperManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "metro-gallery/metro_gallery.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "metro-gallery/metro-gallery.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -340,7 +357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "metro-gallery/metro_gallery.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "metro-gallery/metro-gallery.entitlements";
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";

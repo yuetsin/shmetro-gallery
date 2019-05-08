@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  metro-gallery
 //
-//  Created by 法好 on 2019/5/8.
+//  Created by yuetsin on 2019/5/8.
 //  Copyright © 2019 yuetsin. All rights reserved.
 //
 

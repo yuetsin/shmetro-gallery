@@ -21,7 +21,7 @@ class Station {
     var stationNameEn: String = ""
     // English Station Name
     
-    var stationLines: [Line] = []
+    var stationOfLines: [Line] = []
     // Line class shallow-copy
     
     var stationCode: String = ""
@@ -36,12 +36,12 @@ class Station {
     private var entranceInfo: String = ""
     private var entranceInfoEn: String = ""
     
-    func getToiletInfo(_ language: Language = LanguageManager.UILanguage) -> String {
+    func getToiletInfo(_ language: Language = SuperManager.UILanguage) -> String {
         /* WIP */
         return ""
     }
     
-    func getEntranceInfo(_ language: Language = LanguageManager.UILanguage) -> String {
+    func getEntranceInfo(_ language: Language = SuperManager.UILanguage) -> String {
         /* WIP */
         return ""
     }

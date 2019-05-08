@@ -10,7 +10,7 @@
 
 import Foundation
 
-func generateDisplayName(_ lineId: Int, language: Language = LanguageManager.UILanguage) -> String {
+func generateDisplayName(_ lineId: Int, language: Language = SuperManager.UILanguage) -> String {
     if language == .chinese {
         if lineId == 41 {
             return "浦江线"
