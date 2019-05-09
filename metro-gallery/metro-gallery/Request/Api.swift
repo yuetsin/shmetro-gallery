@@ -43,3 +43,17 @@ class PostApi {
         return "http://m.shmetro.com/interface/metromap/metromap.aspx?func=stationInfo&stat_id=\(stationCode)"
     }
 }
+
+
+enum RequestItem {
+    case allStation
+    case transitionFee
+    case transitionPath
+    case lastTrainTime
+    case lineStatus
+    case operationHistory
+    case lineColor
+    case timeTable
+    case transitionTable
+    case stationDetail
+}

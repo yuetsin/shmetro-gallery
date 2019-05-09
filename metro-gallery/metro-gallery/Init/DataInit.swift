@@ -8,19 +8,18 @@
 
 import Foundation
 
-func InitData() -> Bool {
+func InitData(lineData: inout [Line], stationData: inout [Station]) -> Bool {
     if SuperManager.requestMode == .online {
-        return onlineInitData()
+        return onlineInitData(lineData: &lineData, stationData: &stationData)
     } else {
-        return offlineInitData()
+        return offlineInitData(lineData: &lineData, stationData: &stationData)
     }
 }
 
-
-func onlineInitData() -> Bool {
+func onlineInitData(lineData: inout [Line], stationData: inout [Station]) -> Bool {
     return true
 }
 
-func offlineInitData() -> Bool {
+func offlineInitData(lineData: inout [Line], stationData: inout [Station]) -> Bool {
     return true
 }
