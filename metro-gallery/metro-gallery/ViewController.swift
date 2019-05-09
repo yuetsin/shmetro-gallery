@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    var metroLines: [Line] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
