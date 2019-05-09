@@ -19,9 +19,12 @@
 		8A79525D22827FA3007DD187 /* Toilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525C22827FA3007DD187 /* Toilet.swift */; };
 		8A79526022827FBE007DD187 /* SuperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525F22827FBE007DD187 /* SuperManager.swift */; };
 		8A964D6B2283C3C400786F65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A964D6A2283C3C400786F65 /* Api.swift */; };
+		CD07B4FF1FD1EE3E1B60F046 /* Pods_metro_gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE8C226CBFFE213793D7 /* Pods_metro_gallery.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2302E89BEC5E6CCFB82E65C1 /* Pods-metro-gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metro-gallery.debug.xcconfig"; path = "Target Support Files/Pods-metro-gallery/Pods-metro-gallery.debug.xcconfig"; sourceTree = "<group>"; };
+		4DE3BE8C226CBFFE213793D7 /* Pods_metro_gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A24BDCE22828247001C7A8F /* DataInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInit.swift; sourceTree = "<group>"; };
 		8A24BDD02282849B001C7A8F /* metro-gallery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "metro-gallery.entitlements"; sourceTree = "<group>"; };
 		8A79523F2282780B007DD187 /* metro-gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metro-gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +40,7 @@
 		8A79525C22827FA3007DD187 /* Toilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toilet.swift; sourceTree = "<group>"; };
 		8A79525F22827FBE007DD187 /* SuperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperManager.swift; sourceTree = "<group>"; };
 		8A964D6A2283C3C400786F65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		E2F1339913B40804CF145248 /* Pods-metro-gallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metro-gallery.release.xcconfig"; path = "Target Support Files/Pods-metro-gallery/Pods-metro-gallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,12 +48,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD07B4FF1FD1EE3E1B60F046 /* Pods_metro_gallery.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7DDBAED144CD25A069C40EB7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2302E89BEC5E6CCFB82E65C1 /* Pods-metro-gallery.debug.xcconfig */,
+				E2F1339913B40804CF145248 /* Pods-metro-gallery.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		8A24BDCC2282821C001C7A8F /* Init */ = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +78,8 @@
 			children = (
 				8A7952412282780B007DD187 /* metro-gallery */,
 				8A7952402282780B007DD187 /* Products */,
+				7DDBAED144CD25A069C40EB7 /* Pods */,
+				E26C4D77E2FCD3875A25FFD5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,6 +144,14 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		E26C4D77E2FCD3875A25FFD5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4DE3BE8C226CBFFE213793D7 /* Pods_metro_gallery.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +159,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A79524F22827810007DD187 /* Build configuration list for PBXNativeTarget "metro-gallery" */;
 			buildPhases = (
+				43C0026B9195850953BFEE58 /* [CP] Check Pods Manifest.lock */,
 				8A79523B2282780B007DD187 /* Sources */,
 				8A79523C2282780B007DD187 /* Frameworks */,
 				8A79523D2282780B007DD187 /* Resources */,
+				DB9A492061AC4F78330D8A40 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,6 +223,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		43C0026B9195850953BFEE58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-metro-gallery-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB9A492061AC4F78330D8A40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-metro-gallery/Pods-metro-gallery-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CrossroadRegex/Regex.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Regex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-metro-gallery/Pods-metro-gallery-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8A79523B2282780B007DD187 /* Sources */ = {
@@ -346,6 +424,7 @@
 		};
 		8A79525022827810007DD187 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2302E89BEC5E6CCFB82E65C1 /* Pods-metro-gallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "metro-gallery/metro-gallery.entitlements";
@@ -367,6 +446,7 @@
 		};
 		8A79525122827810007DD187 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2F1339913B40804CF145248 /* Pods-metro-gallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "metro-gallery/metro-gallery.entitlements";

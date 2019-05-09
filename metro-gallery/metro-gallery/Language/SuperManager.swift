@@ -32,3 +32,11 @@ enum ReqMode {
     case offline
     /* Use static local data */
 }
+
+enum PayType: Int {
+    case transitionCard = 0
+    /* Paid via Shanghai Transition Card */
+    
+    case singleTicket = 1
+    /* Paid via Single Ticket */
+}
