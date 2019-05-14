@@ -9,16 +9,21 @@
 import Cocoa
 
 class ViewController: NSViewController {
-
     var metroLines: [Line] = []
     var metroStations: [Station] = []
-    
+
+    @IBOutlet var outlineView: NSOutlineView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        outlineView.target = self
+        outlineView.delegate = self
+        outlineView.dataSource = self
         // Do any additional setup after loading the view.
-        InitData(lineCompletion: { (lines) in
+        InitData(lineCompletion: { lines in
             self.metroLines = lines
-        }, stationCompletion: { (stations) in
+            self.outlineView.reloadData()
+        }, stationCompletion: { stations in
             self.metroStations = stations
         })
     }
@@ -31,38 +36,41 @@ class ViewController: NSViewController {
 }
 
 extension ViewController: NSOutlineViewDataSource {
-    func numberOfRows(in outlineView: NSOutlineView) -> Int {
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
         return metroLines.count
+    }
+
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
+        return false
+    }
+
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
+        return metroLines[index]
     }
 }
 
 extension ViewController: NSOutlineViewDelegate {
-    
     fileprivate enum CellIdentifiers {
         static let ImgCell = "ImgCellID"
     }
-    
-    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
-        
+
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
         var image: NSImage?
         var text: String = ""
-        var cellIdentifier: String = ""
-        
+
         // 1
-        let item = metroLines[row]
-        
+        let item = item as? Line
+
         // 2
-        image = item.
-        text = item.lineDisplayName()
-        
-        
+        image = nil
+        text = item?.lineDisplayName() ?? "未知"
+
         // 3
-        if let cell = outlineView.make(withIdentifier: cellIdentifier, owner: nil) as? NSTableCellView {
+        if let cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.ImgCell), owner: self) as? NSTableCellView {
             cell.textField?.stringValue = text
             cell.imageView?.image = image ?? nil
             return cell
         }
         return nil
     }
-    
 }

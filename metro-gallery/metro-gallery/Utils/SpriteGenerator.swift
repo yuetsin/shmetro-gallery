@@ -28,7 +28,7 @@ func roundCorners(image: NSImage, width: CGFloat = 192, height: CGFloat = 192) -
     
     let rect = NSRect(x: 0, y: 0, width: newSize.width, height: newSize.height)
     
-    image.drawAtPoint(NSZeroPoint, fromRect: rect, operation: NSCompositingOperation.sourceOver, fraction: 1)
+    image.draw(at: NSZeroPoint, from: rect, operation: NSCompositingOperation.sourceOver, fraction: 1)
     composedImage.unlockFocus()
     
     return composedImage
