@@ -6,15 +6,23 @@
 //  Copyright © 2019 yuetsin. All rights reserved.
 //
 
+import Cocoa
 import Foundation
 
 class Line {
-    let lineId: Int = -1
+    
+    init(LineId: Int, PrimColor: NSColor, BgColor: NSColor) {
+        lineId = LineId
+        primaryColor = PrimColor
+        bgColor = BgColor
+    }
+    
+    var lineId: Int = -1
     // Numeric, 浦江线 referred as Line 41
     
-    let primaryColor: Int32 = 0xfffef9
+    var primaryColor: NSColor = NSColor.white
     
-    let bgColor: Int32 = 0x000000
+    var bgColor: NSColor = NSColor.black
     
     var stationInLines: [Line] = []
     // Station class shallow-copy

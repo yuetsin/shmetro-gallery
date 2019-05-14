@@ -9,6 +9,13 @@
 import Foundation
 
 class Station {
+    
+    init(StationKeyStr: String, StationName: String) {
+        stationKeyStr = StationKeyStr
+        stationName = StationName
+        stationKeyInt = Int(stationKeyStr) ?? -1
+    }
+    
     var stationKeyStr: String = ""
     // With pre-filling '0', like 莘庄 - "0111"
     

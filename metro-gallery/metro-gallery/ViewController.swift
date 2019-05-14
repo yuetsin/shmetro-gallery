@@ -11,10 +11,16 @@ import Cocoa
 class ViewController: NSViewController {
 
     var metroLines: [Line] = []
+    var metroStations: [Station] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        InitData(lineCompletion: { (lines) in
+            self.metroLines = lines
+        }, stationCompletion: { (stations) in
+            self.metroStations = stations
+        })
     }
 
     override var representedObject: Any? {

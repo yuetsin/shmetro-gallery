@@ -19,6 +19,7 @@
 		8A79525D22827FA3007DD187 /* Toilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525C22827FA3007DD187 /* Toilet.swift */; };
 		8A79526022827FBE007DD187 /* SuperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525F22827FBE007DD187 /* SuperManager.swift */; };
 		8A964D6B2283C3C400786F65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A964D6A2283C3C400786F65 /* Api.swift */; };
+		8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBF416228B078E00FEF3EF /* NSColorParser.m */; };
 		8AC85C6B2283DA5600F9C6B7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */; };
 		8AC85C6D2283DA5A00F9C6B7 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */; };
 		8AC85C6F2283DA5D00F9C6B7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */; };
@@ -42,6 +43,8 @@
 		8A79525C22827FA3007DD187 /* Toilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toilet.swift; sourceTree = "<group>"; };
 		8A79525F22827FBE007DD187 /* SuperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperManager.swift; sourceTree = "<group>"; };
 		8A964D6A2283C3C400786F65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "metro-gallery-Bridging-Header.h"; sourceTree = "<group>"; };
+		8ABBF416228B078E00FEF3EF /* NSColorParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSColorParser.m; path = "metro-gallery/Utils/NSColorParser.m"; sourceTree = SOURCE_ROOT; };
 		8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +132,8 @@
 		8A79525722827C8B007DD187 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				8ABBF416228B078E00FEF3EF /* NSColorParser.m */,
+				8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */,
 				8A79525822827C99007DD187 /* LineNameGenerator.swift */,
 			);
 			path = Utils;
@@ -195,6 +200,7 @@
 				TargetAttributes = {
 					8A79523E2282780B007DD187 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
 								enabled = 0;
@@ -267,6 +273,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-metro-gallery/Pods-metro-gallery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CrossroadRegex/Regex.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftHEXColors/SwiftHEXColors.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -275,6 +282,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Regex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHEXColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,6 +306,7 @@
 				8A79525622827ACF007DD187 /* Station.swift in Sources */,
 				8A7952432282780B007DD187 /* AppDelegate.swift in Sources */,
 				8A964D6B2283C3C400786F65 /* Api.swift in Sources */,
+				8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */,
 				8A79526022827FBE007DD187 /* SuperManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +447,7 @@
 			baseConfigurationReference = 2302E89BEC5E6CCFB82E65C1 /* Pods-metro-gallery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -450,6 +460,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.yuetsin.metro-gallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "metro-gallery/Utils/metro-gallery-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -459,6 +471,7 @@
 			baseConfigurationReference = E2F1339913B40804CF145248 /* Pods-metro-gallery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -471,6 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "io.github.yuetsin.metro-gallery";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "metro-gallery/Utils/metro-gallery-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
