@@ -23,6 +23,7 @@
 		8AC85C6B2283DA5600F9C6B7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */; };
 		8AC85C6D2283DA5A00F9C6B7 /* Regex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */; };
 		8AC85C6F2283DA5D00F9C6B7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */; };
+		8AFF38C8228B0CDB001322AF /* SpriteGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFF38C7228B0CDB001322AF /* SpriteGenerator.swift */; };
 		CD07B4FF1FD1EE3E1B60F046 /* Pods_metro_gallery.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DE3BE8C226CBFFE213793D7 /* Pods_metro_gallery.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AFF38C7228B0CDB001322AF /* SpriteGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteGenerator.swift; sourceTree = "<group>"; };
 		E2F1339913B40804CF145248 /* Pods-metro-gallery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metro-gallery.release.xcconfig"; path = "Target Support Files/Pods-metro-gallery/Pods-metro-gallery.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +137,7 @@
 				8ABBF416228B078E00FEF3EF /* NSColorParser.m */,
 				8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */,
 				8A79525822827C99007DD187 /* LineNameGenerator.swift */,
+				8AFF38C7228B0CDB001322AF /* SpriteGenerator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				8A79525922827C99007DD187 /* LineNameGenerator.swift in Sources */,
 				8A795254228279C9007DD187 /* Line.swift in Sources */,
+				8AFF38C8228B0CDB001322AF /* SpriteGenerator.swift in Sources */,
 				8A79525B22827ED7007DD187 /* Entrance.swift in Sources */,
 				8A79525D22827FA3007DD187 /* Toilet.swift in Sources */,
 				8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */,
