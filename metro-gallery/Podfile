@@ -10,4 +10,5 @@ target 'metro-gallery' do
   pod 'SwiftyJSON'
   pod 'CrossroadRegex'
   pod 'SwiftHEXColors'
+  pod 'FlexibleImage', '~> 1.9'
 end

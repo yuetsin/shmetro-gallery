@@ -18,6 +18,9 @@
 		8A79525B22827ED7007DD187 /* Entrance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525A22827ED7007DD187 /* Entrance.swift */; };
 		8A79525D22827FA3007DD187 /* Toilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525C22827FA3007DD187 /* Toilet.swift */; };
 		8A79526022827FBE007DD187 /* SuperManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79525F22827FBE007DD187 /* SuperManager.swift */; };
+		8A79D3F6228BA8CF00AE59E7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79D3F5228BA8CF00AE59E7 /* Constants.swift */; };
+		8A79D3F9228BAA0600AE59E7 /* DrawIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79D3F8228BAA0600AE59E7 /* DrawIcon.swift */; };
+		8A79D3FB228BAB2100AE59E7 /* BorderColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A79D3FA228BAB2100AE59E7 /* BorderColorGenerator.swift */; };
 		8A964D6B2283C3C400786F65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A964D6A2283C3C400786F65 /* Api.swift */; };
 		8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBF416228B078E00FEF3EF /* NSColorParser.m */; };
 		8AC85C6B2283DA5600F9C6B7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */; };
@@ -43,6 +46,9 @@
 		8A79525A22827ED7007DD187 /* Entrance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entrance.swift; sourceTree = "<group>"; };
 		8A79525C22827FA3007DD187 /* Toilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toilet.swift; sourceTree = "<group>"; };
 		8A79525F22827FBE007DD187 /* SuperManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperManager.swift; sourceTree = "<group>"; };
+		8A79D3F5228BA8CF00AE59E7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8A79D3F8228BAA0600AE59E7 /* DrawIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawIcon.swift; sourceTree = "<group>"; };
+		8A79D3FA228BAB2100AE59E7 /* BorderColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderColorGenerator.swift; sourceTree = "<group>"; };
 		8A964D6A2283C3C400786F65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "metro-gallery-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ABBF416228B078E00FEF3EF /* NSColorParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSColorParser.m; path = "metro-gallery/Utils/NSColorParser.m"; sourceTree = SOURCE_ROOT; };
@@ -106,6 +112,7 @@
 		8A7952412282780B007DD187 /* metro-gallery */ = {
 			isa = PBXGroup;
 			children = (
+				8A79D3F7228BA9F900AE59E7 /* Shape */,
 				8A24BDCC2282821C001C7A8F /* Init */,
 				8A79525E22827FB4007DD187 /* Manager */,
 				8A79525722827C8B007DD187 /* Utils */,
@@ -138,6 +145,7 @@
 				8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */,
 				8A79525822827C99007DD187 /* LineNameGenerator.swift */,
 				8AFF38C7228B0CDB001322AF /* SpriteGenerator.swift */,
+				8A79D3F5228BA8CF00AE59E7 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -148,6 +156,15 @@
 				8A79525F22827FBE007DD187 /* SuperManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		8A79D3F7228BA9F900AE59E7 /* Shape */ = {
+			isa = PBXGroup;
+			children = (
+				8A79D3F8228BAA0600AE59E7 /* DrawIcon.swift */,
+				8A79D3FA228BAB2100AE59E7 /* BorderColorGenerator.swift */,
+			);
+			path = Shape;
 			sourceTree = "<group>";
 		};
 		8A964D692283C3A900786F65 /* Request */ = {
@@ -276,6 +293,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-metro-gallery/Pods-metro-gallery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/CrossroadRegex/Regex.framework",
+				"${BUILT_PRODUCTS_DIR}/FlexibleImage/FlexibleImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHEXColors/SwiftHEXColors.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -285,6 +303,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Regex.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexibleImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHEXColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -304,10 +323,13 @@
 				8A795254228279C9007DD187 /* Line.swift in Sources */,
 				8AFF38C8228B0CDB001322AF /* SpriteGenerator.swift in Sources */,
 				8A79525B22827ED7007DD187 /* Entrance.swift in Sources */,
+				8A79D3F9228BAA0600AE59E7 /* DrawIcon.swift in Sources */,
 				8A79525D22827FA3007DD187 /* Toilet.swift in Sources */,
 				8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */,
 				8A7952452282780B007DD187 /* ViewController.swift in Sources */,
+				8A79D3F6228BA8CF00AE59E7 /* Constants.swift in Sources */,
 				8A79525622827ACF007DD187 /* Station.swift in Sources */,
+				8A79D3FB228BAB2100AE59E7 /* BorderColorGenerator.swift in Sources */,
 				8A7952432282780B007DD187 /* AppDelegate.swift in Sources */,
 				8A964D6B2283C3C400786F65 /* Api.swift in Sources */,
 				8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */,
