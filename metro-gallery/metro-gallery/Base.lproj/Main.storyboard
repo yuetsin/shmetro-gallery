@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -717,6 +718,119 @@
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="j0a-xK-fBS">
+            <objects>
+                <windowController storyboardIdentifier="StationDetailViewController" id="CoQ-5T-QhQ" sceneMemberID="viewController">
+                    <window key="window" title="站点详情" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="preferred" titlebarAppearsTransparent="YES" id="G5W-MH-5e8">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <connections>
+                            <outlet property="delegate" destination="CoQ-5T-QhQ" id="tJq-5O-wry"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="yiy-3l-Ikz" kind="relationship" relationship="window.shadowedContentViewController" id="Gnf-gy-dXr"/>
+                    </connections>
+                </windowController>
+                <customObject id="Rup-Oq-FVf" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="137"/>
+        </scene>
+        <!--Station Detail View Controller-->
+        <scene sceneID="8Bt-JG-ubt">
+            <objects>
+                <viewController id="yiy-3l-Ikz" customClass="StationDetailViewController" customModule="metro_gallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="3Zd-b4-9eR">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="388"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <tabView translatesAutoresizingMaskIntoConstraints="NO" id="EIU-OK-WDH">
+                                <rect key="frame" x="13" y="10" width="454" height="316"/>
+                                <font key="font" metaFont="system"/>
+                                <tabViewItems>
+                                    <tabViewItem label="一般" identifier="" id="2v8-8P-TIs">
+                                        <view key="view" id="lDN-eI-lVt" customClass="NSVisualEffectView">
+                                            <rect key="frame" x="10" y="33" width="434" height="270"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="设施" identifier="" id="6DM-Yq-twT">
+                                        <view key="view" id="N6d-7x-vOi" customClass="NSVisualEffectView">
+                                            <rect key="frame" x="10" y="33" width="434" height="270"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                    </tabViewItem>
+                                    <tabViewItem label="位置" identifier="" id="cnS-gv-52W">
+                                        <view key="view" id="qnX-mn-cMW" customClass="NSVisualEffectView">
+                                            <rect key="frame" x="10" y="33" width="434" height="270"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <mapView mapType="standard" showsScale="YES" showsTraffic="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vZo-LZ-6Xc">
+                                                    <rect key="frame" x="17" y="17" width="400" height="250"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="vZo-LZ-6Xc" secondAttribute="trailing" constant="17" id="4Oz-XI-mDy"/>
+                                                <constraint firstItem="vZo-LZ-6Xc" firstAttribute="top" secondItem="qnX-mn-cMW" secondAttribute="top" constant="3" id="FrA-0F-Khn"/>
+                                                <constraint firstAttribute="bottom" secondItem="vZo-LZ-6Xc" secondAttribute="bottom" constant="17" id="Oa9-J1-GMs"/>
+                                                <constraint firstItem="vZo-LZ-6Xc" firstAttribute="leading" secondItem="qnX-mn-cMW" secondAttribute="leading" constant="17" id="tuf-WQ-0n6"/>
+                                            </constraints>
+                                        </view>
+                                    </tabViewItem>
+                                </tabViewItems>
+                            </tabView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yQp-B0-bZP">
+                                <rect key="frame" x="18" y="328" width="104" height="40"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="徐家汇" id="lCm-Of-1Rl">
+                                    <font key="font" metaFont="systemBlack" size="33"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="yiy-3l-Ikz" name="value" keyPath="stationName" id="VoW-Yf-xoo"/>
+                                </connections>
+                            </textField>
+                            <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="caY-de-I53">
+                                <rect key="frame" x="437" y="333" width="25" height="25"/>
+                                <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="MtU-DH-XH0">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-Of-qmU">
+                                <rect key="frame" x="126" y="328" width="78" height="27"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Xujiahui" id="bc1-pQ-52k">
+                                    <font key="font" metaFont="system" size="22"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="yiy-3l-Ikz" name="value" keyPath="stationNameEn" id="cjQ-7f-pal"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="EIU-OK-WDH" secondAttribute="bottom" constant="20" id="0T3-xk-mLr"/>
+                            <constraint firstItem="yQp-B0-bZP" firstAttribute="leading" secondItem="3Zd-b4-9eR" secondAttribute="leading" constant="20" id="2CV-zq-yl7"/>
+                            <constraint firstItem="caY-de-I53" firstAttribute="top" secondItem="3Zd-b4-9eR" secondAttribute="top" constant="30" id="5ob-D7-czR"/>
+                            <constraint firstAttribute="trailing" secondItem="caY-de-I53" secondAttribute="trailing" constant="20" id="6bx-Tz-5Lu"/>
+                            <constraint firstItem="yQp-B0-bZP" firstAttribute="top" secondItem="3Zd-b4-9eR" secondAttribute="top" constant="20" id="8EX-cN-Q11"/>
+                            <constraint firstAttribute="trailing" secondItem="EIU-OK-WDH" secondAttribute="trailing" constant="20" id="FWw-0n-0ew"/>
+                            <constraint firstItem="pPC-Of-qmU" firstAttribute="top" secondItem="3Zd-b4-9eR" secondAttribute="top" constant="33" id="OAA-oq-ySi"/>
+                            <constraint firstItem="EIU-OK-WDH" firstAttribute="top" secondItem="yQp-B0-bZP" secondAttribute="bottom" constant="8" id="c8Y-3U-JZU"/>
+                            <constraint firstItem="EIU-OK-WDH" firstAttribute="leading" secondItem="3Zd-b4-9eR" secondAttribute="leading" constant="20" id="eWq-WH-fIj"/>
+                            <constraint firstItem="pPC-Of-qmU" firstAttribute="leading" secondItem="yQp-B0-bZP" secondAttribute="trailing" constant="8" id="xwb-JN-fSK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="8W6-m0-efP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="LRj-d4-RIu"/>
+            </objects>
+            <point key="canvasLocation" x="759" y="889"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">

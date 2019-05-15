@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  metro-gallery
 //
 //  Created by yuetsin on 2019/5/8.
@@ -13,7 +13,7 @@ class ViewController: NSViewController {
     var metroLines: [Line] = []
     var metroStations: [Station] = []
     
-    var selectedStations: [Station] = []
+    var selectedStations: [SimpleStation] = []
     
     var visitedStationCount: Int = 0
     var targetStationCount: Int = 0
@@ -37,8 +37,10 @@ class ViewController: NSViewController {
         tableView.target = self
         tableView.delegate = self
         tableView.dataSource = self
+
+//        loadingRing.startAnimation(self)
         
-        loadingRing.startAnimation(self)
+        tableView.doubleAction = #selector(tableViewDoubleClick(_:))
         
         // Do any additional setup after loading the view.
         InitData(lineCompletion: { lines in
@@ -48,8 +50,8 @@ class ViewController: NSViewController {
             self.metroStations = stations
             
             for line in self.metroLines {
-                requestRawData(line.lineId, { str in
-                    
+                requestRawData(line.lineId, { simpleStations in
+                    line.stationInLines = simpleStations
                 })
             }
             /*
@@ -84,15 +86,31 @@ class ViewController: NSViewController {
     func updateStatus() {
         let lineSelected = metroLines[outlineView.selectedRow]
         
-        selectedStations.removeAll()
-        
-        for station in metroStationsWithDetail {
-            if station.stationOfLinesId.contains(lineSelected.lineId) {
-                selectedStations.append(station)
-            }
-        }
+        selectedStations = lineSelected.stationInLines
         
         tableView.reloadData()
+    }
+    
+    @objc func tableViewDoubleClick(_ sender: AnyObject) {
+        if tableView.selectedRow == 0 {
+            return
+        }
+        
+        let selStation: SimpleStation = selectedStations[tableView.selectedRow]
+        
+        let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
+        let SDVC = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("StationDetailViewController")) as! NSWindowController
+        
+        if let StationWindow = SDVC.window {
+            let StationVC = StationWindow.contentViewController as! StationDetailViewController
+            StationVC.stationName = selStation.stationName
+            StationVC.stationIdStr = selStation.stationKeyStr
+            //            let application = NSApplication.shared
+            //            application.runModal(for: poemDetailWindow)
+            //            poemDetailWindow.close()
+            StationWindow.title = "“\(selStation.stationName)”站点信息"
+            SDVC.showWindow(nil)
+        }
     }
 }
 
@@ -244,7 +262,7 @@ extension ViewController: NSTableViewDelegate {
         
         // 2
         if tableColumn == tableView.tableColumns[0] {
-            text = item.getStationName()
+            text = item.stationName ?? "未知站点"
             cellIdentifier = StationCellIdentifiers.StationNameCell
         } else if tableColumn == tableView.tableColumns[1] {
             image = accessibilityIcon

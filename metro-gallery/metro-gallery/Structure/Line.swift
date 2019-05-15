@@ -24,8 +24,8 @@ class Line {
     
     var bgColor: NSColor = NSColor.black
     
-    var stationInLines: [Line] = []
-    // Station class shallow-copy
+    var stationInLines: [SimpleStation] = []
+    // Stations of this line
     
     func lineDisplayName() -> String {
         return generateDisplayName(self.lineId)
