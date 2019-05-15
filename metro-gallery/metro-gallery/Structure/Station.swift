@@ -48,6 +48,14 @@ class Station {
     var elevatorInfo: String = ""
     var elevatorInfoEn: String = ""
     
+    func getStationName(_ language: Language = SuperManager.UILanguage) -> String {
+        if language == .chinese {
+            return stationName
+        } else {
+            return stationNameEn
+        }
+    }
+    
     func getToiletInfo(_ language: Language = SuperManager.UILanguage) -> String {
         /* WIP */
         return ""

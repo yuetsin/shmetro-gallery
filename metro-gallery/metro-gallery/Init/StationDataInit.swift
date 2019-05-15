@@ -12,7 +12,7 @@ import Foundation
 
 
 
-func InitStationData(station: Station, stationDetailCompletion: @escaping (Station) -> Void) -> Void {
+func InitStationData(station: Station, stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
     if SuperManager.requestMode == .online {
         onlineInitData(station, stationDetailCompletion)
     } else {
@@ -20,7 +20,7 @@ func InitStationData(station: Station, stationDetailCompletion: @escaping (Stati
     }
 }
 
-fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @escaping (Station) -> Void) -> Void {
+fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
     Alamofire.request(PostApi.getStationDetail(stationCode: station.stationKeyStr), method: .post)
         .response(completionHandler: { (statResponse) in
             let stationDetail = try! JSON(data: statResponse.data!)
@@ -31,8 +31,14 @@ fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @
             station.stationCode = stationJson["station_code"].stringValue
             
             station.stationOfLinesId.removeAll()
-            for id in stationJson["lines"].stringValue.split(separator: ",") {
-                station.stationOfLinesId.append(Int(String(id))!)
+            for id in stationJson["lines"].stringValue.components(separatedBy: CharacterSet(charactersIn: ",，")) {
+                let stationInt = Int(id)
+                if stationInt != nil {
+                    station.stationOfLinesId.append(stationInt!)
+                } else {
+                    stationDetailCompletion(nil)
+                    return
+                }
             }
             station.stationPosition = (stationJson["x"].doubleValue, stationJson["y"].doubleValue)
             
@@ -50,6 +56,6 @@ fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @
     })
 }
 
-fileprivate func offlineInitData(_ station: Station, _ stationCompletion: @escaping (Station) -> Void) -> Void {
+fileprivate func offlineInitData(_ station: Station, _ stationCompletion: @escaping (Station?) -> Void) -> Void {
     return
 }

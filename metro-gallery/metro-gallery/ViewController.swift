@@ -12,8 +12,20 @@ import FlexibleImage
 class ViewController: NSViewController {
     var metroLines: [Line] = []
     var metroStations: [Station] = []
-
+    
+    var selectedStations: [Station] = []
+    
+    var visitedStationCount: Int = 0
+    var targetStationCount: Int = 0
+    var metroStationsWithDetail: [Station] = []
+    
+    @objc dynamic var finishedLoading = false
+    
+    @IBOutlet weak var loadingRing: NSProgressIndicator!
+    
     @IBOutlet var outlineView: NSOutlineView!
+    @IBOutlet weak var tableView: NSTableView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +33,35 @@ class ViewController: NSViewController {
         outlineView.target = self
         outlineView.delegate = self
         outlineView.dataSource = self
+        
+        tableView.target = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        loadingRing.startAnimation(self)
+        
         // Do any additional setup after loading the view.
         InitData(lineCompletion: { lines in
             self.metroLines = lines
             self.outlineView.reloadData()
         }, stationCompletion: { stations in
             self.metroStations = stations
+            self.targetStationCount = self.metroStations.count
+            for station in self.metroStations {
+                
+                InitStationData(station: station, stationDetailCompletion: { statDetail in
+                    if statDetail != nil {
+                        self.metroStationsWithDetail.append(statDetail!)
+                    }
+                    self.visitedStationCount += 1
+                    self.loadingRing.doubleValue = Double(self.visitedStationCount) / Double(self.targetStationCount) * self.loadingRing.maxValue
+//                    NSLog("And here we are \(self.loadingRing.doubleValue)")
+                    if self.targetStationCount == self.visitedStationCount {
+                        self.finishedLoading = true
+                        self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: 0), byExtendingSelection: false)
+                    }
+                })
+            }
         })
     }
 
@@ -37,9 +72,17 @@ class ViewController: NSViewController {
     }
     
     func updateStatus() {
-        let selectedRow = outlineView.selectedRow
-        let id = outlineView.item(atRow: selectedRow)
-        outlineView.setNeedsDisplay(outlineView.rect(ofRow: selectedRow))
+        let lineSelected = metroLines[outlineView.selectedRow]
+        
+        selectedStations.removeAll()
+        
+        for station in metroStationsWithDetail {
+            if station.stationOfLinesId.contains(lineSelected.lineId) {
+                selectedStations.append(station)
+            }
+        }
+        
+        tableView.reloadData()
     }
 }
 
@@ -62,12 +105,13 @@ extension ViewController: NSOutlineViewDelegate {
         static let ImgCell = "ImgCellID"
     }
     
-    func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {
-        rowView.backgroundColor = .clear
-    }
     
     func outlineViewSelectionDidChange(_ notification: Notification) {
         updateStatus()
+    }
+
+    func outlineView(_ outlineView: NSOutlineView, didAdd rowView: NSTableRowView, forRow row: Int) {
+        rowView.backgroundColor = .clear
     }
     
     func outlineView(_ outlineView: NSOutlineView, willDisplayCell cell: Any, for tableColumn: NSTableColumn?, item: Any) {
@@ -154,5 +198,58 @@ class AudioCellView: NSTableRowView {
             let selectionPath = NSBezierPath.init(rect: selectionRect)
             selectionPath.fill()
         }
+    }
+}
+
+
+extension ViewController: NSTableViewDataSource {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        return selectedStations.count
+    }
+}
+
+extension ViewController: NSTableViewDelegate {
+    
+    fileprivate enum StationCellIdentifiers {
+        static let StationNameCell = "StationCellID"
+        static let AccessibilityCell = "AccessibilityCellID"
+        static let ToiletCell = "ToiletCellID"
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        
+        var image: NSImage?
+        var text: String = ""
+        var cellIdentifier: String = ""
+        
+        let accessibilityIcon = NSImage(named: "Icons/Accessibility.png")
+        let toiletIcon = NSImage(named: "Icons/Toilet.png")
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .long
+        
+        // 1
+        let item = selectedStations[row]
+        
+        // 2
+        if tableColumn == tableView.tableColumns[0] {
+            text = item.getStationName()
+            cellIdentifier = StationCellIdentifiers.StationNameCell
+        } else if tableColumn == tableView.tableColumns[1] {
+            image = accessibilityIcon
+            cellIdentifier = StationCellIdentifiers.AccessibilityCell
+        } else if tableColumn == tableView.tableColumns[2] {
+            image = toiletIcon
+            cellIdentifier = StationCellIdentifiers.ToiletCell
+        }
+        
+        // 3
+        if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: cellIdentifier), owner: nil) as? NSTableCellView {
+            cell.textField?.stringValue = text
+            cell.imageView?.image = image ?? nil
+            return cell
+        }
+        return nil
     }
 }
