@@ -11,4 +11,5 @@ target 'metro-gallery' do
   pod 'CrossroadRegex'
   pod 'SwiftHEXColors'
   pod 'FlexibleImage', '~> 1.9'
+  pod 'SWXMLHash', '~> 4.7.0'
 end

@@ -46,6 +46,13 @@ class ViewController: NSViewController {
             self.outlineView.reloadData()
         }, stationCompletion: { stations in
             self.metroStations = stations
+            
+            for line in self.metroLines {
+                requestRawData(line.lineId, { str in
+                    
+                })
+            }
+            /*
             self.targetStationCount = self.metroStations.count
             for station in self.metroStations {
                 
@@ -62,6 +69,9 @@ class ViewController: NSViewController {
                     }
                 })
             }
+            */
+            
+            self.finishedLoading = true
         })
     }
 

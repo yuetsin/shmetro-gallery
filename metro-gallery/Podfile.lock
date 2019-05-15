@@ -4,6 +4,7 @@ PODS:
   - FlexibleImage (1.10)
   - SwiftHEXColors (1.1.2)
   - SwiftyJSON (4.2.0)
+  - SWXMLHash (4.7.4)
 
 DEPENDENCIES:
   - Alamofire
@@ -11,6 +12,7 @@ DEPENDENCIES:
   - FlexibleImage (~> 1.9)
   - SwiftHEXColors
   - SwiftyJSON
+  - SWXMLHash (~> 4.7.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - FlexibleImage
     - SwiftHEXColors
     - SwiftyJSON
+    - SWXMLHash
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   FlexibleImage: 22bf26c42f1b6299b94bc5001e6ec310c94e6786
   SwiftHEXColors: 7f9f7e6bdce888d821e11749279733e5ddff5f51
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SWXMLHash: b35739a5cfd915c3b482977aa720d6708e260a90
 
-PODFILE CHECKSUM: 2477e603fe82d61d2bcc55670af1cbad9c4fe6d3
+PODFILE CHECKSUM: b8bab96dafc5329967676f7b21681095782656b7
 
 COCOAPODS: 1.6.1
