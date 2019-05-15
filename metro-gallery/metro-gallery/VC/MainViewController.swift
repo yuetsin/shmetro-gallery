@@ -10,7 +10,7 @@ import Cocoa
 import FlexibleImage
 
 class ViewController: NSViewController {
-    var metroLines: [Line] = []
+    static var metroLines: [Line] = []
     var metroStations: [Station] = []
     
     var selectedStations: [SimpleStation] = []
@@ -44,12 +44,12 @@ class ViewController: NSViewController {
         
         // Do any additional setup after loading the view.
         InitData(lineCompletion: { lines in
-            self.metroLines = lines
+            ViewController.metroLines = lines
             self.outlineView.reloadData()
         }, stationCompletion: { stations in
             self.metroStations = stations
             
-            for line in self.metroLines {
+            for line in ViewController.metroLines {
                 requestRawData(line.lineId, { simpleStations in
                     line.stationInLines = simpleStations
                 })
@@ -84,7 +84,7 @@ class ViewController: NSViewController {
     }
     
     func updateStatus() {
-        let lineSelected = metroLines[outlineView.selectedRow]
+        let lineSelected = ViewController.metroLines[outlineView.selectedRow]
         
         selectedStations = lineSelected.stationInLines
         
@@ -92,7 +92,7 @@ class ViewController: NSViewController {
     }
     
     @objc func tableViewDoubleClick(_ sender: AnyObject) {
-        if tableView.selectedRow == 0 {
+        if tableView.selectedRow < 0 {
             return
         }
         
@@ -105,6 +105,7 @@ class ViewController: NSViewController {
             let StationVC = StationWindow.contentViewController as! StationDetailViewController
             StationVC.stationName = selStation.stationName
             StationVC.stationIdStr = selStation.stationKeyStr
+            StationVC.loadDetail()
             //            let application = NSApplication.shared
             //            application.runModal(for: poemDetailWindow)
             //            poemDetailWindow.close()
@@ -116,7 +117,7 @@ class ViewController: NSViewController {
 
 extension ViewController: NSOutlineViewDataSource {
     func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
-        return metroLines.count
+        return ViewController.metroLines.count
     }
 
     func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
@@ -124,7 +125,7 @@ extension ViewController: NSOutlineViewDataSource {
     }
 
     func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
-        return metroLines[index]
+        return ViewController.metroLines[index]
     }
 }
 
@@ -146,7 +147,7 @@ extension ViewController: NSOutlineViewDelegate {
         let rowNo: Int = outlineView.row(forItem: item)
         var bgColor: NSColor = .blue
         if (outlineView.selectedRowIndexes.contains(rowNo)) {
-            bgColor = metroLines[rowNo].primaryColor
+            bgColor = ViewController.metroLines[rowNo].primaryColor
         } else {
             bgColor = .clear
         }
@@ -262,7 +263,7 @@ extension ViewController: NSTableViewDelegate {
         
         // 2
         if tableColumn == tableView.tableColumns[0] {
-            text = item.stationName ?? "未知站点"
+            text = item.stationName 
             cellIdentifier = StationCellIdentifiers.StationNameCell
         } else if tableColumn == tableView.tableColumns[1] {
             image = accessibilityIcon

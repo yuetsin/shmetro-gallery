@@ -21,3 +21,7 @@ let sizeBarColorIconMargin: EdgeInsets = EdgeInsets(top: 256,
 let borderLineWidth: Int = 20
 
 let borderLineRadius: Int = 20
+
+let defaultScaleMeters: Float = 2000.0
+
+let colorStripeSize: NSSize = NSSize(width: 12, height: 40)

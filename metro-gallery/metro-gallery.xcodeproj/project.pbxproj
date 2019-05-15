@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A24BDCE22828247001C7A8F /* DataInit.swift */; };
+		8A404749228C541200D3B5E9 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A404748228C541200D3B5E9 /* MapAnnotation.swift */; };
 		8A565AF6228C01B8004F417F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 8A565AF5228C01B8004F417F /* Icons */; };
 		8A7952432282780B007DD187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7952422282780B007DD187 /* AppDelegate.swift */; };
 		8A7952452282780B007DD187 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7952442282780B007DD187 /* MainViewController.swift */; };
@@ -38,6 +39,7 @@
 		2302E89BEC5E6CCFB82E65C1 /* Pods-metro-gallery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-metro-gallery.debug.xcconfig"; path = "Target Support Files/Pods-metro-gallery/Pods-metro-gallery.debug.xcconfig"; sourceTree = "<group>"; };
 		4DE3BE8C226CBFFE213793D7 /* Pods_metro_gallery.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_metro_gallery.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A24BDCE22828247001C7A8F /* DataInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataInit.swift; sourceTree = "<group>"; };
+		8A404748228C541200D3B5E9 /* MapAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
 		8A565AF5228C01B8004F417F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		8A79523F2282780B007DD187 /* metro-gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metro-gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7952422282780B007DD187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				8A795253228279C9007DD187 /* Line.swift */,
 				8A79525522827ACF007DD187 /* Station.swift */,
 				8AE6FEEF228C189000EFB94C /* SimpleStation.swift */,
+				8A404748228C541200D3B5E9 /* MapAnnotation.swift */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				8A964D6B2283C3C400786F65 /* Api.swift in Sources */,
 				8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */,
 				8A830895228C0A6D003AD1BE /* RawStationDataInit.swift in Sources */,
+				8A404749228C541200D3B5E9 /* MapAnnotation.swift in Sources */,
 				8A79526022827FBE007DD187 /* SuperManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

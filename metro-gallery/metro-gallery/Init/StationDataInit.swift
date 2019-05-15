@@ -12,17 +12,20 @@ import Foundation
 
 
 
-func InitStationData(station: Station, stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
+func InitStationData(simpleStation: SimpleStation, stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
     if SuperManager.requestMode == .online {
-        onlineInitData(station, stationDetailCompletion)
+        onlineInitData(simpleStation, stationDetailCompletion)
     } else {
-        offlineInitData(station, stationDetailCompletion)
+        offlineInitData(simpleStation, stationDetailCompletion)
     }
 }
 
-fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
-    Alamofire.request(PostApi.getStationDetail(stationCode: station.stationKeyStr), method: .post)
+fileprivate func onlineInitData(_ simpleStation: SimpleStation, _ stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
+    Alamofire.request(PostApi.getStationDetail(stationCode: simpleStation.stationKeyStr), method: .post)
         .response(completionHandler: { (statResponse) in
+            let station: Station = Station(StationKeyStr: simpleStation.stationKeyStr,
+                                           StationName: simpleStation.stationName)
+            
             let stationDetail = try! JSON(data: statResponse.data!)
             let stationJson = stationDetail.array![0]
             
@@ -40,7 +43,7 @@ fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @
                     return
                 }
             }
-            station.stationPosition = (stationJson["x"].doubleValue, stationJson["y"].doubleValue)
+            station.stationPosition = (stationJson["latitude"].doubleValue, stationJson["longitude"].doubleValue)
             
             station.toiletInStation = stationJson["toilet_inside"].boolValue
             station.toiletPosition = stationJson["toilet_position"].stringValue
@@ -56,6 +59,6 @@ fileprivate func onlineInitData(_ station: Station, _ stationDetailCompletion: @
     })
 }
 
-fileprivate func offlineInitData(_ station: Station, _ stationCompletion: @escaping (Station?) -> Void) -> Void {
+fileprivate func offlineInitData(_ simpleStation: SimpleStation, _ stationCompletion: @escaping (Station?) -> Void) -> Void {
     return
 }
