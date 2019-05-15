@@ -28,7 +28,7 @@ class Station {
     var stationNameEn: String = ""
     // English Station Name
     
-    var stationOfLines: [Line] = []
+    var stationOfLinesId: [Int] = []
     // Line class shallow-copy
     
     var stationCode: String = ""
@@ -37,11 +37,16 @@ class Station {
     var stationPosition: (Double, Double) = (0.0, 0.0)
     // stationPosition, (Longtitude, Latitude)
     
-    private var toiletPosition: String = ""
-    private var toiletPositionEn: String = ""
+    var toiletInStation: Bool = false
     
-    private var entranceInfo: String = ""
-    private var entranceInfoEn: String = ""
+    var toiletPosition: String = ""
+    var toiletPositionEn: String = ""
+    
+    var entranceInfo: String = ""
+    var entranceInfoEn: String = ""
+    
+    var elevatorInfo: String = ""
+    var elevatorInfoEn: String = ""
     
     func getToiletInfo(_ language: Language = SuperManager.UILanguage) -> String {
         /* WIP */
@@ -49,6 +54,11 @@ class Station {
     }
     
     func getEntranceInfo(_ language: Language = SuperManager.UILanguage) -> String {
+        /* WIP */
+        return ""
+    }
+    
+    func getElevatorInfo(_ language: Language = SuperManager.UILanguage) -> String {
         /* WIP */
         return ""
     }

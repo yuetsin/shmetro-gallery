@@ -25,5 +25,4 @@ func drawIconByColor(_ color: NSColor) -> NSImage? {
         .adjust()
         .background(color: NSColor.clear)
         .image()
-
 }

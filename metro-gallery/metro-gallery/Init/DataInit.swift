@@ -22,7 +22,7 @@ func InitData(lineCompletion: @escaping ([Line]) -> Void,
     }
 }
 
-func onlineInitData(_ lineCompletion: @escaping ([Line]) -> Void,
+fileprivate func onlineInitData(_ lineCompletion: @escaping ([Line]) -> Void,
                     _ stationCompletion: @escaping ([Station]) -> Void) -> Void {
     Alamofire.request(GetApi.getAllStation, method: .get).response { (statResponse) in
         let stationsJson = try! JSON(data: statResponse.data!)
@@ -46,7 +46,7 @@ func onlineInitData(_ lineCompletion: @escaping ([Line]) -> Void,
     }
 }
 
-func offlineInitData(_ lineCompletion: @escaping ([Line]) -> Void,
+fileprivate func offlineInitData(_ lineCompletion: @escaping ([Line]) -> Void,
                      _ stationCompletion: @escaping ([Station]) -> Void) -> Void {
     return
 }
