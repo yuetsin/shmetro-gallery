@@ -8,8 +8,6 @@ target 'metro-gallery' do
   # Pods for metro-gallery
   pod 'Alamofire'
   pod 'SwiftyJSON'
-  pod 'CrossroadRegex'
   pod 'SwiftHEXColors'
   pod 'FlexibleImage', '~> 1.9'
-  pod 'SWXMLHash', '~> 4.7.0'
 end
