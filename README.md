@@ -15,3 +15,5 @@
 * [kawoou/FlexibleImage](https://github.com/kawoou/FlexibleImage) · ![GitHub](https://img.shields.io/github/license/kawoou/FlexibleImage.svg?style=social)
 
 * [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) · ![GitHub](https://img.shields.io/github/license/SwiftyJSON/SwiftyJSON.svg?style=social)
+
+* [JackZhouCn/JZLocationConverter-Swift](https://github.com/JackZhouCn/JZLocationConverter-Swift)
