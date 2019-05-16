@@ -13,6 +13,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        JZLocationConverter.start { (error) in
+            if error != nil {
+                print("failed to load JZLocationConverter")
+            } else {
+                print("JZLocationConverter loaded")
+            }
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

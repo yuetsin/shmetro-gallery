@@ -47,16 +47,21 @@ class StationDetailViewController: NSViewController {
             stationNameEn = station?.stationNameEn ?? ""
         }
         let coordinate = CLLocationCoordinate2D(latitude: (station?.stationPosition.0)!, longitude: (station?.stationPosition.1)!)
-        let region = MKCoordinateRegion(center: coordinate,
+        
+        JZLocationConverter.default.bd09ToWgs84(coordinate, result: setAnnotation(_:))
+        drawLineColor()
+    }
+    
+    func setAnnotation(_ gcj2Point: CLLocationCoordinate2D) -> Void {
+        let region = MKCoordinateRegion(center: gcj2Point,
                                         latitudinalMeters: CLLocationDistance(defaultScaleMeters),
                                         longitudinalMeters: CLLocationDistance(defaultScaleMeters))
         mapView.setRegion(region, animated: true)
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(
-            MapAnnotation(myCoordinate: coordinate,
+            MapAnnotation(myCoordinate: gcj2Point,
                           station!.stationName,
                           station!.stationNameEn))
-        drawLineColor()
     }
     
     func drawLineColor() {

@@ -35,6 +35,10 @@ class PostApi {
         return "http://m.shmetro.com/interface/metromap/metromap.aspx?func=fltime&line=\(lineCode)"
     }
     
+    static func getStationTimeTable(stationKey: String) -> String {
+        return "http://m.shmetro.com/interface/metromap/metromap.aspx?func=fltime&stat_id=\(stationKey)"
+    }
+    
     static func getTransitionTable(lineCode: String) -> String {
         return "http://m.shmetro.com/interface/metromap/metromap.aspx?func=exfltime&line1=\(lineCode)"
     }
