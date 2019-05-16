@@ -22,7 +22,12 @@ sess = requests.Session()
 
 for s in station_data:
     f = sess.post(stationDetailUrl % s['key'])
-    station_detail.append(json.loads(f.content.decode()))
+    try:
+        station_detail.append(json.loads(f.content.decode())[0])
+    except:
+        pprint(json.loads(f.content.decode()))
+        input()
+        continue
 
     f = sess.post(stationTimeTableUrl % s['key'])
 
@@ -34,7 +39,12 @@ for s in station_data:
         if itm['last_time_desc'] != '':
             itm['last_time_desc'] = json.loads(itm['last_time_desc'])
 
-    station_timetable.append(tmt)
+    try:
+        station_timetable.append(tmt[0])
+    except:
+        pprint(tmt)
+        input()
+        continue
     # pprint(tmt)
     # input()
 
