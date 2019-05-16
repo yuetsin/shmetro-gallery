@@ -10,6 +10,8 @@
 
 * [cnmetro/shmetro-api](https://github.com/cnmetro/shmetro-api) · ![GitHub](https://img.shields.io/github/license/cnmetro/shmetro-api.svg?style=social)
 
+* [kennethreitz/requests](https://github.com/kennethreitz/requests) · ![GitHub](https://img.shields.io/badge/License-Apache--2.0-lightgrey.svg?style=social)
+
 * [kawoou/FlexibleImage](https://github.com/kawoou/FlexibleImage) · ![GitHub](https://img.shields.io/github/license/kawoou/FlexibleImage.svg?style=social)
 
 * [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) · ![GitHub](https://img.shields.io/github/license/SwiftyJSON/SwiftyJSON.svg?style=social)
