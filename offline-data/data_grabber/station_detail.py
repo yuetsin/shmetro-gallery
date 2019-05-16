@@ -43,14 +43,14 @@ for s in station_data:
         station_timetable.append(tmt[0])
     except:
         pprint(tmt)
-        input()
+        # input()
         continue
     # pprint(tmt)
     # input()
 
 with open('../station_detail.json', 'w') as detail_f:
-    json.dump(station_detail, detail_f)
+    json.dump(station_detail, detail_f, ensure_ascii=False)
 
 
 with open('../station_timetable.json', 'w') as tt_f:
-    json.dump(station_timetable, tt_f)
+    json.dump(station_timetable, tt_f, ensure_ascii=False)
