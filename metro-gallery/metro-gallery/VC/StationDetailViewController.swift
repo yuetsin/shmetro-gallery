@@ -48,7 +48,8 @@ class StationDetailViewController: NSViewController {
         }
         let coordinate = CLLocationCoordinate2D(latitude: (station?.stationPosition.0)!, longitude: (station?.stationPosition.1)!)
         
-        JZLocationConverter.default.bd09ToWgs84(coordinate, result: setAnnotation(_:))
+        JZLocationConverter.default.bd09ToGcj02(coordinate, result: setAnnotation(_:))
+        
         drawLineColor()
     }
     
