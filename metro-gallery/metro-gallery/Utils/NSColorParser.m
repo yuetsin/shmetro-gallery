@@ -1,10 +1,6 @@
 //
 //  NSColorParser.m
-//  metro-gallery
-//
-//  Created by yuetsin on 2019/5/14.
-//  Copyright © 2019 yuetsin. All rights reserved.
-//
+// 
 
 #import <Foundation/Foundation.h>
 #import <Cocoa/Cocoa.h>
