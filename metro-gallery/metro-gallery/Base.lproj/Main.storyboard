@@ -723,7 +723,7 @@
         <scene sceneID="j0a-xK-fBS">
             <objects>
                 <windowController storyboardIdentifier="StationDetailViewController" id="CoQ-5T-QhQ" sceneMemberID="viewController">
-                    <window key="window" title="站点详情" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" tabbingMode="preferred" titlebarAppearsTransparent="YES" id="G5W-MH-5e8">
+                    <window key="window" title="站点详情" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="alertPanel" frameAutosaveName="" tabbingMode="preferred" titlebarAppearsTransparent="YES" id="G5W-MH-5e8">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>

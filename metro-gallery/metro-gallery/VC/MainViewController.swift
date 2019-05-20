@@ -102,6 +102,7 @@ class ViewController: NSViewController {
         let SDVC = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("StationDetailViewController")) as! NSWindowController
         
         if let StationWindow = SDVC.window {
+
             let StationVC = StationWindow.contentViewController as! StationDetailViewController
             StationVC.stationName = selStation.stationName
             StationVC.stationIdStr = selStation.stationKeyStr

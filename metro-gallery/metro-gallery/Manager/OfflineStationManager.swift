@@ -13,11 +13,15 @@ class OfflineStationManager {
     static var stations: JSON = JSON.null
     
     static func getStationById(_ id: String) -> JSON {
+        if id == "0533" {
+            
+        }
         for stat in OfflineStationManager.stations.array! {
             if stat.dictionary!["stat_id"]?.stringValue == id {
                 return stat
             }
         }
+        
         return JSON.null
     }
     

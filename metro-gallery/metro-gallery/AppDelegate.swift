@@ -22,7 +22,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         
-//        playGround()
         OfflineStationManager.initStationData()
     }
 
@@ -34,8 +33,5 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
     
-    fileprivate func playGround() {
-        
-    }
 }
 

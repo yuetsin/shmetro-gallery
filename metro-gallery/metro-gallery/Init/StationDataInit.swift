@@ -60,7 +60,7 @@ fileprivate func onlineInitData(_ simpleStation: SimpleStation, _ stationDetailC
 
 fileprivate func offlineInitData(_ simpleStation: SimpleStation, _ stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
     
-    let station: Station = Station()
+    let station: Station = Station(StationKeyStr: simpleStation.stationKeyStr, StationName: simpleStation.stationName)
     
     let stationJson = OfflineStationManager.getStationById("\(simpleStation.stationKeyInt)")
     
@@ -73,9 +73,6 @@ fileprivate func offlineInitData(_ simpleStation: SimpleStation, _ stationDetail
         let stationInt = Int(id)
         if stationInt != nil {
             station.stationOfLinesId.append(stationInt!)
-        } else {
-            stationDetailCompletion(nil)
-            return
         }
     }
     
