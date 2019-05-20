@@ -8,6 +8,7 @@
 
 import Cocoa
 import MapKit
+import SwiftyJSON
 
 class StationDetailViewController: NSViewController {
 
@@ -22,7 +23,27 @@ class StationDetailViewController: NSViewController {
     @IBOutlet weak var stripeC: NSTextField!
     @IBOutlet weak var stripeD: NSTextField!
     
+    
+    @IBOutlet weak var startOpText: NSTextField!
+    @IBOutlet weak var currentTime: NSTextField!
+    @IBOutlet weak var endOpText: NSTextField!
+    @IBOutlet weak var isNextDayText: NSTextField!
+    
+    @IBOutlet weak var lineAndDestSelector: NSPopUpButton!
+    
+    @IBAction func capabilitiesSelected(_ sender: NSButton) {
+        
+    }
+    
+    @IBAction func timeTableOptionSelected(_ sender: NSPopUpButton) {
+        
+    }
+    
     var stations: [Station] = []
+    
+    var timetables: [JSON] = []
+    
+    var timetableStrings: [String] = []
     
     var stationIdStr: String = ""
     
@@ -38,8 +59,42 @@ class StationDetailViewController: NSViewController {
                             if station != nil {
                                 self.stations.append(station!)
                                 self.flushUIElement(NSButton())
+                                self.loadTimeTable()
                             }
         })
+    }
+    
+    fileprivate func loadTimeTable() {
+        if stations.count == 0 {
+            return
+        }
+        
+        if timetables.count != 0 {
+            return
+        }
+        
+        let stationCode = stations[0].stationCode
+        
+        timetables = TimeTableManager.getTimeTableRelatedStation(stationCode)
+        
+        renderTimeTable()
+    }
+    
+    fileprivate func renderTimeTable() {
+        lineAndDestSelector.removeAllItems()
+        
+        for timePiece in timetables {
+            let itemTitle = generateSelectTime(timePiece["line"].intValue, timePiece["description"].stringValue)
+            timetableStrings.append(itemTitle)
+        }
+        
+        if timetables.count == timetableStrings.count {
+            lineAndDestSelector.addItems(withTitles: timetableStrings)
+        } else {
+            timetables.removeAll()
+            timetableStrings.removeAll()
+            loadDetail()
+        }
     }
     
     @IBAction func flushUIElement(_ sender: NSButton) {

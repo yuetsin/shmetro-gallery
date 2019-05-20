@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         OfflineStationManager.initStationData()
+        TimeTableManager.initTimeTableData()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

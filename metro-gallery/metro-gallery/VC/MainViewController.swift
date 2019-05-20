@@ -52,6 +52,7 @@ class ViewController: NSViewController {
             for line in ViewController.metroLines {
                 requestRawData(line.lineId, { simpleStations in
                     line.stationInLines = simpleStations
+                    self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: 0), byExtendingSelection: false)
                 })
             }
             /*

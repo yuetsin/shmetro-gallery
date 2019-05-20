@@ -778,6 +778,9 @@
                                                                         </items>
                                                                     </menu>
                                                                 </popUpButtonCell>
+                                                                <connections>
+                                                                    <action selector="timeTableOptionSelected:" target="yiy-3l-Ikz" id="QN2-8E-oyw"/>
+                                                                </connections>
                                                             </popUpButton>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I2V-LC-Srp">
                                                                 <rect key="frame" x="18" y="60" width="100" height="44"/>
@@ -878,10 +881,13 @@
                                                                     <gridCell row="dAd-mR-FKt" column="4zV-lH-ybq" id="UsH-gl-PuQ">
                                                                         <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qQI-BU-QoQ">
                                                                             <rect key="frame" x="-1" y="22" width="89" height="18"/>
-                                                                            <buttonCell key="cell" type="radio" title="卫生间" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="dXU-Yf-KEM">
+                                                                            <buttonCell key="cell" type="radio" title="卫生间" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="dXU-Yf-KEM">
                                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                 <font key="font" metaFont="system"/>
                                                                             </buttonCell>
+                                                                            <connections>
+                                                                                <action selector="capabilitiesSelected:" target="yiy-3l-Ikz" id="eF5-y5-7nm"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </gridCell>
                                                                     <gridCell row="xC7-Z7-nHs" column="4zV-lH-ybq" id="o7z-YF-f8X">
@@ -891,6 +897,9 @@
                                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                                                                 <font key="font" metaFont="system"/>
                                                                             </buttonCell>
+                                                                            <connections>
+                                                                                <action selector="capabilitiesSelected:" target="yiy-3l-Ikz" id="0Ct-f1-GFZ"/>
+                                                                            </connections>
                                                                         </button>
                                                                     </gridCell>
                                                                 </gridCells>
@@ -985,6 +994,7 @@
                                     <constraint firstAttribute="height" constant="8" id="PFT-vz-oiB"/>
                                 </constraints>
                                 <shadow key="shadow" blurRadius="2">
+                                    <size key="offset" width="1" height="1"/>
                                     <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="dqL-YT-091">
@@ -1002,6 +1012,7 @@
                                     <constraint firstAttribute="width" constant="8" id="d4s-Aa-46f"/>
                                 </constraints>
                                 <shadow key="shadow" blurRadius="2">
+                                    <size key="offset" width="1" height="1"/>
                                     <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="Igg-L1-cQ2">
@@ -1019,6 +1030,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="yoX-2H-eYO"/>
                                 </constraints>
                                 <shadow key="shadow" blurRadius="2">
+                                    <size key="offset" width="1" height="1"/>
                                     <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="Oq2-xd-yus">
@@ -1036,6 +1048,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="q0i-79-1p5"/>
                                 </constraints>
                                 <shadow key="shadow" blurRadius="2">
+                                    <size key="offset" width="1" height="1"/>
                                     <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
                                 </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="mP9-dk-3Kr">
@@ -1078,7 +1091,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="currentTime" destination="DxX-Of-1BO" id="t1x-xR-33H"/>
+                        <outlet property="endOpText" destination="tnx-jl-Qqx" id="p1U-YX-cfV"/>
+                        <outlet property="isNextDayText" destination="770-eN-D89" id="lSo-iy-lcj"/>
+                        <outlet property="lineAndDestSelector" destination="FIw-Bu-ew4" id="you-Ii-Fb8"/>
                         <outlet property="mapView" destination="vZo-LZ-6Xc" id="Kek-q8-oGc"/>
+                        <outlet property="startOpText" destination="I2V-LC-Srp" id="WcJ-4E-pPI"/>
                         <outlet property="stripeA" destination="gbm-a0-KQC" id="GYb-Fv-Lsl"/>
                         <outlet property="stripeB" destination="HMo-LQ-Aqj" id="CHk-Bf-xtU"/>
                         <outlet property="stripeC" destination="vwd-KW-D0X" id="f8g-3H-rNR"/>
@@ -1138,6 +1156,9 @@
                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8xX-96-Ax8">
                                                                                     <rect key="frame" x="3" y="0.0" width="17" height="17"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                    <shadow key="shadow" blurRadius="2">
+                                                                                        <color key="color" red="1" green="1" blue="1" alpha="0.80591823630136983" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                                    </shadow>
                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSAddTemplate" id="uNP-We-ARy"/>
                                                                                 </imageView>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-rv-YGV">
