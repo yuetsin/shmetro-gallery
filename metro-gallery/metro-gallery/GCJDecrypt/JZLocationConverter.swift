@@ -8,6 +8,7 @@
 
 import CoreLocation
 import Foundation
+
 extension CLLocationCoordinate2D {
     struct JZConstant {
         static let A = 6378245.0
