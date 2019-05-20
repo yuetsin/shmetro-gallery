@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import FlexibleImage
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -20,6 +21,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 print("JZLocationConverter loaded")
             }
         }
+        
+//        playGround()
+        OfflineStationManager.initStationData()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -28,6 +32,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
         return true
+    }
+    
+    fileprivate func playGround() {
+        
     }
 }
 

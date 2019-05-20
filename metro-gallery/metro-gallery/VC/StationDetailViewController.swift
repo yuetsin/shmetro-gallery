@@ -22,7 +22,7 @@ class StationDetailViewController: NSViewController {
     @IBOutlet weak var stripeC: NSTextField!
     @IBOutlet weak var stripeD: NSTextField!
     
-    var station: Station?
+    var stations: [Station] = []
     
     var stationIdStr: String = ""
     
@@ -32,21 +32,24 @@ class StationDetailViewController: NSViewController {
     }
     
     func loadDetail() {
-        InitStationData(simpleStation: SimpleStation(StationKeyStr: stationIdStr,
+        initStationData(simpleStation: SimpleStation(StationKeyStr: stationIdStr,
                                                      StationName: stationName),
                         stationDetailCompletion: { station in
                             if station != nil {
-                                self.station = station
+                                self.stations.append(station!)
                                 self.flushUIElement(NSButton())
                             }
         })
     }
     
     @IBAction func flushUIElement(_ sender: NSButton) {
-        if (station != nil) {
-            stationNameEn = station?.stationNameEn ?? ""
+        if (stations.count == 0) {
+            return
         }
-        let coordinate = CLLocationCoordinate2D(latitude: (station?.stationPosition.0)!, longitude: (station?.stationPosition.1)!)
+        
+        stationNameEn = stations[0].stationNameEn
+        
+        let coordinate = CLLocationCoordinate2D(latitude: (stations[0].stationPosition.0), longitude: (stations[0].stationPosition.1))
         
         JZLocationConverter.default.bd09ToGcj02(coordinate, result: setAnnotation(_:))
         
@@ -61,16 +64,16 @@ class StationDetailViewController: NSViewController {
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(
             MapAnnotation(myCoordinate: gcj2Point,
-                          station!.stationName,
-                          station!.stationNameEn))
+                          stations[0].stationName,
+                          stations[0].stationNameEn))
     }
     
     func drawLineColor() {
-        let lines = station?.stationOfLinesId
+        let lines = stations[0].stationOfLinesId
         var colors: [NSColor] = []
         
         for metroLine in ViewController.metroLines {
-            if lines!.contains(metroLine.lineId) {
+            if lines.contains(metroLine.lineId) {
                 colors.append(metroLine.primaryColor)
             }
         }

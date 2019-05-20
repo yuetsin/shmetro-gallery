@@ -32,6 +32,8 @@
 		8AC85C6F2283DA5D00F9C6B7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */; };
 		8AE1B328228D320E00AF9D0F /* JZLocationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1B327228D320E00AF9D0F /* JZLocationConverter.swift */; };
 		8AE1B32A228D323400AF9D0F /* JZAreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1B329228D323400AF9D0F /* JZAreaManager.swift */; };
+		8AE695C822926B3E001F9944 /* offline-data in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE695C722926B3E001F9944 /* offline-data */; };
+		8AE695CB2292715A001F9944 /* OfflineStationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE695CA2292715A001F9944 /* OfflineStationManager.swift */; };
 		8AE6FEF0228C189000EFB94C /* SimpleStation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6FEEF228C189000EFB94C /* SimpleStation.swift */; };
 		8AE6FEF3228C389E00EFB94C /* StationDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE6FEF2228C389E00EFB94C /* StationDetailViewController.swift */; };
 		8AF09692228D34E800E9441A /* GCJ02.json in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE1B32D228D341900AF9D0F /* GCJ02.json */; };
@@ -46,6 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
+				8AE695C822926B3E001F9944 /* offline-data in CopyFiles */,
 				8AF09692228D34E800E9441A /* GCJ02.json in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +88,8 @@
 		8AE1B327228D320E00AF9D0F /* JZLocationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JZLocationConverter.swift; sourceTree = "<group>"; };
 		8AE1B329228D323400AF9D0F /* JZAreaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JZAreaManager.swift; sourceTree = "<group>"; };
 		8AE1B32D228D341900AF9D0F /* GCJ02.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = GCJ02.json; path = "metro-gallery/GCJDecrypt/GCJ02.json"; sourceTree = "<group>"; };
+		8AE695C722926B3E001F9944 /* offline-data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "offline-data"; path = "../offline-data"; sourceTree = "<group>"; };
+		8AE695CA2292715A001F9944 /* OfflineStationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineStationManager.swift; sourceTree = "<group>"; };
 		8AE6FEEF228C189000EFB94C /* SimpleStation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleStation.swift; sourceTree = "<group>"; };
 		8AE6FEF2228C389E00EFB94C /* StationDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		8AFF38C7228B0CDB001322AF /* SpriteGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpriteGenerator.swift; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 		8A7952362282780B007DD187 = {
 			isa = PBXGroup;
 			children = (
+				8AE695C722926B3E001F9944 /* offline-data */,
 				8AE1B32D228D341900AF9D0F /* GCJ02.json */,
 				8A7952412282780B007DD187 /* metro-gallery */,
 				8A7952402282780B007DD187 /* Products */,
@@ -192,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				8A79525F22827FBE007DD187 /* SuperManager.swift */,
+				8AE695CA2292715A001F9944 /* OfflineStationManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -398,6 +405,7 @@
 				8A830895228C0A6D003AD1BE /* RawStationDataInit.swift in Sources */,
 				8A404749228C541200D3B5E9 /* MapAnnotation.swift in Sources */,
 				8A40474B228CFA4B00D3B5E9 /* StationTimeTableInit.swift in Sources */,
+				8AE695CB2292715A001F9944 /* OfflineStationManager.swift in Sources */,
 				8A79526022827FBE007DD187 /* SuperManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

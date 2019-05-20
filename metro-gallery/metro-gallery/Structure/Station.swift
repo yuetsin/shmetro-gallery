@@ -10,6 +10,10 @@ import Foundation
 
 class Station {
     
+    init() {
+        
+    }
+    
     init(StationKeyStr: String, StationName: String) {
         stationKeyStr = StationKeyStr
         stationName = StationName

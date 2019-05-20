@@ -11,8 +11,7 @@ import SwiftyJSON
 import Foundation
 
 
-
-func InitStationData(simpleStation: SimpleStation, stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
+func initStationData(simpleStation: SimpleStation, stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
     if SuperManager.requestMode == .online {
         onlineInitData(simpleStation, stationDetailCompletion)
     } else {
@@ -59,6 +58,39 @@ fileprivate func onlineInitData(_ simpleStation: SimpleStation, _ stationDetailC
     })
 }
 
-fileprivate func offlineInitData(_ simpleStation: SimpleStation, _ stationCompletion: @escaping (Station?) -> Void) -> Void {
+fileprivate func offlineInitData(_ simpleStation: SimpleStation, _ stationDetailCompletion: @escaping (Station?) -> Void) -> Void {
+    
+    let station: Station = Station()
+    
+    let stationJson = OfflineStationManager.getStationById("\(simpleStation.stationKeyInt)")
+    
+    station.stationName = stationJson["name_cn"].stringValue
+    station.stationNameEn = stationJson["name_en"].stringValue
+    station.stationCode = stationJson["station_code"].stringValue
+    
+    station.stationOfLinesId.removeAll()
+    for id in stationJson["lines"].stringValue.components(separatedBy: CharacterSet(charactersIn: ",，")) {
+        let stationInt = Int(id)
+        if stationInt != nil {
+            station.stationOfLinesId.append(stationInt!)
+        } else {
+            stationDetailCompletion(nil)
+            return
+        }
+    }
+    
+    station.stationPosition = (stationJson["latitude"].doubleValue, stationJson["longitude"].doubleValue)
+    
+    station.toiletInStation = stationJson["toilet_inside"].boolValue
+    station.toiletPosition = stationJson["toilet_position"].stringValue
+    station.toiletPositionEn = stationJson["toilet_position_en"].stringValue
+    
+    station.entranceInfo = stationJson["entrance_info"].stringValue
+    station.entranceInfoEn = stationJson["entrance_info_en"].stringValue
+    
+    station.elevatorInfo = stationJson["elevator"].stringValue
+    station.elevatorInfoEn = stationJson["elevator_en"].stringValue
+    
+    stationDetailCompletion(station)
     return
 }
