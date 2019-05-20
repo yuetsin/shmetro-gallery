@@ -984,6 +984,9 @@
                                     <constraint firstAttribute="width" constant="8" id="JPF-uy-6RL"/>
                                     <constraint firstAttribute="height" constant="8" id="PFT-vz-oiB"/>
                                 </constraints>
+                                <shadow key="shadow" blurRadius="2">
+                                    <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="dqL-YT-091">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -998,6 +1001,9 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="8" id="bA6-dl-fYc"/>
                                     <constraint firstAttribute="width" constant="8" id="d4s-Aa-46f"/>
                                 </constraints>
+                                <shadow key="shadow" blurRadius="2">
+                                    <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="Igg-L1-cQ2">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
@@ -1012,6 +1018,9 @@
                                     <constraint firstAttribute="width" constant="8" id="nUa-3F-Zgz"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="yoX-2H-eYO"/>
                                 </constraints>
+                                <shadow key="shadow" blurRadius="2">
+                                    <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="Oq2-xd-yus">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1026,6 +1035,9 @@
                                     <constraint firstAttribute="height" constant="8" id="F2J-Mq-VJN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="q0i-79-1p5"/>
                                 </constraints>
+                                <shadow key="shadow" blurRadius="2">
+                                    <color key="color" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                </shadow>
                                 <textFieldCell key="cell" lineBreakMode="clipping" drawsBackground="YES" id="mP9-dk-3Kr">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
