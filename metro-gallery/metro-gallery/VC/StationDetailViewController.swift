@@ -16,6 +16,12 @@ class StationDetailViewController: NSViewController {
     @objc dynamic var stationName: String = "$STATION_NAME$"
     @objc dynamic var stationNameEn: String = "$STATION_NAME_EN$"
     
+    @objc dynamic var startTime: String = ""
+    @objc dynamic var endTime: String = ""
+    @objc dynamic var currentTime: String = ""
+    @objc dynamic var isTomorrow: Bool = false
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var stripeA: NSTextField!
@@ -25,7 +31,7 @@ class StationDetailViewController: NSViewController {
     
     
     @IBOutlet weak var startOpText: NSTextField!
-    @IBOutlet weak var currentTime: NSTextField!
+    @IBOutlet weak var currentTimeText: NSTextField!
     @IBOutlet weak var endOpText: NSTextField!
     @IBOutlet weak var isNextDayText: NSTextField!
     
@@ -36,7 +42,15 @@ class StationDetailViewController: NSViewController {
     }
     
     @IBAction func timeTableOptionSelected(_ sender: NSPopUpButton) {
+        if timetables.count == 0 {
+            return
+        }
         
+        let timePiece = timetables[timetableStrings.firstIndex(of: sender.titleOfSelectedItem ?? "") ?? 0]
+        
+        startTime = timePiece.dictionary?["first_time"]?.stringValue ?? "??:??"
+        endTime = timePiece.dictionary?["last_time"]?.stringValue ?? "??:??"
+        isTomorrow = !endTime.starts(with: "0")
     }
     
     var stations: [Station] = []
@@ -95,6 +109,7 @@ class StationDetailViewController: NSViewController {
             timetableStrings.removeAll()
             loadDetail()
         }
+        timeTableOptionSelected(NSPopUpButton())
     }
     
     @IBAction func flushUIElement(_ sender: NSButton) {

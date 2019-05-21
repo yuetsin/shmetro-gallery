@@ -33,6 +33,9 @@ class TimeTableManager {
                     let stationTimeTableBlocks = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                     let timeTableJson = try! JSON(data: stationTimeTableBlocks)
                     for timeItem in timeTableJson.array! {
+                        if timeItem.dictionary?["first_time"]?.stringValue.count ?? 0 < 5 || timeItem.dictionary?["last_time"]?.stringValue.count ?? 0 < 5 {
+                            continue
+                        }
                         stationTimeTable.append(timeItem)
                     }
                 } catch {

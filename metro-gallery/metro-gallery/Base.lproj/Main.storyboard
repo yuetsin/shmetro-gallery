@@ -789,6 +789,9 @@
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="yiy-3l-Ikz" name="value" keyPath="startTime" id="WSC-f3-ElQ"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-jl-Qqx">
                                                                 <rect key="frame" x="313" y="60" width="100" height="44"/>
@@ -797,6 +800,9 @@
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="yiy-3l-Ikz" name="value" keyPath="endTime" id="glv-UC-HxQ"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DxX-Of-1BO">
                                                                 <rect key="frame" x="183" y="60" width="65" height="29"/>
@@ -813,6 +819,9 @@
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
+                                                                <connections>
+                                                                    <binding destination="yiy-3l-Ikz" name="hidden" keyPath="isTomorrow" id="YLW-eB-IGo"/>
+                                                                </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-UA-eeT">
                                                                 <rect key="frame" x="18" y="41" width="58" height="17"/>
@@ -1091,7 +1100,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="currentTime" destination="DxX-Of-1BO" id="t1x-xR-33H"/>
+                        <outlet property="currentTimeText" destination="DxX-Of-1BO" id="t1x-xR-33H"/>
                         <outlet property="endOpText" destination="tnx-jl-Qqx" id="p1U-YX-cfV"/>
                         <outlet property="isNextDayText" destination="770-eN-D89" id="lSo-iy-lcj"/>
                         <outlet property="lineAndDestSelector" destination="FIw-Bu-ew4" id="you-Ii-Fb8"/>
@@ -1105,6 +1114,7 @@
                 </viewController>
                 <customObject id="8W6-m0-efP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="LRj-d4-RIu"/>
+                <userDefaultsController id="yvv-co-zRF"/>
             </objects>
             <point key="canvasLocation" x="765.5" y="884.5"/>
         </scene>

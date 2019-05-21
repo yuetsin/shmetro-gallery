@@ -592,7 +592,7 @@
         "stat_id": "248",
         "name": "东昌路",
         "station_code": "2-DCL",
-        "first_time": " ",
+        "first_time": "",
         "first_time_desc": "",
         "last_time": "23:25",
         "last_time_desc": "{\"weekday\":[0,0,0,0,0,70,70],\"dateday\":[{\"date\":\"12-31\",\"adjust\":\"+70\"},{\"date\":\"01-26\",\"adjust\":\"+70\"},{\"date\":\"04-30\",\"adjust\":\"+70\"},{\"date\":\"09-30\",\"adjust\":\"+70\"}]}",

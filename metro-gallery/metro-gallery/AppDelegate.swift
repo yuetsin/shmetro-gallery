@@ -21,14 +21,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 print("JZLocationConverter loaded")
             }
         }
-        
-        OfflineStationManager.initStationData()
-        TimeTableManager.initTimeTableData()
-        EnglishStationNameManager.initStationNameMapping()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        NSLog("Bye")
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

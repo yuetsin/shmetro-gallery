@@ -30,6 +30,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        globalInit()
+        
         outlineView.target = self
         outlineView.delegate = self
         outlineView.dataSource = self
@@ -111,7 +113,7 @@ class ViewController: NSViewController {
             //            let application = NSApplication.shared
             //            application.runModal(for: poemDetailWindow)
             //            poemDetailWindow.close()
-            StationWindow.title = "“\(selStation.stationName)”站点信息"
+            StationWindow.title = "\(selStation.stationName)"
             SDVC.showWindow(nil)
         }
     }
@@ -188,7 +190,7 @@ extension ViewController: NSOutlineViewDelegate {
         
         // 2
         let image: NSImage? = drawIconByColor(item!.primaryColor)
-        text = item?.lineDisplayName() ?? "未知"
+        text = item?.lineDisplayName() ?? " --- "
 
         // 3
         if let cell = outlineView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: CellIdentifiers.ImgCell), owner: self) as? NSTableCellView {
@@ -265,7 +267,11 @@ extension ViewController: NSTableViewDelegate {
         
         // 2
         if tableColumn == tableView.tableColumns[0] {
-            text = item.stationName 
+            if SuperManager.UILanguage == .chinese {
+                text = item.stationName
+            } else {
+                text = item.stationNameEn
+            }
             cellIdentifier = StationCellIdentifiers.StationNameCell
         } else if tableColumn == tableView.tableColumns[1] {
             image = accessibilityIcon

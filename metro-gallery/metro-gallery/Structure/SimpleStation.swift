@@ -15,6 +15,11 @@ class SimpleStation {
         stationKeyStr = StationKeyStr
         stationName = StationName
         stationKeyInt = Int(stationKeyStr) ?? -1
+        stationNameEn = EnglishStationNameManager.getEnglishStationName(chineseName: stationName)
+        
+        if stationNameEn == "" {
+            NSLog("Failed to translate chinese station name", stationName)
+        }
     }
     
     var stationKeyStr: String = ""
@@ -25,4 +30,7 @@ class SimpleStation {
     
     var stationName: String = ""
     // Chinese Station Name
+    
+    var stationNameEn: String = ""
+    // English Station Name
 }

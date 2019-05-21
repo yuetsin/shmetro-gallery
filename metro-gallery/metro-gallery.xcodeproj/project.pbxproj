@@ -12,6 +12,7 @@
 		8A40474B228CFA4B00D3B5E9 /* StationTimeTableInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40474A228CFA4B00D3B5E9 /* StationTimeTableInit.swift */; };
 		8A40474D228CFAB500D3B5E9 /* TimeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A40474C228CFAB500D3B5E9 /* TimeTable.swift */; };
 		8A49F6C72293D76300749356 /* EnglishStationNameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49F6C62293D76300749356 /* EnglishStationNameManager.swift */; };
+		8A49F6C92293DFA500749356 /* GlobalInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A49F6C82293DFA500749356 /* GlobalInitializer.swift */; };
 		8A565AF6228C01B8004F417F /* Icons in Resources */ = {isa = PBXBuildFile; fileRef = 8A565AF5228C01B8004F417F /* Icons */; };
 		8A7952432282780B007DD187 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7952422282780B007DD187 /* AppDelegate.swift */; };
 		8A7952452282780B007DD187 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7952442282780B007DD187 /* MainViewController.swift */; };
@@ -65,6 +66,7 @@
 		8A40474A228CFA4B00D3B5E9 /* StationTimeTableInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationTimeTableInit.swift; sourceTree = "<group>"; };
 		8A40474C228CFAB500D3B5E9 /* TimeTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTable.swift; sourceTree = "<group>"; };
 		8A49F6C62293D76300749356 /* EnglishStationNameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnglishStationNameManager.swift; sourceTree = "<group>"; };
+		8A49F6C82293DFA500749356 /* GlobalInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalInitializer.swift; sourceTree = "<group>"; };
 		8A565AF5228C01B8004F417F /* Icons */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Icons; sourceTree = "<group>"; };
 		8A79523F2282780B007DD187 /* metro-gallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "metro-gallery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A7952422282780B007DD187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				8A79D3FC228BC03300AE59E7 /* StationDataInit.swift */,
 				8A830894228C0A6D003AD1BE /* RawStationDataInit.swift */,
 				8A40474A228CFA4B00D3B5E9 /* StationTimeTableInit.swift */,
+				8A49F6C82293DFA500749356 /* GlobalInitializer.swift */,
 			);
 			path = Init;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				8A830895228C0A6D003AD1BE /* RawStationDataInit.swift in Sources */,
 				8A404749228C541200D3B5E9 /* MapAnnotation.swift in Sources */,
 				8A40474B228CFA4B00D3B5E9 /* StationTimeTableInit.swift in Sources */,
+				8A49F6C92293DFA500749356 /* GlobalInitializer.swift in Sources */,
 				8AE695CB2292715A001F9944 /* OfflineStationManager.swift in Sources */,
 				8A79526022827FBE007DD187 /* SuperManager.swift in Sources */,
 			);

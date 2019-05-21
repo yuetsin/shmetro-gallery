@@ -26,6 +26,6 @@ class EnglishStationNameManager {
     }
     
     static func getEnglishStationName(chineseName name: String) -> String {
-        return EnglishStationNameManager.stationNameMapper.dictionary![name]!.stringValue
+        return EnglishStationNameManager.stationNameMapper.dictionary![name]?.stringValue ?? ""
     }
 }
