@@ -62,7 +62,7 @@ func generateSelectTime(_ lineId: Int, _ destination: String, _ language: Langua
         }
         
         if englishStationName != "" {
-            resultStr += ", Bound for “" + englishStationName + "“"
+            resultStr += ", Bound for \"\(englishStationName)\""
         }
         
         return "\(generateDisplayName(lineId, language))\(resultStr)"
