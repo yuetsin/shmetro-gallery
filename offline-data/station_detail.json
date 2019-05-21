@@ -8885,7 +8885,7 @@
     {
         "stat_id": "4104",
         "name_cn": "浦航路",
-        "name_en": "PuhangRoad",
+        "name_en": "Puhang Road",
         "pinyin": "phl",
         "station_code": "10000000000-PHL",
         "lines": "41",
@@ -8906,7 +8906,7 @@
     {
         "stat_id": "4105",
         "name_cn": "东城一路",
-        "name_en": "DongchengyiRoad",
+        "name_en": "Dongchengyi Road",
         "pinyin": "dcyl",
         "station_code": "10000000000-DCYL",
         "lines": "41",
@@ -8927,7 +8927,7 @@
     {
         "stat_id": "4106",
         "name_cn": "汇臻路",
-        "name_en": "HuizhenRoad",
+        "name_en": "Huizhen Road",
         "pinyin": "hzl",
         "station_code": "10000000000-HZL",
         "lines": "41",
