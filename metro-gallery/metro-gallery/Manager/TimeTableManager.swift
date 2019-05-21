@@ -15,7 +15,7 @@ class TimeTableManager {
     
     static var stationTimeTable: [JSON] = []
     
-    static let lineCode: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "16", "41"]
+    static let lineCode: [String] = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "16", "17", "41"]
     
     static func initTimeTableData() {
         if let path = Bundle.main.path(forResource: "offline-data/station_timetable", ofType: "json") {
