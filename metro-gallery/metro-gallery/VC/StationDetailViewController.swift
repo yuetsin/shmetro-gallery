@@ -21,7 +21,6 @@ class StationDetailViewController: NSViewController {
     @objc dynamic var currentTime: String = ""
     @objc dynamic var isTomorrow: Bool = false
     
-    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var stripeA: NSTextField!
@@ -48,8 +47,10 @@ class StationDetailViewController: NSViewController {
         
         let timePiece = timetables[timetableStrings.firstIndex(of: sender.titleOfSelectedItem ?? "") ?? 0]
         
-        startTime = timePiece.dictionary?["first_time"]?.stringValue ?? "??:??"
-        endTime = timePiece.dictionary?["last_time"]?.stringValue ?? "??:??"
+        startTime = (timePiece.dictionary?["first_time"]?.stringValue ?? "??:??")
+            .replacingOccurrences(of: " ", with: "")
+        endTime = (timePiece.dictionary?["last_time"]?.stringValue ?? "??:??")
+            .replacingOccurrences(of: " ", with: "")
         isTomorrow = !endTime.starts(with: "0")
     }
     
@@ -117,7 +118,12 @@ class StationDetailViewController: NSViewController {
             return
         }
         
-        stationNameEn = stations[0].stationNameEn
+        if SuperManager.UILanguage == .chinese {
+            stationNameEn = stations[0].stationNameEn
+        } else {
+            stationNameEn = stationName
+            stationName = stations[0].stationNameEn
+        }
         
         let coordinate = CLLocationCoordinate2D(latitude: (stations[0].stationPosition.0), longitude: (stations[0].stationPosition.1))
         
