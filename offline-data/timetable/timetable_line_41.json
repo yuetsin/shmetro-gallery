@@ -9,7 +9,7 @@
         "last_time": "22:30",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往汇臻路",
+        "description": "往汇臻路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -23,7 +23,7 @@
         "last_time": "22:21",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往沈杜公路",
+        "description": "往沈杜公路方向",
         "firstarrival_time": 1,
         "lastarrival_time": 1
     },
@@ -37,7 +37,7 @@
         "last_time": "22:33",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往汇臻路",
+        "description": "往汇臻路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -51,7 +51,7 @@
         "last_time": "22:18",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往沈杜公路",
+        "description": "往沈杜公路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -65,7 +65,7 @@
         "last_time": "22:35",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往汇臻路",
+        "description": "往汇臻路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -79,7 +79,7 @@
         "last_time": "22:16",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往沈杜公路",
+        "description": "往沈杜公路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -93,7 +93,7 @@
         "last_time": "22:37",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往汇臻路",
+        "description": "往汇臻路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -107,7 +107,7 @@
         "last_time": "22:14",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往沈杜公路",
+        "description": "往沈杜公路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -121,7 +121,7 @@
         "last_time": "22:39",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往汇臻路",
+        "description": "往汇臻路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -135,7 +135,7 @@
         "last_time": "22:12",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往沈杜公路",
+        "description": "往沈杜公路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -149,7 +149,7 @@
         "last_time": "22:42",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往汇臻路",
+        "description": "往汇臻路方向",
         "firstarrival_time": 1,
         "lastarrival_time": 1
     },
@@ -163,7 +163,7 @@
         "last_time": "22:10",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往沈杜公路",
+        "description": "往沈杜公路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     }

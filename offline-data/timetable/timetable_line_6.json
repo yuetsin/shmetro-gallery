@@ -2,28 +2,28 @@
     {
         "line": 6,
         "stat_id": "621",
-        "name": "东方体育中心",
+        "name": "东方体育中心方向",
         "station_code": "4A0-DFTYZX",
         "first_time": "06:34",
         "first_time_desc": "",
         "last_time": "23:34",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 1,
         "lastarrival_time": 1
     },
     {
         "line": 6,
         "stat_id": "621",
-        "name": "东方体育中心",
+        "name": "东方体育中心方向",
         "station_code": "4A0-DFTYZX",
         "first_time": "05:30",
         "first_time_desc": "",
         "last_time": "22:30",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -37,7 +37,7 @@
         "last_time": "23:32",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -51,7 +51,7 @@
         "last_time": "22:32",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -65,7 +65,7 @@
         "last_time": "23:30",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -79,7 +79,7 @@
         "last_time": "22:34",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -93,7 +93,7 @@
         "last_time": "23:28",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -107,7 +107,7 @@
         "last_time": "22:36",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -121,7 +121,7 @@
         "last_time": "23:26",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -135,7 +135,7 @@
         "last_time": "22:39",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -149,7 +149,7 @@
         "last_time": "23:23",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -163,7 +163,7 @@
         "last_time": "22:41",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -177,7 +177,7 @@
         "last_time": "23:21",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -191,7 +191,7 @@
         "last_time": "22:44",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -205,7 +205,7 @@
         "last_time": "23:18",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -219,7 +219,7 @@
         "last_time": "22:46",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -233,7 +233,7 @@
         "last_time": "23:16",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -247,7 +247,7 @@
         "last_time": "22:49",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -261,7 +261,7 @@
         "last_time": "23:13",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -275,7 +275,7 @@
         "last_time": "22:52",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -289,7 +289,7 @@
         "last_time": "23:11",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -303,7 +303,7 @@
         "last_time": "22:54",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -317,7 +317,7 @@
         "last_time": "23:08",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -331,7 +331,7 @@
         "last_time": "22:57",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -345,7 +345,7 @@
         "last_time": "23:06",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -359,7 +359,7 @@
         "last_time": "22:59",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -373,7 +373,7 @@
         "last_time": "23:03",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -387,7 +387,7 @@
         "last_time": "23:01",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -401,7 +401,7 @@
         "last_time": "23:01",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -415,7 +415,7 @@
         "last_time": "23:03",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -429,7 +429,7 @@
         "last_time": "22:59",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -443,7 +443,7 @@
         "last_time": "23:06",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -457,7 +457,7 @@
         "last_time": "22:56",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -471,7 +471,7 @@
         "last_time": "23:08",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -485,7 +485,7 @@
         "last_time": "22:54",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -499,7 +499,7 @@
         "last_time": "23:11",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -513,7 +513,7 @@
         "last_time": "22:52",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -527,7 +527,7 @@
         "last_time": "23:13",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -541,7 +541,7 @@
         "last_time": "22:49",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -555,7 +555,7 @@
         "last_time": "23:15",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -569,7 +569,7 @@
         "last_time": "22:47",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -583,7 +583,7 @@
         "last_time": "23:17",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -597,7 +597,7 @@
         "last_time": "22:45",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -611,7 +611,7 @@
         "last_time": "23:20",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -625,7 +625,7 @@
         "last_time": "22:43",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -639,7 +639,7 @@
         "last_time": "23:22",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -653,7 +653,7 @@
         "last_time": "22:41",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -667,7 +667,7 @@
         "last_time": "23:24",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -681,7 +681,7 @@
         "last_time": "22:38",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -695,7 +695,7 @@
         "last_time": "23:27",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -709,7 +709,7 @@
         "last_time": "22:35",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -723,7 +723,7 @@
         "last_time": "23:30",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -737,7 +737,7 @@
         "last_time": "22:32",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -751,35 +751,35 @@
         "last_time": "23:32",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
     {
         "line": 6,
         "stat_id": "648",
-        "name": "港城路",
+        "name": "港城路方向",
         "station_code": "20-GCL",
         "first_time": "05:30",
         "first_time_desc": "",
         "last_time": "22:30",
         "last_time_desc": "",
         "direction": 1,
-        "description": "往东方体育中心",
+        "description": "往东方体育中心方向",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
     {
         "line": 6,
         "stat_id": "648",
-        "name": "港城路",
+        "name": "港城路方向",
         "station_code": "20-GCL",
         "first_time": "06:35",
         "first_time_desc": "",
         "last_time": "23:35",
         "last_time_desc": "",
         "direction": -1,
-        "description": "往港城路",
+        "description": "往港城路方向",
         "firstarrival_time": 1,
         "lastarrival_time": 1
     }

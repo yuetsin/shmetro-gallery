@@ -9,7 +9,7 @@
         "last_time": "22:27",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -23,7 +23,7 @@
         "last_time": "21:32",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -37,7 +37,7 @@
         "last_time": "23:27",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -51,7 +51,7 @@
         "last_time": "22:32",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -65,7 +65,7 @@
         "last_time": "21:30",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -79,7 +79,7 @@
         "last_time": "21:30",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -93,7 +93,7 @@
         "last_time": "22:30",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -107,7 +107,7 @@
         "last_time": "22:30",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -121,7 +121,7 @@
         "last_time": "21:32",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -135,7 +135,7 @@
         "last_time": "22:26",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -149,7 +149,7 @@
         "last_time": "22:32",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -163,7 +163,7 @@
         "last_time": "23:26",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -177,7 +177,7 @@
         "last_time": "21:35",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -191,7 +191,7 @@
         "last_time": "22:24",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -205,7 +205,7 @@
         "last_time": "22:35",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -219,7 +219,7 @@
         "last_time": "23:24",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -230,10 +230,10 @@
         "station_code": "E-ZSGY",
         "first_time": "05:37",
         "first_time_desc": "",
-        "last_time": " \t21:37",
+        "last_time": " 21:37",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -247,7 +247,7 @@
         "last_time": "22:22",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -261,7 +261,7 @@
         "last_time": "22:37",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -275,7 +275,7 @@
         "last_time": "23:22",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -289,7 +289,7 @@
         "last_time": "21:39",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -303,7 +303,7 @@
         "last_time": "22:19",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -317,7 +317,7 @@
         "last_time": "22:39",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -331,7 +331,7 @@
         "last_time": "23:19",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -345,7 +345,7 @@
         "last_time": "21:41",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -359,7 +359,7 @@
         "last_time": "22:18",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -373,7 +373,7 @@
         "last_time": "22:41",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -387,7 +387,7 @@
         "last_time": "23:18",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -401,7 +401,7 @@
         "last_time": "21:44",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -415,7 +415,7 @@
         "last_time": "22:15",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -429,7 +429,7 @@
         "last_time": "22:44",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -443,7 +443,7 @@
         "last_time": "23:15",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -457,7 +457,7 @@
         "last_time": "21:46",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -471,7 +471,7 @@
         "last_time": "22:13",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -485,7 +485,7 @@
         "last_time": "22:46",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -499,7 +499,7 @@
         "last_time": "23:13",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -513,7 +513,7 @@
         "last_time": "21:49",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -527,7 +527,7 @@
         "last_time": "22:10",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -541,7 +541,7 @@
         "last_time": "22:49",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -555,7 +555,7 @@
         "last_time": "23:10",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -569,7 +569,7 @@
         "last_time": " \t21:52",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -583,7 +583,7 @@
         "last_time": "22:07",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -597,7 +597,7 @@
         "last_time": "22:52",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -611,7 +611,7 @@
         "last_time": "23:07",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -625,7 +625,7 @@
         "last_time": "21:55",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -639,7 +639,7 @@
         "last_time": "22:04",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -653,7 +653,7 @@
         "last_time": "22:55",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -667,7 +667,7 @@
         "last_time": "23:04",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -681,7 +681,7 @@
         "last_time": "21:57",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -695,7 +695,7 @@
         "last_time": "22:02",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -709,7 +709,7 @@
         "last_time": "22:57",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -723,7 +723,7 @@
         "last_time": "23:02",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -737,7 +737,7 @@
         "last_time": "21:59",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -751,7 +751,7 @@
         "last_time": "22:00",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -765,7 +765,7 @@
         "last_time": "22:59",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -779,7 +779,7 @@
         "last_time": "23:00",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -793,7 +793,7 @@
         "last_time": "22:01",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -807,7 +807,7 @@
         "last_time": "21:58",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -821,7 +821,7 @@
         "last_time": "23:01",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -835,7 +835,7 @@
         "last_time": "22:58",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -849,7 +849,7 @@
         "last_time": "22:03",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -863,7 +863,7 @@
         "last_time": "21:56",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -877,7 +877,7 @@
         "last_time": "23:03",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -891,7 +891,7 @@
         "last_time": "22:56",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -905,7 +905,7 @@
         "last_time": "22:05",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -919,7 +919,7 @@
         "last_time": "21:53",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -933,7 +933,7 @@
         "last_time": "23:05",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -947,7 +947,7 @@
         "last_time": "22:53",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -961,7 +961,7 @@
         "last_time": "22:07",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -975,7 +975,7 @@
         "last_time": "21:51",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -989,7 +989,7 @@
         "last_time": "23:07",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1003,7 +1003,7 @@
         "last_time": "22:51",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1017,7 +1017,7 @@
         "last_time": "22:10",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1031,7 +1031,7 @@
         "last_time": "21:49",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1045,7 +1045,7 @@
         "last_time": "23:10",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1059,7 +1059,7 @@
         "last_time": "22:49",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1073,7 +1073,7 @@
         "last_time": "22:12",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1087,7 +1087,7 @@
         "last_time": "21:47",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1101,7 +1101,7 @@
         "last_time": "23:12",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1115,7 +1115,7 @@
         "last_time": "22:47",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1129,7 +1129,7 @@
         "last_time": "22:15",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1143,7 +1143,7 @@
         "last_time": "21:44",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1157,7 +1157,7 @@
         "last_time": "23:15",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1171,7 +1171,7 @@
         "last_time": "22:44",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1185,7 +1185,7 @@
         "last_time": "22:17",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1199,7 +1199,7 @@
         "last_time": "21:42",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1213,7 +1213,7 @@
         "last_time": "23:17",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1227,7 +1227,7 @@
         "last_time": "22:42",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1241,7 +1241,7 @@
         "last_time": "22:19",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1255,7 +1255,7 @@
         "last_time": "21:39",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1269,7 +1269,7 @@
         "last_time": "23:19",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1283,7 +1283,7 @@
         "last_time": "22:39",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1297,7 +1297,7 @@
         "last_time": "22:21",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1311,7 +1311,7 @@
         "last_time": "21:37",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1325,7 +1325,7 @@
         "last_time": "23:21",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1339,7 +1339,7 @@
         "last_time": "22:37",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1353,7 +1353,7 @@
         "last_time": "22:23",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1367,7 +1367,7 @@
         "last_time": "21:36",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1381,7 +1381,7 @@
         "last_time": "23:23",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1395,7 +1395,7 @@
         "last_time": "22:36",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1409,7 +1409,7 @@
         "last_time": "22:25",
         "last_time_desc": "",
         "direction": 1,
-        "description": "全程（内）",
+        "description": "内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1423,7 +1423,7 @@
         "last_time": "21:34",
         "last_time_desc": "",
         "direction": -1,
-        "description": "全程（外）",
+        "description": "外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1437,7 +1437,7 @@
         "last_time": "23:25",
         "last_time_desc": "",
         "direction": 1,
-        "description": "终点：宜山路（内）",
+        "description": "往宜山路方向，内环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     },
@@ -1451,7 +1451,7 @@
         "last_time": "22:34",
         "last_time_desc": "",
         "direction": -1,
-        "description": "终点：宜山路（外）",
+        "description": "往宜山路方向，外环",
         "firstarrival_time": 0,
         "lastarrival_time": 0
     }
