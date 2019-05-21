@@ -33,4 +33,6 @@ func setPreferences() {
     let defaults = UserDefaults.standard
     defaults.set(language.rawValue, forKey: preferenceKeys.languageKey)
     defaults.set(useAccessibility, forKey: preferenceKeys.useAccessibilityKey)
+    
+    Bundle.setLanguage(languageId: SuperManager.UILanguage.rawValue)
 }

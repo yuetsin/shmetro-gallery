@@ -35,6 +35,7 @@
 		8AC70CFE22941224008CC02B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70CFD22941224008CC02B /* PreferencesViewController.swift */; };
 		8AC70D0022941323008CC02B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70CFF22941323008CC02B /* MainWindowController.swift */; };
 		8AC70D0322941CF2008CC02B /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70D0222941CF2008CC02B /* UDManager.swift */; };
+		8AC70D072294246B008CC02B /* LocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70D062294246B008CC02B /* LocalizationUtil.swift */; };
 		8AC85C6B2283DA5600F9C6B7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */; };
 		8AC85C6F2283DA5D00F9C6B7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */; };
 		8AE1B328228D320E00AF9D0F /* JZLocationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1B327228D320E00AF9D0F /* JZLocationConverter.swift */; };
@@ -79,7 +80,6 @@
 		8A7952422282780B007DD187 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A7952442282780B007DD187 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		8A79524622827810007DD187 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A79524922827810007DD187 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A79524B22827810007DD187 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8A795253228279C9007DD187 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		8A79525522827ACF007DD187 /* Station.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Station.swift; sourceTree = "<group>"; };
@@ -97,6 +97,9 @@
 		8AC70CFD22941224008CC02B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		8AC70CFF22941323008CC02B /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		8AC70D0222941CF2008CC02B /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
+		8AC70D062294246B008CC02B /* LocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUtil.swift; sourceTree = "<group>"; };
+		8AC70D0822942746008CC02B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		8AC70D0922942746008CC02B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,6 +173,7 @@
 		8A7952412282780B007DD187 /* metro-gallery */ = {
 			isa = PBXGroup;
 			children = (
+				8AC70D0522942460008CC02B /* Localization */,
 				8AC70D0122941CE5008CC02B /* UserDefaults */,
 				8AE1B326228D320000AF9D0F /* GCJDecrypt */,
 				8AE6FEF1228C387A00EFB94C /* VC */,
@@ -249,6 +253,14 @@
 				8AC70D0222941CF2008CC02B /* UDManager.swift */,
 			);
 			path = UserDefaults;
+			sourceTree = "<group>";
+		};
+		8AC70D0522942460008CC02B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				8AC70D062294246B008CC02B /* LocalizationUtil.swift */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		8AE1B326228D320000AF9D0F /* GCJDecrypt */ = {
@@ -332,7 +344,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
+				"zh-Hans",
 			);
 			mainGroup = 8A7952362282780B007DD187;
 			productRefGroup = 8A7952402282780B007DD187 /* Products */;
@@ -438,6 +450,7 @@
 				8A964D6B2283C3C400786F65 /* Api.swift in Sources */,
 				8A49F6C72293D76300749356 /* EnglishStationNameManager.swift in Sources */,
 				8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */,
+				8AC70D072294246B008CC02B /* LocalizationUtil.swift in Sources */,
 				8A40474D228CFAB500D3B5E9 /* TimeTable.swift in Sources */,
 				8A49F6CB2293EC1600749356 /* GetLineTextColor.swift in Sources */,
 				8A830895228C0A6D003AD1BE /* RawStationDataInit.swift in Sources */,
@@ -456,7 +469,8 @@
 		8A79524822827810007DD187 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8A79524922827810007DD187 /* Base */,
+				8AC70D0822942746008CC02B /* zh-Hans */,
+				8AC70D0922942746008CC02B /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -468,6 +482,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -516,7 +531,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -530,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -572,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

@@ -770,7 +770,7 @@
                                             <rect key="frame" x="10" y="33" width="447" height="270"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <box title="列车时刻表" translatesAutoresizingMaskIntoConstraints="NO" id="kCr-bJ-lVQ">
+                                                <box title="首末班车时间" translatesAutoresizingMaskIntoConstraints="NO" id="kCr-bJ-lVQ">
                                                     <rect key="frame" x="5" y="128" width="437" height="142"/>
                                                     <view key="contentView" id="qb1-JB-IXR">
                                                         <rect key="frame" x="3" y="3" width="431" height="124"/>
@@ -783,7 +783,7 @@
                                                                     <font key="font" metaFont="cellTitle"/>
                                                                     <menu key="menu" id="cXp-1o-c4g">
                                                                         <items>
-                                                                            <menuItem title="Item 1" state="on" id="TOs-Px-zdu"/>
+                                                                            <menuItem title="Item 1" id="TOs-Px-zdu"/>
                                                                             <menuItem title="Item 2" id="sD2-Pg-0Tq"/>
                                                                             <menuItem title="Item 3" id="Gdc-sc-deJ"/>
                                                                         </items>
@@ -827,16 +827,16 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-UA-eeT">
-                                                                <rect key="frame" x="18" y="41" width="58" height="17"/>
-                                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="运营开始" id="pUM-wK-CYU">
+                                                                <rect key="frame" x="18" y="41" width="44" height="17"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="首班车" id="pUM-wK-CYU">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gpo-6o-lqw">
-                                                                <rect key="frame" x="355" y="41" width="58" height="17"/>
-                                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="运营结束" id="npg-DJ-OQn">
+                                                                <rect key="frame" x="369" y="41" width="44" height="17"/>
+                                                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="末班车" id="npg-DJ-OQn">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -871,7 +871,7 @@
                                                         <constraint firstAttribute="height" constant="138" id="Yw3-vf-u8U"/>
                                                     </constraints>
                                                 </box>
-                                                <box title="站内设施" translatesAutoresizingMaskIntoConstraints="NO" id="PZk-S3-rzo">
+                                                <box title="车站设施" translatesAutoresizingMaskIntoConstraints="NO" id="PZk-S3-rzo">
                                                     <rect key="frame" x="5" y="4" width="437" height="120"/>
                                                     <view key="contentView" id="slV-Lk-OaR">
                                                         <rect key="frame" x="3" y="3" width="431" height="102"/>
@@ -904,7 +904,7 @@
                                                                             <rect key="frame" x="-1" y="-1" width="89" height="18"/>
                                                                             <buttonCell key="cell" type="radio" title="无障碍电梯" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="Yha-AZ-Yro">
                                                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                                                <font key="font" metaFont="system"/>
+                                                                                <font key="font" usesAppearanceFont="YES"/>
                                                                             </buttonCell>
                                                                             <connections>
                                                                                 <action selector="capabilitiesSelected:" target="yiy-3l-Ikz" id="0Ct-f1-GFZ"/>
@@ -1139,12 +1139,12 @@
             <objects>
                 <viewController storyboardIdentifier="PreferenceVC" id="lVT-9p-FhB" customClass="PreferencesViewController" customModule="metro_gallery" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Eul-nr-Pvf" customClass="NSVisualEffectView">
-                        <rect key="frame" x="0.0" y="0.0" width="655" height="208"/>
+                        <rect key="frame" x="0.0" y="0.0" width="737" height="208"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-4U-1eQ">
-                                <rect key="frame" x="118" y="83" width="115" height="18"/>
-                                <buttonCell key="cell" type="check" title="不使用颜色区分" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ybf-Yx-Xm6">
+                                <rect key="frame" x="118" y="83" width="129" height="18"/>
+                                <buttonCell key="cell" type="check" title="不使用颜色来区分" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ybf-Yx-Xm6">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -1154,12 +1154,12 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fZY-FX-Eyk">
-                                <rect key="frame" x="139" y="49" width="510" height="28"/>
+                                <rect key="frame" x="139" y="49" width="592" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="35N-aZ-zmN"/>
                                 </constraints>
-                                <textFieldCell key="cell" alignment="left" title="开启此项开关后，线路标识色将不会被绘制或绘制为灰度颜色。额外的符号将被绘制以区分不同线路。" id="1Kp-5Q-gIz">
-                                    <font key="font" metaFont="system" size="11"/>
+                                <textFieldCell key="cell" alignment="left" title="打开此开关后，将不绘制标识色来区分地铁线路。将绘制辅助符号来标记线路。" id="1Kp-5Q-gIz">
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1209,7 +1209,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="ooX-TS-RX7"/>
                                 </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="显示语言：" id="sB5-0g-qee">
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="界面语言：" id="sB5-0g-qee">
                                     <font key="font" metaFont="systemMedium" size="13"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1228,15 +1228,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-e6-ZDd">
-                                <rect key="frame" x="139" y="109" width="218" height="14"/>
-                                <textFieldCell key="cell" alignment="left" title="部分界面元素的语言设定需要重启后生效。" id="Eg8-Uc-ZIA">
-                                    <font key="font" metaFont="system" size="11"/>
+                                <rect key="frame" x="139" y="109" width="189" height="14"/>
+                                <textFieldCell key="cell" alignment="left" title="需要重新启动 App 来应用此项设置。" id="Eg8-Uc-ZIA">
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BP6-Qi-hV2">
-                                <rect key="frame" x="282" y="163" width="92" height="25"/>
+                                <rect key="frame" x="323" y="163" width="92" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="偏好设定" id="ihN-Eo-3Qz">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1244,8 +1244,8 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gLS-54-aiY">
-                                <rect key="frame" x="587" y="5" width="54" height="32"/>
-                                <buttonCell key="cell" type="push" title="好" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i08-Ec-lFl">
+                                <rect key="frame" x="664" y="5" width="59" height="32"/>
+                                <buttonCell key="cell" type="push" title="OK" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="i08-Ec-lFl">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -1257,9 +1257,9 @@ DQ
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-RO-z9V">
-                                <rect key="frame" x="110" y="32" width="435" height="14"/>
+                                <rect key="frame" x="151" y="32" width="435" height="14"/>
                                 <textFieldCell key="cell" alignment="center" title="Copyright © 2008 - 2019 上海申通地铁集团有限公司 版权所有 All Rights Reserved." id="r39-nv-wDy">
-                                    <font key="font" metaFont="system" size="11"/>
+                                    <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1407,7 +1407,7 @@ DQ
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
                                                                 <tableColumn width="479" minWidth="40" maxWidth="1000" id="4OG-Tl-jdB">
-                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="站名">
+                                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Station Name">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
