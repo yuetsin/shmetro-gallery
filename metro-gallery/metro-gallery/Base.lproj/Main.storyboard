@@ -766,7 +766,7 @@
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FIw-Bu-ew4">
-                                                                <rect key="frame" x="178" y="17" width="77" height="25"/>
+                                                                <rect key="frame" x="178" y="13" width="77" height="25"/>
                                                                 <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="TOs-Px-zdu" id="IdQ-hX-1my">
                                                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="menu"/>
@@ -861,7 +861,7 @@
                                                             <constraint firstItem="EPg-UA-eeT" firstAttribute="top" secondItem="1cQ-gv-Wgz" secondAttribute="bottom" constant="2" id="pBa-dO-N6D"/>
                                                             <constraint firstAttribute="trailing" secondItem="1cQ-gv-Wgz" secondAttribute="trailing" constant="20" id="r4I-MP-IPn"/>
                                                             <constraint firstItem="I2V-LC-Srp" firstAttribute="top" secondItem="qb1-JB-IXR" secondAttribute="top" constant="20" id="rAh-SO-CZ1"/>
-                                                            <constraint firstAttribute="bottom" secondItem="FIw-Bu-ew4" secondAttribute="bottom" constant="20" id="sdk-cu-NjE"/>
+                                                            <constraint firstAttribute="bottom" secondItem="FIw-Bu-ew4" secondAttribute="bottom" constant="16" id="sdk-cu-NjE"/>
                                                             <constraint firstItem="DxX-Of-1BO" firstAttribute="bottom" secondItem="I2V-LC-Srp" secondAttribute="bottom" id="shA-bA-ySK"/>
                                                             <constraint firstItem="tnx-jl-Qqx" firstAttribute="leading" secondItem="770-eN-D89" secondAttribute="trailing" constant="5" id="t0W-Hy-gJW"/>
                                                             <constraint firstItem="gpo-6o-lqw" firstAttribute="top" secondItem="tnx-jl-Qqx" secondAttribute="bottom" constant="2" id="waK-hw-4Ag"/>
