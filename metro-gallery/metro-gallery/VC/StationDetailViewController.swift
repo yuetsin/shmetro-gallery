@@ -136,6 +136,10 @@ class StationDetailViewController: NSViewController {
         let region = MKCoordinateRegion(center: gcj2Point,
                                         latitudinalMeters: CLLocationDistance(defaultScaleMeters),
                                         longitudinalMeters: CLLocationDistance(defaultScaleMeters))
+        
+        mapView.showsScale = false
+        mapView.showsCompass = true
+        mapView.showsPointsOfInterest = true
         mapView.setRegion(region, animated: true)
         mapView.removeAnnotations(mapView.annotations)
         mapView.addAnnotation(
@@ -147,10 +151,12 @@ class StationDetailViewController: NSViewController {
     func drawLineColor() {
         let lines = stations[0].stationOfLinesId
         var colors: [NSColor] = []
+        var textColors: [NSColor] = []
         
         for metroLine in ViewController.metroLines {
             if lines.contains(metroLine.lineId) {
                 colors.append(metroLine.primaryColor)
+                textColors.append(getLineTextColor(metroLine.lineId))
             }
         }
         
@@ -169,6 +175,29 @@ class StationDetailViewController: NSViewController {
                      stripeC.backgroundColor = colors[2]
                     if colorsCount > 3 {
                          stripeD.backgroundColor = colors[3]
+                    }
+                }
+            }
+        }
+        
+        if SuperManager.acessibilityMode {
+            if colorsCount > 0 {
+                stripeA.stringValue = getMinorIconText(lines[0])
+                stripeA.textColor = textColors[0]
+                stripeA.sizeToFit()
+                if colorsCount > 1 {
+                    stripeB.stringValue = getMinorIconText(lines[1])
+                    stripeB.textColor = textColors[1]
+                    stripeB.sizeToFit()
+                    if colorsCount > 2 {
+                        stripeC.stringValue = getMinorIconText(lines[2])
+                        stripeC.textColor = textColors[2]
+                        stripeC.sizeToFit()
+                        if colorsCount > 3 {
+                            stripeD.stringValue = getMinorIconText(lines[3])
+                            stripeD.textColor = textColors[3]
+                            stripeD.sizeToFit()
+                        }
                     }
                 }
             }

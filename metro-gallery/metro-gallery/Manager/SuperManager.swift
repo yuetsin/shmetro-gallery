@@ -9,8 +9,10 @@
 import Foundation
 
 class SuperManager {
-    static var UILanguage: Language = .english
+    static var UILanguage: Language = .chinese
     static var requestMode: ReqMode = .offline
+    
+    static var acessibilityMode: Bool = true
     
     static var Lines: [Line] = []
     static var Stations: [Line] = []

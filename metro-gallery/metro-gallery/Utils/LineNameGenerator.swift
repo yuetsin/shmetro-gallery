@@ -27,7 +27,8 @@ func generateDisplayName(_ lineId: Int, _ language: Language = SuperManager.UILa
 
 func generateSelectTime(_ lineId: Int, _ destination: String, _ language: Language = SuperManager.UILanguage) -> String {
     if language == .chinese {
-        return "\(generateDisplayName(lineId, language))，\(destination)"
+        let cleanDestination = destination.replacingOccurrences(of: "往", with: "往「").replacingOccurrences(of: "方向", with: "」方向")
+        return "\(generateDisplayName(lineId, language))，\(cleanDestination)"
     } else {
         var ringInfo = ""
         
@@ -61,7 +62,7 @@ func generateSelectTime(_ lineId: Int, _ destination: String, _ language: Langua
         }
         
         if englishStationName != "" {
-            resultStr += ", Bound for " + englishStationName
+            resultStr += ", Bound for “" + englishStationName + "“"
         }
         
         return "\(generateDisplayName(lineId, language))\(resultStr)"
