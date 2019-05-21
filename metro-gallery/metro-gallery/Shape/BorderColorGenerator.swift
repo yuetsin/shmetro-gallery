@@ -10,6 +10,12 @@ import Foundation
 import Cocoa
 
 func getBorderColor(_ color: NSColor) -> NSColor {
+    
+    if SuperManager.acessibilityMode {
+        let averageFactor = (color.redComponent + color.greenComponent + color.blueComponent) / 3.0
+        return NSColor(calibratedWhite: averageFactor, alpha: 1.0)
+    }
+    
     return NSColor(calibratedRed: pow(color.redComponent, 2.0),
                    green: pow(color.greenComponent, 2.0),
                    blue: pow(color.blueComponent, 2.0),

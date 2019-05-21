@@ -11,7 +11,9 @@ import Foundation
 import FlexibleImage
 
 func drawIconByColor(_ color: NSColor) -> NSImage? {
-
+    if SuperManager.acessibilityMode {
+        return nil
+    }
     return NSImage.circle(
         color: NSColor.blue,
         size: CGSize(width: 100, height: 100)

@@ -51,6 +51,24 @@ class StationDetailViewController: NSViewController {
             .replacingOccurrences(of: " ", with: "")
         endTime = (timePiece.dictionary?["last_time"]?.stringValue ?? "??:??")
             .replacingOccurrences(of: " ", with: "")
+        
+        if startTime.replacingOccurrences(of: " ", with: "").count == 0 {
+            if SuperManager.UILanguage == .chinese {
+                startTime = "未定"
+            } else {
+                startTime = "Uncertain"
+            }
+        }
+        
+        if endTime.replacingOccurrences(of: " ", with: "").count == 0 {
+            if SuperManager.UILanguage == .chinese {
+                endTime = "未定"
+            } else {
+                endTime = "Uncertain"
+            }
+        }
+        
+        
         isTomorrow = !endTime.starts(with: "0")
     }
     
@@ -155,7 +173,7 @@ class StationDetailViewController: NSViewController {
         
         for metroLine in ViewController.metroLines {
             if lines.contains(metroLine.lineId) {
-                colors.append(metroLine.primaryColor)
+                colors.append(getBorderColor(metroLine.primaryColor))
                 textColors.append(getLineTextColor(metroLine.lineId))
             }
         }
