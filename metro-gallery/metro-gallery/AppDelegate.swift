@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         OfflineStationManager.initStationData()
         TimeTableManager.initTimeTableData()
+        EnglishStationNameManager.initStationNameMapping()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

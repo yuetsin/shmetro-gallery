@@ -9,7 +9,7 @@
 import Foundation
 
 class SuperManager {
-    static var UILanguage: Language = .chinese
+    static var UILanguage: Language = .english
     static var requestMode: ReqMode = .offline
     
     static var Lines: [Line] = []
