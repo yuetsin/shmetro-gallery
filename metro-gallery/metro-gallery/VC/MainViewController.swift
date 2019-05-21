@@ -113,7 +113,12 @@ class ViewController: NSViewController {
             //            let application = NSApplication.shared
             //            application.runModal(for: poemDetailWindow)
             //            poemDetailWindow.close()
-            StationWindow.title = "\(selStation.stationName)"
+            
+            if (SuperManager.UILanguage == .chinese) {
+                StationWindow.title = "「\(selStation.stationName)」站点信息"
+            } else {
+                StationWindow.title = "\(selStation.stationNameEn) Info"
+            }
             SDVC.showWindow(nil)
         }
     }
