@@ -32,6 +32,7 @@
 		8A830897228C0A7E003AD1BE /* Uri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A830896228C0A7E003AD1BE /* Uri.swift */; };
 		8A964D6B2283C3C400786F65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A964D6A2283C3C400786F65 /* Api.swift */; };
 		8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBF416228B078E00FEF3EF /* NSColorParser.m */; };
+		8ABFDD1A22943E8C00C9F12C /* UILanguageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */; };
 		8AC70CFE22941224008CC02B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70CFD22941224008CC02B /* PreferencesViewController.swift */; };
 		8AC70D0022941323008CC02B /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70CFF22941323008CC02B /* MainWindowController.swift */; };
 		8AC70D0322941CF2008CC02B /* UDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70D0222941CF2008CC02B /* UDManager.swift */; };
@@ -94,6 +95,7 @@
 		8A964D6A2283C3C400786F65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "metro-gallery-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ABBF416228B078E00FEF3EF /* NSColorParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSColorParser.m; path = "metro-gallery/Utils/NSColorParser.m"; sourceTree = SOURCE_ROOT; };
+		8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILanguageInit.swift; sourceTree = "<group>"; };
 		8AC70CFD22941224008CC02B /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		8AC70CFF22941323008CC02B /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		8AC70D0222941CF2008CC02B /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				8A830894228C0A6D003AD1BE /* RawStationDataInit.swift */,
 				8A40474A228CFA4B00D3B5E9 /* StationTimeTableInit.swift */,
 				8A49F6C82293DFA500749356 /* GlobalInitializer.swift */,
+				8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */,
 			);
 			path = Init;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-metro-gallery/Pods-metro-gallery-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/FlexibleImage/FlexibleImage.framework",
+				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftHEXColors/SwiftHEXColors.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -412,6 +416,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FlexibleImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftHEXColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -430,6 +435,7 @@
 				8A79D3FD228BC03300AE59E7 /* StationDataInit.swift in Sources */,
 				8AE1B328228D320E00AF9D0F /* JZLocationConverter.swift in Sources */,
 				8A79525922827C99007DD187 /* LineNameGenerator.swift in Sources */,
+				8ABFDD1A22943E8C00C9F12C /* UILanguageInit.swift in Sources */,
 				8AE6FEF0228C189000EFB94C /* SimpleStation.swift in Sources */,
 				8A795254228279C9007DD187 /* Line.swift in Sources */,
 				8AC70CFE22941224008CC02B /* PreferencesViewController.swift in Sources */,

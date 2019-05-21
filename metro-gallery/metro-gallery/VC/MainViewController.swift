@@ -19,7 +19,7 @@ class ViewController: NSViewController {
     var targetStationCount: Int = 0
     var metroStationsWithDetail: [Station] = []
     
-    @objc dynamic var finishedLoading = false
+    @objc dynamic var finishedLoading = true
     
     @IBOutlet weak var loadingRing: NSProgressIndicator!
     
@@ -44,7 +44,26 @@ class ViewController: NSViewController {
         
         tableView.doubleAction = #selector(tableViewDoubleClick(_:))
         
-        // Do any additional setup after loading the view.
+        renderUI()
+    }
+
+    override var representedObject: Any? {
+        didSet {
+            // Update the view, if already loaded.
+        }
+    }
+    
+    func forceReRender() {
+        let tempCache = ViewController.metroLines
+        ViewController.metroLines.removeAll()
+        outlineView.reloadData()
+        ViewController.metroLines = tempCache
+        outlineView.reloadData()
+        tableView.reloadData()
+    }
+    
+    func renderUI() {
+        
         InitData(lineCompletion: { lines in
             ViewController.metroLines = lines
             self.outlineView.reloadData()
@@ -58,32 +77,26 @@ class ViewController: NSViewController {
                 })
             }
             /*
-            self.targetStationCount = self.metroStations.count
-            for station in self.metroStations {
-                
-                InitStationData(station: station, stationDetailCompletion: { statDetail in
-                    if statDetail != nil {
-                        self.metroStationsWithDetail.append(statDetail!)
-                    }
-                    self.visitedStationCount += 1
-                    self.loadingRing.doubleValue = Double(self.visitedStationCount) / Double(self.targetStationCount) * self.loadingRing.maxValue
-//                    NSLog("And here we are \(self.loadingRing.doubleValue)")
-                    if self.targetStationCount == self.visitedStationCount {
-                        self.finishedLoading = true
-                        self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: 0), byExtendingSelection: false)
-                    }
-                })
-            }
-            */
+             self.targetStationCount = self.metroStations.count
+             for station in self.metroStations {
+             
+             InitStationData(station: station, stationDetailCompletion: { statDetail in
+             if statDetail != nil {
+             self.metroStationsWithDetail.append(statDetail!)
+             }
+             self.visitedStationCount += 1
+             self.loadingRing.doubleValue = Double(self.visitedStationCount) / Double(self.targetStationCount) * self.loadingRing.maxValue
+             //                    NSLog("And here we are \(self.loadingRing.doubleValue)")
+             if self.targetStationCount == self.visitedStationCount {
+             self.finishedLoading = true
+             self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: 0), byExtendingSelection: false)
+             }
+             })
+             }
+             */
             
-            self.finishedLoading = true
+            //            self.finishedLoading = true
         })
-    }
-
-    override var representedObject: Any? {
-        didSet {
-            // Update the view, if already loaded.
-        }
     }
     
     func updateStatus() {

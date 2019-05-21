@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Localize_Swift
 
 class PreferencesViewController: NSViewController {
 
@@ -26,7 +27,7 @@ class PreferencesViewController: NSViewController {
     
     @IBAction func closePrefWindow(_ sender: NSButton) {
         setPreferences()
-        self.view.window?.close()
+        self.view.window?.sheetParent?.endSheet(self.view.window!)
     }
     
     @IBAction func languageSwitched(_ sender: NSButtonCell) {
@@ -63,5 +64,6 @@ class PreferencesViewController: NSViewController {
 //        SuperManager.requestMode = alwaysAccessOnlineData == .on ? .online : .offline
         
         setPreferences()
+        initUILanguage()
     }
 }

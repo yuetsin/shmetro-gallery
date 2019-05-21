@@ -9,6 +9,7 @@
 import Cocoa
 import MapKit
 import SwiftyJSON
+import Localize_Swift
 
 class StationDetailViewController: NSViewController {
 

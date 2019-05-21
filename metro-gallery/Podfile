@@ -10,4 +10,5 @@ target 'metro-gallery' do
   pod 'SwiftyJSON'
   pod 'SwiftHEXColors'
   pod 'FlexibleImage', '~> 1.9'
+  pod 'Localize-Swift', '~> 2.0'
 end

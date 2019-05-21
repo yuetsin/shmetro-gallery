@@ -794,7 +794,7 @@
                                                                 </connections>
                                                             </popUpButton>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I2V-LC-Srp">
-                                                                <rect key="frame" x="18" y="60" width="100" height="44"/>
+                                                                <rect key="frame" x="18" y="60" width="102" height="44"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="06:05" id="GJs-wU-gQa">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -805,7 +805,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-jl-Qqx">
-                                                                <rect key="frame" x="313" y="60" width="100" height="44"/>
+                                                                <rect key="frame" x="311" y="60" width="102" height="44"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="00:03" id="WE6-xu-qZZ">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -816,7 +816,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="770-eN-D89">
-                                                                <rect key="frame" x="254" y="66" width="58" height="17"/>
+                                                                <rect key="frame" x="252" y="66" width="58" height="17"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Next day" id="FHI-Gv-PPF">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -997,7 +997,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-a0-KQC">
-                                <rect key="frame" x="260" y="333" width="8" height="8"/>
+                                <rect key="frame" x="264" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="JPF-uy-6RL"/>
                                     <constraint firstAttribute="height" constant="8" id="PFT-vz-oiB"/>
@@ -1013,7 +1013,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-LQ-Aqj">
-                                <rect key="frame" x="273" y="333" width="8" height="8"/>
+                                <rect key="frame" x="277" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="UC4-ud-QUd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="Zp9-Uw-Zz7"/>
@@ -1029,7 +1029,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vwd-KW-D0X">
-                                <rect key="frame" x="286" y="333" width="8" height="8"/>
+                                <rect key="frame" x="290" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="2SV-ow-9vl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="yoX-2H-eYO"/>
@@ -1045,7 +1045,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-W0-K8E">
-                                <rect key="frame" x="299" y="333" width="8" height="8"/>
+                                <rect key="frame" x="303" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="F2J-Mq-VJN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="q0i-79-1p5"/>
@@ -1061,7 +1061,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-Of-qmU">
-                                <rect key="frame" x="126" y="329" width="131" height="24"/>
+                                <rect key="frame" x="126" y="329" width="135" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="徐家汇Xujiahui" id="bc1-pQ-52k">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1236,7 +1236,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BP6-Qi-hV2">
-                                <rect key="frame" x="312" y="163" width="113" height="25"/>
+                                <rect key="frame" x="310" y="163" width="117" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="Preferences" id="ihN-Eo-3Qz">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>

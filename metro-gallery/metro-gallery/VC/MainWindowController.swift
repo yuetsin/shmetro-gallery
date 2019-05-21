@@ -7,6 +7,7 @@
 //
 
 import Cocoa
+import Localize_Swift
 
 class MainWindowController: NSWindowController {
 
@@ -34,7 +35,9 @@ class MainWindowController: NSWindowController {
         let windowController = storyboard.instantiateController(withIdentifier: NSStoryboard.SceneIdentifier("PreferenceWC")) as! NSWindowController
         
         if let window = windowController.window {
-            self.window?.beginSheet(window, completionHandler: nil)
+            self.window?.beginSheet(window, completionHandler: { _ in
+                (self.window?.contentViewController as! ViewController).forceReRender()
+            })
         }
     }
 }

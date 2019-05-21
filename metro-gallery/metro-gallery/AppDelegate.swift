@@ -23,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         
         initPreferences()
+        initUILanguage()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
