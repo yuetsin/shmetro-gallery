@@ -1190,7 +1190,7 @@
                                         </button>
                                     </gridCell>
                                     <gridCell row="GgT-jO-DhO" column="Vlv-Yo-E5b" id="3PT-v8-Gw1">
-                                        <button key="contentView" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dcX-5m-ejK">
+                                        <button key="contentView" verticalHuggingPriority="750" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="dcX-5m-ejK">
                                             <rect key="frame" x="80" y="-1" width="66" height="18"/>
                                             <buttonCell key="cell" type="radio" title="English" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="qlB-Ci-I2g">
                                                 <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>

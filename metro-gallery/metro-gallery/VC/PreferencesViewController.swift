@@ -15,8 +15,8 @@ class PreferencesViewController: NSViewController {
         // Do view setup here.
         displayLanguageIsChinese = SuperManager.UILanguage == .chinese ? .on : .off
         displayLanguageIsEnglish = displayLanguageIsChinese == .on ? .off : .on
-        doNotUseColorDistinguish = SuperManager.acessibilityMode ? .on : .off
         
+        doNotUseColorDistinguish = SuperManager.acessibilityMode ? .on : .off
     }
     
     @objc dynamic var displayLanguageIsChinese: NSButton.StateValue = .on
@@ -25,10 +25,19 @@ class PreferencesViewController: NSViewController {
 //    @objc dynamic var alwaysAccessOnlineData: NSButton.StateValue = .off
     
     @IBAction func closePrefWindow(_ sender: NSButton) {
+        setPreferences()
         self.view.window?.close()
     }
     
     @IBAction func languageSwitched(_ sender: NSButtonCell) {
+        
+        if sender.tag == 0 {
+            displayLanguageIsChinese = .on
+            displayLanguageIsEnglish = .off
+        } else {
+            displayLanguageIsChinese = .off
+            displayLanguageIsEnglish = .on
+        }
         updateSuperManager()
     }
     
@@ -52,6 +61,7 @@ class PreferencesViewController: NSViewController {
         SuperManager.UILanguage = displayLanguageIsChinese == .on ? .chinese : .english
         SuperManager.acessibilityMode = doNotUseColorDistinguish == .on
 //        SuperManager.requestMode = alwaysAccessOnlineData == .on ? .online : .offline
+        
+        setPreferences()
     }
-
 }

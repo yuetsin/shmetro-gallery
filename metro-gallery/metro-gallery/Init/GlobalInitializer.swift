@@ -12,4 +12,6 @@ func globalInit() {
     EnglishStationNameManager.initStationNameMapping()
     OfflineStationManager.initStationData()
     TimeTableManager.initTimeTableData()
+
+    loadPreferences()
 }

@@ -21,6 +21,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 print("JZLocationConverter loaded")
             }
         }
+        
+        initPreferences()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

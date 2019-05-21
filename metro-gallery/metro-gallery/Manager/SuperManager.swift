@@ -19,11 +19,11 @@ class SuperManager {
 }
 
 
-enum Language {
-    case chinese
+enum Language: Int {
+    case chinese = 0
     /* Simplified Chinese */
     
-    case english
+    case english = 1
     /* English */
 }
 
