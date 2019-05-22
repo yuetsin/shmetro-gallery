@@ -28,3 +28,20 @@ func drawIconByColor(_ color: NSColor) -> NSImage? {
         .background(color: NSColor.clear)
         .image()
 }
+
+
+func drawMiniIconByColor(_ color: NSColor) -> NSImage? {
+    if SuperManager.acessibilityMode {
+        return nil
+    }
+    return NSImage.rect(
+        color: NSColor.blue,
+        size: CGSize(width: 10, height: 10)
+        )!
+        .adjust()
+        .normal(color: color)
+        .image()!
+        .adjust()
+        .background(color: NSColor.clear)
+        .image()
+}

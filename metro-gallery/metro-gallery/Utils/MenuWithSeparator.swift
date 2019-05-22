@@ -18,6 +18,16 @@ class MenuWithSeparator: NSMenu {
         return super.addItem(withTitle: string, action: selector, keyEquivalent: charCode)
     }
     
+    func setItemImage(withTitle string: String, image: NSImage) {
+        for itm in self.items {
+            if itm.title == string {
+                itm.image = image
+                
+                break
+            }
+        }
+    }
+    
     override func insertItem(withTitle string: String, action selector: Selector?, keyEquivalent charCode: String, at index: Int) -> NSMenuItem {
         if string == "---TIMETABLE--ITEM--SEPARATOR---" {
             let separator = NSMenuItem.separator()

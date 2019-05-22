@@ -65,6 +65,7 @@ class ViewController: NSViewController, L11nRefreshDelegate {
         ViewController.metroLines = tempCache
         outlineView.reloadData()
         tableView.reloadData()
+        self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: 0), byExtendingSelection: false)
     }
     
     func renderUI() {

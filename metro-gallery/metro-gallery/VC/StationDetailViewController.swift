@@ -148,13 +148,16 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
     fileprivate func renderTimeTable() {
         lineAndDestSelector.removeAllItems()
 
+        var lineIds: [Int] = []
+        
         for timePiece in timetables {
             let itemTitle = generateSelectTime(timePiece["line"].intValue, timePiece["description"].stringValue)
             timetableStrings.append(itemTitle)
+            lineIds.append(timePiece["line"].intValue)
         }
 
         if timetables.count == timetableStrings.count {
-            lineAndDestSelector.addItemsWithSeparator(withTitles: timetableStrings)
+            lineAndDestSelector.addItemsWithSeparator(withTitles: timetableStrings, lineIds)
         } else {
             timetables.removeAll()
             timetableStrings.removeAll()
@@ -260,8 +263,15 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
 
 
 @objc extension NSPopUpButton {
-    func addItemsWithSeparator(withTitles items: [String]) {
+    func addItemsWithSeparator(withTitles items: [String], _ lineIds: [Int]) {
         var lastLine: String?
+        
+        if items.count != lineIds.count {
+            NSLog("items and lineIds count mismatch")
+        }
+        
+        var counter = 0
+        
         for item in items {
             if SuperManager.UILanguage == .chinese {
                 let currentLine = item.components(separatedBy: "线")[0]
@@ -294,6 +304,18 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
                     }
                 }
             }
+            
+            var drawColorSprite: NSImage?
+            for line in ViewController.metroLines {
+                if line.lineId == lineIds[counter] {
+                    drawColorSprite = drawMiniIconByColor(line.primaryColor)
+                    break
+                }
+            }
+            if drawColorSprite != nil {
+                (self.menu as! MenuWithSeparator).setItemImage(withTitle: item, image: drawColorSprite!)
+            }
+            counter += 1
         }
     }
 }
