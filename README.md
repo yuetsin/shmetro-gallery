@@ -16,4 +16,6 @@
 
 * [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON) · ![GitHub](https://img.shields.io/github/license/SwiftyJSON/SwiftyJSON.svg?style=social)
 
+* [marmelroy/Localize-Swift](https://github.com/marmelroy/Localize-Swift) · ![GitHub](https://img.shields.io/github/license/marmelroy/Localize-Swift.svg?style=social)
+
 * [JackZhouCn/JZLocationConverter-Swift](https://github.com/JackZhouCn/JZLocationConverter-Swift)
