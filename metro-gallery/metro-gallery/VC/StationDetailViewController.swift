@@ -154,7 +154,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
         }
 
         if timetables.count == timetableStrings.count {
-            lineAndDestSelector.addItems(withTitles: timetableStrings)
+            lineAndDestSelector.addItemsWithSeparator(withTitles: timetableStrings)
         } else {
             timetables.removeAll()
             timetableStrings.removeAll()
@@ -251,6 +251,46 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
                             stripeD.textColor = textColors[3]
                             stripeD.sizeToFit()
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@objc extension NSPopUpButton {
+    func addItemsWithSeparator(withTitles items: [String]) {
+        var lastLine: String?
+        for item in items {
+            if SuperManager.UILanguage == .chinese {
+                let currentLine = item.components(separatedBy: "线")[0]
+                if lastLine == nil {
+                    lastLine = currentLine
+                    self.addItem(withTitle: item)
+                } else {
+                    if lastLine == currentLine {
+                        self.addItem(withTitle: item)
+                    } else {
+                        self.addItem(withTitle: "---TIMETABLE--ITEM--SEPARATOR---")
+                        self.addItem(withTitle: item)
+                        lastLine = currentLine
+                    }
+                }
+            } else {
+                let currentLine = item.replacingOccurrences(of: " Inner Ring", with: "")
+                    .replacingOccurrences(of: " Outer Ring", with: "")
+                    .components(separatedBy: ",")[0]
+                if lastLine == nil {
+                    lastLine = currentLine
+                    self.addItem(withTitle: item)
+                } else {
+                    if lastLine == currentLine {
+                        self.addItem(withTitle: item)
+                    } else {
+                        self.addItem(withTitle: "---TIMETABLE--ITEM--SEPARATOR---")
+                        self.addItem(withTitle: item)
+                        lastLine = currentLine
                     }
                 }
             }

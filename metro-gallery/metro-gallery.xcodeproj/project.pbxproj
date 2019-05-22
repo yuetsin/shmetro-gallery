@@ -33,6 +33,7 @@
 		8A964D6B2283C3C400786F65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A964D6A2283C3C400786F65 /* Api.swift */; };
 		8A9E25582294DB7C001246A3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E25572294DB7C001246A3 /* Localizer.swift */; };
 		8A9E255B2294DC4B001246A3 /* LocalizationRefreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E255A2294DC4B001246A3 /* LocalizationRefreshDelegate.swift */; };
+		8A9E255D2294E683001246A3 /* MenuWithSeparator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E255C2294E683001246A3 /* MenuWithSeparator.swift */; };
 		8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBF416228B078E00FEF3EF /* NSColorParser.m */; };
 		8ABFDD1A22943E8C00C9F12C /* UILanguageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */; };
 		8AC70CFE22941224008CC02B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70CFD22941224008CC02B /* PreferencesViewController.swift */; };
@@ -97,6 +98,7 @@
 		8A964D6A2283C3C400786F65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		8A9E25572294DB7C001246A3 /* Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
 		8A9E255A2294DC4B001246A3 /* LocalizationRefreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRefreshDelegate.swift; sourceTree = "<group>"; };
+		8A9E255C2294E683001246A3 /* MenuWithSeparator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuWithSeparator.swift; sourceTree = "<group>"; };
 		8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "metro-gallery-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ABBF416228B078E00FEF3EF /* NSColorParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSColorParser.m; path = "metro-gallery/Utils/NSColorParser.m"; sourceTree = SOURCE_ROOT; };
 		8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILanguageInit.swift; sourceTree = "<group>"; };
@@ -221,6 +223,7 @@
 				8A79D3F5228BA8CF00AE59E7 /* Constants.swift */,
 				8A49F6CA2293EC1600749356 /* GetLineTextColor.swift */,
 				8A49F6CC2293EEDB00749356 /* GetMinorIconText.swift */,
+				8A9E255C2294E683001246A3 /* MenuWithSeparator.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */,
 				8A9E25582294DB7C001246A3 /* Localizer.swift in Sources */,
 				8A7952452282780B007DD187 /* MainViewController.swift in Sources */,
+				8A9E255D2294E683001246A3 /* MenuWithSeparator.swift in Sources */,
 				8AC70D0022941323008CC02B /* MainWindowController.swift in Sources */,
 				8A79D3F6228BA8CF00AE59E7 /* Constants.swift in Sources */,
 				8A49F6CD2293EEDB00749356 /* GetMinorIconText.swift in Sources */,

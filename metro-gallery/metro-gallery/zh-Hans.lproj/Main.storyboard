@@ -781,7 +781,7 @@
                                                                 <popUpButtonCell key="cell" type="roundRect" bezelStyle="roundedRect" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="IdQ-hX-1my">
                                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                     <font key="font" metaFont="cellTitle"/>
-                                                                    <menu key="menu" id="cXp-1o-c4g">
+                                                                    <menu key="menu" id="cXp-1o-c4g" customClass="MenuWithSeparator" customModule="metro_gallery" customModuleProvider="target">
                                                                         <items>
                                                                             <menuItem title="Item 1" id="TOs-Px-zdu"/>
                                                                             <menuItem title="Item 2" id="sD2-Pg-0Tq"/>
