@@ -783,7 +783,9 @@
                                                                     <font key="font" metaFont="cellTitle"/>
                                                                     <menu key="menu" id="cXp-1o-c4g" customClass="MenuWithSeparator" customModule="metro_gallery" customModuleProvider="target">
                                                                         <items>
-                                                                            <menuItem title="Item 1" id="TOs-Px-zdu"/>
+                                                                            <menuItem title="Item 1" id="TOs-Px-zdu">
+                                                                                <attributedString key="attributedTitle"/>
+                                                                            </menuItem>
                                                                             <menuItem title="Item 2" id="sD2-Pg-0Tq"/>
                                                                             <menuItem title="Item 3" id="Gdc-sc-deJ"/>
                                                                         </items>

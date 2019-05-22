@@ -74,7 +74,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
 
         if startTime.replacingOccurrences(of: " ", with: "").count == 0 {
             if SuperManager.UILanguage == .chinese {
-                startTime = "未定"
+                startTime = "不定"
             } else {
                 startTime = "Uncertain"
             }
@@ -82,7 +82,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
 
         if endTime.replacingOccurrences(of: " ", with: "").count == 0 {
             if SuperManager.UILanguage == .chinese {
-                endTime = "未定"
+                endTime = "不定"
             } else {
                 endTime = "Uncertain"
             }
