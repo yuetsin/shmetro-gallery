@@ -1094,15 +1094,24 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="elevatorRadioButton" destination="Lx4-Qc-RoM" id="8i2-3O-2sD"/>
                         <outlet property="endOpText" destination="tnx-jl-Qqx" id="p1U-YX-cfV"/>
+                        <outlet property="facilitiesBox" destination="PZk-S3-rzo" id="eMJ-98-lpG"/>
+                        <outlet property="firstTrainLabel" destination="EPg-UA-eeT" id="K0d-r5-DYf"/>
+                        <outlet property="generalTabItem" destination="2v8-8P-TIs" id="eJd-Kz-cCh"/>
                         <outlet property="isNextDayText" destination="770-eN-D89" id="lSo-iy-lcj"/>
+                        <outlet property="lastTrainLabel" destination="gpo-6o-lqw" id="JYf-sw-Opi"/>
                         <outlet property="lineAndDestSelector" destination="FIw-Bu-ew4" id="you-Ii-Fb8"/>
+                        <outlet property="locationTabItem" destination="cnS-gv-52W" id="DWw-1t-dLF"/>
                         <outlet property="mapView" destination="vZo-LZ-6Xc" id="Kek-q8-oGc"/>
+                        <outlet property="nextDayLabel" destination="770-eN-D89" id="eka-YY-Hbe"/>
                         <outlet property="startOpText" destination="I2V-LC-Srp" id="WcJ-4E-pPI"/>
                         <outlet property="stripeA" destination="gbm-a0-KQC" id="GYb-Fv-Lsl"/>
                         <outlet property="stripeB" destination="HMo-LQ-Aqj" id="CHk-Bf-xtU"/>
                         <outlet property="stripeC" destination="vwd-KW-D0X" id="f8g-3H-rNR"/>
                         <outlet property="stripeD" destination="F0g-W0-K8E" id="kI2-fv-2LT"/>
+                        <outlet property="timeTableBox" destination="kCr-bJ-lVQ" id="s5T-bW-L3Z"/>
+                        <outlet property="toiletRadioButton" destination="qQI-BU-QoQ" id="WSp-ii-9sd"/>
                     </connections>
                 </viewController>
                 <customObject id="8W6-m0-efP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
