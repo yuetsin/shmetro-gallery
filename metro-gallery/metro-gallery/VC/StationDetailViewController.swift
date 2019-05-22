@@ -11,9 +11,8 @@ import MapKit
 import SwiftyJSON
 import Localize_Swift
 
-class StationDetailViewController: NSViewController {
+class StationDetailViewController: NSViewController, L11nRefreshDelegate {
 
-    
     @objc dynamic var stationName: String = "$STATION_NAME$"
     @objc dynamic var stationNameEn: String = "$STATION_NAME_EN$"
     
@@ -39,6 +38,10 @@ class StationDetailViewController: NSViewController {
     
     @IBAction func capabilitiesSelected(_ sender: NSButton) {
         
+    }
+    
+    func flushUILocalization() {
+        loadDetail()
     }
     
     @IBAction func timeTableOptionSelected(_ sender: NSPopUpButton) {

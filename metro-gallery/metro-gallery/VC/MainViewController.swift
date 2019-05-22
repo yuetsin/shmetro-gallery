@@ -9,7 +9,7 @@
 import Cocoa
 import FlexibleImage
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, L11nRefreshDelegate {
     static var metroLines: [Line] = []
     var metroStations: [Station] = []
     
@@ -26,6 +26,11 @@ class ViewController: NSViewController {
     @IBOutlet var outlineView: NSOutlineView!
     @IBOutlet weak var tableView: NSTableView!
 
+    @IBOutlet weak var stationDisplayTableColumn: NSTableColumn!
+    
+    func flushUILocalization() {
+        stationDisplayTableColumn.title = genLocalizationString(zhHans: "站点名", en: "Station Name")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

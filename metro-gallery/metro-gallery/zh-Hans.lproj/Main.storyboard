@@ -794,7 +794,7 @@
                                                                 </connections>
                                                             </popUpButton>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I2V-LC-Srp">
-                                                                <rect key="frame" x="18" y="60" width="102" height="44"/>
+                                                                <rect key="frame" x="18" y="60" width="100" height="44"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="06:05" id="GJs-wU-gQa">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -805,7 +805,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-jl-Qqx">
-                                                                <rect key="frame" x="311" y="60" width="102" height="44"/>
+                                                                <rect key="frame" x="313" y="60" width="100" height="44"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="00:03" id="WE6-xu-qZZ">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -816,7 +816,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="770-eN-D89">
-                                                                <rect key="frame" x="279" y="66" width="31" height="17"/>
+                                                                <rect key="frame" x="281" y="66" width="31" height="17"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="次日" id="FHI-Gv-PPF">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -997,7 +997,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-a0-KQC">
-                                <rect key="frame" x="264" y="333" width="8" height="8"/>
+                                <rect key="frame" x="260" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="JPF-uy-6RL"/>
                                     <constraint firstAttribute="height" constant="8" id="PFT-vz-oiB"/>
@@ -1013,7 +1013,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-LQ-Aqj">
-                                <rect key="frame" x="277" y="333" width="8" height="8"/>
+                                <rect key="frame" x="273" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="UC4-ud-QUd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="Zp9-Uw-Zz7"/>
@@ -1029,7 +1029,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vwd-KW-D0X">
-                                <rect key="frame" x="290" y="333" width="8" height="8"/>
+                                <rect key="frame" x="286" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="2SV-ow-9vl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="yoX-2H-eYO"/>
@@ -1045,7 +1045,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-W0-K8E">
-                                <rect key="frame" x="303" y="333" width="8" height="8"/>
+                                <rect key="frame" x="299" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="F2J-Mq-VJN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="q0i-79-1p5"/>
@@ -1061,7 +1061,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-Of-qmU">
-                                <rect key="frame" x="126" y="329" width="135" height="24"/>
+                                <rect key="frame" x="126" y="329" width="131" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="徐家汇Xujiahui" id="bc1-pQ-52k">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1228,15 +1228,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-e6-ZDd">
-                                <rect key="frame" x="139" y="109" width="189" height="14"/>
-                                <textFieldCell key="cell" alignment="left" title="需要重新启动 App 来应用此项设置。" id="Eg8-Uc-ZIA">
+                                <rect key="frame" x="139" y="109" width="274" height="14"/>
+                                <textFieldCell key="cell" alignment="left" title="需要重新打开线路详情窗口以查看新的界面显示语言。" id="Eg8-Uc-ZIA">
                                     <font key="font" metaFont="smallSystem"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BP6-Qi-hV2">
-                                <rect key="frame" x="322" y="163" width="94" height="25"/>
+                                <rect key="frame" x="323" y="163" width="92" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="偏好设定" id="ihN-Eo-3Qz">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1287,6 +1287,16 @@ DQ
                             <constraint firstItem="b2U-yr-7iK" firstAttribute="leading" secondItem="Eul-nr-Pvf" secondAttribute="leading" id="xCP-B8-OdB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="OKButton" destination="gLS-54-aiY" id="bhp-zw-5MF"/>
+                        <outlet property="accessibilityCheckBox" destination="HzI-4U-1eQ" id="EyR-0c-PiQ"/>
+                        <outlet property="accessibilityPromptText" destination="b2U-yr-7iK" id="sZc-rj-1nn"/>
+                        <outlet property="accessibilitySecondaryText" destination="fZY-FX-Eyk" id="Sma-gu-ibN"/>
+                        <outlet property="copyrightTextField" destination="dGB-RO-z9V" id="7xJ-F8-vDM"/>
+                        <outlet property="languagePromptText" destination="eoA-Bj-2JN" id="gU6-uD-4lx"/>
+                        <outlet property="languageSecondaryText" destination="Bez-e6-ZDd" id="LwK-se-VTm"/>
+                        <outlet property="primaryTitleText" destination="BP6-Qi-hV2" id="Xpa-5r-3zI"/>
+                    </connections>
                 </viewController>
                 <customObject id="Ccu-mM-v7q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="wcx-zN-wI1"/>
@@ -1492,6 +1502,7 @@ DQ
                     <connections>
                         <outlet property="loadingRing" destination="QS8-tU-D1x" id="hIu-5H-HcQ"/>
                         <outlet property="outlineView" destination="Djq-8V-BbS" id="hcK-lv-Yvc"/>
+                        <outlet property="stationDisplayTableColumn" destination="4OG-Tl-jdB" id="0Zy-jT-2mb"/>
                         <outlet property="tableView" destination="33L-H7-YFs" id="tHl-eu-bcP"/>
                     </connections>
                 </viewController>

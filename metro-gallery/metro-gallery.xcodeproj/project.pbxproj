@@ -31,6 +31,8 @@
 		8A830895228C0A6D003AD1BE /* RawStationDataInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A830894228C0A6D003AD1BE /* RawStationDataInit.swift */; };
 		8A830897228C0A7E003AD1BE /* Uri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A830896228C0A7E003AD1BE /* Uri.swift */; };
 		8A964D6B2283C3C400786F65 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A964D6A2283C3C400786F65 /* Api.swift */; };
+		8A9E25582294DB7C001246A3 /* Localizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E25572294DB7C001246A3 /* Localizer.swift */; };
+		8A9E255B2294DC4B001246A3 /* LocalizationRefreshDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9E255A2294DC4B001246A3 /* LocalizationRefreshDelegate.swift */; };
 		8ABBF417228B078E00FEF3EF /* NSColorParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ABBF416228B078E00FEF3EF /* NSColorParser.m */; };
 		8ABFDD1A22943E8C00C9F12C /* UILanguageInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */; };
 		8AC70CFE22941224008CC02B /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70CFD22941224008CC02B /* PreferencesViewController.swift */; };
@@ -93,6 +95,8 @@
 		8A830894228C0A6D003AD1BE /* RawStationDataInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawStationDataInit.swift; sourceTree = "<group>"; };
 		8A830896228C0A7E003AD1BE /* Uri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Uri.swift; sourceTree = "<group>"; };
 		8A964D6A2283C3C400786F65 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		8A9E25572294DB7C001246A3 /* Localizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizer.swift; sourceTree = "<group>"; };
+		8A9E255A2294DC4B001246A3 /* LocalizationRefreshDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationRefreshDelegate.swift; sourceTree = "<group>"; };
 		8ABBF415228B078D00FEF3EF /* metro-gallery-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "metro-gallery-Bridging-Header.h"; sourceTree = "<group>"; };
 		8ABBF416228B078E00FEF3EF /* NSColorParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NSColorParser.m; path = "metro-gallery/Utils/NSColorParser.m"; sourceTree = SOURCE_ROOT; };
 		8ABFDD1922943E8C00C9F12C /* UILanguageInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILanguageInit.swift; sourceTree = "<group>"; };
@@ -101,7 +105,6 @@
 		8AC70D0222941CF2008CC02B /* UDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDManager.swift; sourceTree = "<group>"; };
 		8AC70D062294246B008CC02B /* LocalizationUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationUtil.swift; sourceTree = "<group>"; };
 		8AC70D0822942746008CC02B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		8AC70D0922942746008CC02B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +179,7 @@
 		8A7952412282780B007DD187 /* metro-gallery */ = {
 			isa = PBXGroup;
 			children = (
+				8A9E25592294DC3C001246A3 /* Delegate */,
 				8AC70D0522942460008CC02B /* Localization */,
 				8AC70D0122941CE5008CC02B /* UserDefaults */,
 				8AE1B326228D320000AF9D0F /* GCJDecrypt */,
@@ -250,6 +254,14 @@
 			path = Request;
 			sourceTree = "<group>";
 		};
+		8A9E25592294DC3C001246A3 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				8A9E255A2294DC4B001246A3 /* LocalizationRefreshDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		8AC70D0122941CE5008CC02B /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				8AC70D062294246B008CC02B /* LocalizationUtil.swift */,
+				8A9E25572294DB7C001246A3 /* Localizer.swift */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -346,7 +359,6 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				"zh-Hans",
 			);
 			mainGroup = 8A7952362282780B007DD187;
@@ -433,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A79D3FD228BC03300AE59E7 /* StationDataInit.swift in Sources */,
+				8A9E255B2294DC4B001246A3 /* LocalizationRefreshDelegate.swift in Sources */,
 				8AE1B328228D320E00AF9D0F /* JZLocationConverter.swift in Sources */,
 				8A79525922827C99007DD187 /* LineNameGenerator.swift in Sources */,
 				8ABFDD1A22943E8C00C9F12C /* UILanguageInit.swift in Sources */,
@@ -444,6 +457,7 @@
 				8AE6FEF3228C389E00EFB94C /* StationDetailViewController.swift in Sources */,
 				8A79D3F9228BAA0600AE59E7 /* DrawIcon.swift in Sources */,
 				8A24BDCF22828247001C7A8F /* DataInit.swift in Sources */,
+				8A9E25582294DB7C001246A3 /* Localizer.swift in Sources */,
 				8A7952452282780B007DD187 /* MainViewController.swift in Sources */,
 				8AC70D0022941323008CC02B /* MainWindowController.swift in Sources */,
 				8A79D3F6228BA8CF00AE59E7 /* Constants.swift in Sources */,
@@ -476,7 +490,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				8AC70D0822942746008CC02B /* zh-Hans */,
-				8AC70D0922942746008CC02B /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
