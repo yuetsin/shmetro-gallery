@@ -9,9 +9,10 @@
 import Foundation
 
 func globalInit() {
+    /* Loading UI Preferences. Should be done at very first time. */
+    loadPreferences()
+    
     EnglishStationNameManager.initStationNameMapping()
     OfflineStationManager.initStationData()
     TimeTableManager.initTimeTableData()
-
-    loadPreferences()
 }

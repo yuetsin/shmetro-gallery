@@ -31,6 +31,17 @@ class ViewController: NSViewController, L11nRefreshDelegate {
     func flushUILocalization() {
         stationDisplayTableColumn.title = genLocalizationString(zhHans: "站点名", en: "Station Name")
     }
+    
+    func flushOperatingStatus() {
+        OperationStatusManager.updateStatus({
+            for line in ViewController.metroLines {
+                line.operatingStatus = OperationStatusManager.getStatus(line.lineId)
+                if line.operatingStatus == .abnormal {
+                    line.operatingErrInfo = OperationStatusManager.errInfo
+                }
+            }
+        })
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

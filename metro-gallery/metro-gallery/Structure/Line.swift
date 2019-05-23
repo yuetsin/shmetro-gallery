@@ -30,4 +30,7 @@ class Line {
     func lineDisplayName() -> String {
         return generateDisplayName(self.lineId)
     }
+    
+    var operatingStatus: OperatingStatus = .unknown
+    var operatingErrInfo: String?
 }

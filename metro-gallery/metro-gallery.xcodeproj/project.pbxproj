@@ -42,6 +42,8 @@
 		8AC70D072294246B008CC02B /* LocalizationUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AC70D062294246B008CC02B /* LocalizationUtil.swift */; };
 		8AC85C6B2283DA5600F9C6B7 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */; };
 		8AC85C6F2283DA5D00F9C6B7 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */; };
+		8AD18DBA2296389800944D89 /* OperationStatusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD18DB92296389800944D89 /* OperationStatusManager.swift */; };
+		8AD18DBC2296393A00944D89 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD18DBB2296393A00944D89 /* Status.swift */; };
 		8AE1B328228D320E00AF9D0F /* JZLocationConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1B327228D320E00AF9D0F /* JZLocationConverter.swift */; };
 		8AE1B32A228D323400AF9D0F /* JZAreaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE1B329228D323400AF9D0F /* JZAreaManager.swift */; };
 		8AE695C822926B3E001F9944 /* offline-data in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8AE695C722926B3E001F9944 /* offline-data */; };
@@ -110,6 +112,8 @@
 		8AC85C6A2283DA5600F9C6B7 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6C2283DA5A00F9C6B7 /* Regex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Regex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AC85C6E2283DA5D00F9C6B7 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD18DB92296389800944D89 /* OperationStatusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationStatusManager.swift; sourceTree = "<group>"; };
+		8AD18DBB2296393A00944D89 /* Status.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		8AE1B327228D320E00AF9D0F /* JZLocationConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JZLocationConverter.swift; sourceTree = "<group>"; };
 		8AE1B329228D323400AF9D0F /* JZAreaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JZAreaManager.swift; sourceTree = "<group>"; };
 		8AE1B32D228D341900AF9D0F /* GCJ02.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = GCJ02.json; path = "metro-gallery/GCJDecrypt/GCJ02.json"; sourceTree = "<group>"; };
@@ -209,6 +213,7 @@
 				8AE6FEEF228C189000EFB94C /* SimpleStation.swift */,
 				8A404748228C541200D3B5E9 /* MapAnnotation.swift */,
 				8A40474C228CFAB500D3B5E9 /* TimeTable.swift */,
+				8AD18DBB2296393A00944D89 /* Status.swift */,
 			);
 			path = Structure;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				8AE695CC2292884E001F9944 /* TimeTableManager.swift */,
 				8AE695CA2292715A001F9944 /* OfflineStationManager.swift */,
 				8A49F6C62293D76300749356 /* EnglishStationNameManager.swift */,
+				8AD18DB92296389800944D89 /* OperationStatusManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -362,6 +368,7 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				en,
 				"zh-Hans",
 			);
 			mainGroup = 8A7952362282780B007DD187;
@@ -464,6 +471,7 @@
 				8A7952452282780B007DD187 /* MainViewController.swift in Sources */,
 				8A9E255D2294E683001246A3 /* MenuWithSeparator.swift in Sources */,
 				8AC70D0022941323008CC02B /* MainWindowController.swift in Sources */,
+				8AD18DBA2296389800944D89 /* OperationStatusManager.swift in Sources */,
 				8A79D3F6228BA8CF00AE59E7 /* Constants.swift in Sources */,
 				8A49F6CD2293EEDB00749356 /* GetMinorIconText.swift in Sources */,
 				8A79525622827ACF007DD187 /* Station.swift in Sources */,
@@ -481,6 +489,7 @@
 				8A404749228C541200D3B5E9 /* MapAnnotation.swift in Sources */,
 				8A40474B228CFA4B00D3B5E9 /* StationTimeTableInit.swift in Sources */,
 				8A49F6C92293DFA500749356 /* GlobalInitializer.swift in Sources */,
+				8AD18DBC2296393A00944D89 /* Status.swift in Sources */,
 				8AE695CB2292715A001F9944 /* OfflineStationManager.swift in Sources */,
 				8AC70D0322941CF2008CC02B /* UDManager.swift in Sources */,
 				8A79526022827FBE007DD187 /* SuperManager.swift in Sources */,
