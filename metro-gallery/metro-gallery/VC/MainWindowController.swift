@@ -55,7 +55,7 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
     func flushUILocalization() {
         prefToolBarItem.label = genLocalizationString(zhHans: "偏好设定", en: "Preferences")
         statusToolBarItem.label = genLocalizationString(zhHans: "运营情况", en: "Operating Status")
-        updateStatusToolBarItem.label = genLocalizationString(zhHans: "更新运营状态", en: "Update Status")
+        updateStatusToolBarItem.label = genLocalizationString(zhHans: "刷新运营状态", en: "Refresh Status")
         self.window?.title = genLocalizationString(zhHans: "上海轨道交通", en: "Shanghai Metro")
         (self.contentViewController as! ViewController).flushUILocalization()
     }

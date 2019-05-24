@@ -2,7 +2,7 @@
 //  Status.swift
 //  metro-gallery
 //
-//  Created by 法好 on 2019/5/23.
+//  Created by yuetsin on 2019/5/23.
 //  Copyright © 2019 yuetsin. All rights reserved.
 //
 
@@ -16,7 +16,6 @@ class Status {
     static func updateStatus(json: JSON) -> Void {
         Status.operationStatusRawJson = json
         Status.lastUpdateTime = Date.init()
-        
     }
     
     fileprivate static var lastUpdateTime: Date?
@@ -31,5 +30,9 @@ class Status {
             }
         }
         return nil
+    }
+    
+    static func markUnknown() {
+        Status.operationStatusRawJson = nil
     }
 }

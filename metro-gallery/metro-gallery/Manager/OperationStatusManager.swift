@@ -2,7 +2,7 @@
 //  OperationStatusManager.swift
 //  metro-gallery
 //
-//  Created by 法好 on 2019/5/23.
+//  Created by yuetsin on 2019/5/23.
 //  Copyright © 2019 yuetsin. All rights reserved.
 //
 
@@ -11,19 +11,21 @@ import Foundation
 import SwiftyJSON
 
 class OperationStatusManager {
-    static func updateStatus(_ completion: @escaping () -> Void) -> Void {
+    static func updateStatus(_ completion: @escaping () -> Void) {
         Alamofire.request(PostApi.getLineStatus, method: .post).response(completionHandler: { statusResp in
             if statusResp.data == nil {
 //                errHandler(statusResp.response?.statusCode)
-                return
-            }
-            do {
-                let statusJson = try JSON(data: statusResp.data!)
-                Status.updateStatus(json: statusJson)
+                Status.markUnknown()
                 completion()
-            } catch {
-                // catch exception
-                return
+            } else {
+                do {
+                    let statusJson = try JSON(data: statusResp.data!)
+                    Status.updateStatus(json: statusJson)
+                    completion()
+                } catch {
+                    Status.markUnknown()
+                    completion()
+                }
             }
         })
     }
