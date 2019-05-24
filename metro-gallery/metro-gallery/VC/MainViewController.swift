@@ -42,6 +42,7 @@ class ViewController: NSViewController, L11nRefreshDelegate {
                     line.operatingErrInfo = OperationStatusManager.errInfo
                 }
             }
+            self.updateCurrentLineOperatingStatus()
         })
     }
     
@@ -72,8 +73,8 @@ class ViewController: NSViewController, L11nRefreshDelegate {
 //        loadingRing.startAnimation(self)
         
         tableView.doubleAction = #selector(tableViewDoubleClick(_:))
-        
-        OperationStatusManager.updateStatus({})
+    
+        flushOperatingStatus()
         renderUI()
     }
 
@@ -91,6 +92,7 @@ class ViewController: NSViewController, L11nRefreshDelegate {
         outlineView.reloadData()
         tableView.reloadData()
         self.outlineView.selectRowIndexes(IndexSet(arrayLiteral: 0), byExtendingSelection: false)
+        updateCurrentLineOperatingStatus()
     }
     
     func renderUI() {
