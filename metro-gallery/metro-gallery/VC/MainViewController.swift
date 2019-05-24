@@ -13,6 +13,8 @@ class ViewController: NSViewController, L11nRefreshDelegate {
     static var metroLines: [Line] = []
     var metroStations: [Station] = []
     
+    var delegate: StatusOperatingDelegate?
+    
     var selectedStations: [SimpleStation] = []
     
     var visitedStationCount: Int = 0
@@ -42,6 +44,17 @@ class ViewController: NSViewController, L11nRefreshDelegate {
             }
         })
     }
+    
+    func updateCurrentLineOperatingStatus() {
+        let currentRowIndex = outlineView.selectedRow
+        if currentRowIndex == -1 || currentRowIndex >= ViewController.metroLines.count {
+            (self.view.window?.windowController as! MainWindowController).setStatusIcon(.unknown)
+        }
+        
+        let currentLine = ViewController.metroLines[currentRowIndex]
+        
+        self.delegate?.setStatusIcon(currentLine.operatingStatus)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,6 +73,7 @@ class ViewController: NSViewController, L11nRefreshDelegate {
         
         tableView.doubleAction = #selector(tableViewDoubleClick(_:))
         
+        OperationStatusManager.updateStatus({})
         renderUI()
     }
 
@@ -118,9 +132,8 @@ class ViewController: NSViewController, L11nRefreshDelegate {
     
     func updateStatus() {
         let lineSelected = ViewController.metroLines[outlineView.selectedRow]
-        
         selectedStations = lineSelected.stationInLines
-        
+        updateCurrentLineOperatingStatus()
         tableView.reloadData()
     }
     

@@ -11,3 +11,7 @@ import Foundation
 protocol L11nRefreshDelegate {
     func flushUILocalization() -> ()
 }
+
+protocol StatusOperatingDelegate {
+    func setStatusIcon(_: OperatingStatus) -> ()
+}

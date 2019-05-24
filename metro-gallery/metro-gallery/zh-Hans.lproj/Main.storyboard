@@ -703,10 +703,17 @@
                                         <action selector="openPreferencePanel:" target="B8D-0N-5wS" id="LQN-zx-eXH"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6EFE2C4F-8566-43CB-906C-EC55FCC30CCA" label="运营情况" paletteLabel="运营情况" tag="-1" image="NSStatusAvailable" autovalidates="NO" id="YL7-Ul-0Y8"/>
+                                <toolbarItem implicitItemIdentifier="6EFE2C4F-8566-43CB-906C-EC55FCC30CCA" label="运营情况" paletteLabel="运营情况" tag="-1" image="NSStatusNone" autovalidates="NO" id="YL7-Ul-0Y8">
+                                    <connections>
+                                        <action selector="showOpStatusItem:" target="B8D-0N-5wS" id="Fd1-bs-ken"/>
+                                    </connections>
+                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="CFE8C5C4-943D-444B-B595-2AE2EF4915BA" label="更新运营状态" paletteLabel="更新运营状态" tag="-1" image="NSInfo" autovalidates="NO" id="CVi-Bx-CgR">
                                     <size key="minSize" width="32" height="32"/>
                                     <size key="maxSize" width="32" height="32"/>
+                                    <connections>
+                                        <action selector="updateOperatingStatus:" target="B8D-0N-5wS" id="Crh-9x-JNp"/>
+                                    </connections>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
@@ -723,6 +730,8 @@
                     </window>
                     <connections>
                         <outlet property="prefToolBarItem" destination="uLK-FS-9K1" id="YEe-Qs-1Pw"/>
+                        <outlet property="statusToolBarItem" destination="YL7-Ul-0Y8" id="4wE-jA-6bv"/>
+                        <outlet property="updateStatusToolBarItem" destination="CVi-Bx-CgR" id="89z-bs-9Mi"/>
                         <outlet property="windowToolBar" destination="k7j-GG-b3Z" id="ng5-Fu-jjM"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
@@ -1527,6 +1536,6 @@ DQ
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
-        <image name="NSStatusAvailable" width="16" height="16"/>
+        <image name="NSStatusNone" width="16" height="16"/>
     </resources>
 </document>

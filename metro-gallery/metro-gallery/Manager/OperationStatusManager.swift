@@ -35,7 +35,7 @@ class OperationStatusManager {
         }
 
         let statusCode = statusJson?.dictionary!["status"]?.stringValue
-        if statusCode == "0" {
+        if statusCode == "" {
             /* 0 means normally operating */
             return .normal
         }
