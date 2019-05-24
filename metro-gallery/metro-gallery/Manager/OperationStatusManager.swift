@@ -18,7 +18,7 @@ class OperationStatusManager {
                 return
             }
             do {
-                let statusJson = try! JSON(data: statusResp.data!)
+                let statusJson = try JSON(data: statusResp.data!)
                 Status.updateStatus(json: statusJson)
                 completion()
             } catch {

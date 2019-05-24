@@ -39,7 +39,7 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
     }
     
     @IBAction func showOpStatusItem(_ sender: NSToolbarItem) {
-        
+        (self.window?.contentViewController as! ViewController).clickStatusDetail()
     }
     
     func setStatusIcon(_ stat: OperatingStatus) {
