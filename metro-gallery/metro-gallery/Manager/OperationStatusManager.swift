@@ -21,6 +21,7 @@ class OperationStatusManager {
                 do {
                     let statusJson = try JSON(data: statusResp.data!)
                     Status.updateStatus(json: statusJson)
+                    OperationStatusManager.lastUpdateTime = currentTime()
                     completion()
                 } catch {
                     Status.markUnknown()
@@ -50,6 +51,8 @@ class OperationStatusManager {
 
     static var errCode: String?
     static var errInfo: String?
+    
+    static var lastUpdateTime: String?
 }
 
 enum OperatingStatus {

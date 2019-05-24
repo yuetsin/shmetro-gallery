@@ -69,11 +69,11 @@ class ViewController: NSViewController, L11nRefreshDelegate {
         statAlert.addButton(withTitle: genLocalizationString(zhHans: "嗯", en: "OK"))
         
         if lineInfo.operatingStatus == .normal {
-            statAlert.informativeText = genLocalizationString(zhHans: "\(generateDisplayName(lineInfo.lineId))当前运行正常。", en: "\(generateDisplayName(lineInfo.lineId)) is operating normally.")
+            statAlert.informativeText = genLocalizationString(zhHans: "\(generateDisplayName(lineInfo.lineId))当前运行正常。\n\n上次更新于：\(OperationStatusManager.lastUpdateTime ?? "未知")", en: "\(generateDisplayName(lineInfo.lineId)) is operating normally.\n\nLast Update Time: \(OperationStatusManager.lastUpdateTime ?? "Unknown")")
             statAlert.alertStyle = NSAlert.Style.informational
             statAlert.icon = NSImage(named: "NSStatusAvailable")
         } else if lineInfo.operatingStatus == .abnormal {
-            statAlert.informativeText = genLocalizationString(zhHans: "\(generateDisplayName(lineInfo.lineId))当前运行不正常。\n\(lineInfo.operatingErrInfo ?? "")", en: "\(generateDisplayName(lineInfo.lineId)) is operating abnormally.")
+            statAlert.informativeText = genLocalizationString(zhHans: "\(generateDisplayName(lineInfo.lineId))当前运行不正常。\n\(lineInfo.operatingErrInfo ?? "")\n\n上次更新于：\(OperationStatusManager.lastUpdateTime ?? "未知")", en: "\(generateDisplayName(lineInfo.lineId)) is operating abnormally.\n\nLast Update Time: \(OperationStatusManager.lastUpdateTime ?? "Unknown")")
             statAlert.alertStyle = NSAlert.Style.critical
             statAlert.icon = NSImage(named: "NSStatusUnavailable")
         } else {
