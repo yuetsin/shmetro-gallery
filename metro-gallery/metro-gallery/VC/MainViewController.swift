@@ -32,6 +32,8 @@ class ViewController: NSViewController, L11nRefreshDelegate {
 
     func flushUILocalization() {
         stationDisplayTableColumn.title = genLocalizationString(zhHans: "站点名", en: "Station Name")
+        ViewController.lastQueryString = ""
+        ViewController.lastResult.removeAll()
     }
 
     func flushOperatingStatus() {
@@ -56,22 +58,75 @@ class ViewController: NSViewController, L11nRefreshDelegate {
 
         delegate?.setStatusIcon(currentLine.operatingStatus)
     }
-    
+
+    static var lastQueryString: String = ""
+    static var lastResult: [(Int, Int)] = []
+    static var lastIndex: Int = 0
+
     func searchStation(_ stationName: String) {
+        if stationName == ViewController.lastQueryString {
+            if ViewController.lastResult.count == 0 {
+                return
+            }
+            if ViewController.lastIndex == ViewController.lastResult.count - 1 {
+                ViewController.lastIndex = 0
+
+            } else {
+                ViewController.lastIndex += 1
+            }
+
+            let next = ViewController.lastResult[ViewController.lastIndex]
+            outlineView.selectRowIndexes(IndexSet(integer: next.0), byExtendingSelection: false)
+            outlineView.scrollRowToVisible(next.0)
+            tableView.selectRowIndexes(IndexSet(integer: next.1), byExtendingSelection: false)
+            tableView.scrollRowToVisible(next.1)
+            return
+        } else {
+            ViewController.lastQueryString = stationName
+            ViewController.lastResult.removeAll()
+            ViewController.lastIndex = 0
+        }
+
+        NSLog("requested searching \(stationName)")
+
+        var currentIndex = outlineView.selectedRow
+
+        if currentIndex == -1 {
+            currentIndex = 0
+        }
+
+        for line in ViewController.metroLines {
+            for station in line.stationInLines {
+                if SuperManager.UILanguage == .chinese {
+                    if station.stationName.contains(stationName) {
+                        ViewController.lastResult.append(((ViewController.metroLines.firstIndex(of: line)!), line.stationInLines.firstIndex(of: station)!))
+                    }
+                } else {
+                    if station.stationNameEn.contains(stationName) {
+                        ViewController.lastResult.append(((ViewController.metroLines.firstIndex(of: line)!), line.stationInLines.firstIndex(of: station)!))
+                    }
+                }
+            }
+        }
         
+        if ViewController.lastResult.count != 0 {
+            let next = ViewController.lastResult[ViewController.lastIndex]
+            outlineView.selectRowIndexes(IndexSet(integer: next.0), byExtendingSelection: false)
+            tableView.selectRowIndexes(IndexSet(integer: next.1), byExtendingSelection: false)
+        }
     }
-    
+
     func clickStatusDetail() {
         if outlineView.selectedRow < 0 {
             return
         }
         let lineInfo = ViewController.metroLines[outlineView.selectedRow]
-        
+
         let statAlert: NSAlert = NSAlert()
         statAlert.messageText = genLocalizationString(zhHans: "\(generateDisplayName(lineInfo.lineId))运营情况",
-            en: "\(generateDisplayName(lineInfo.lineId)) Operating Status")
+                                                      en: "\(generateDisplayName(lineInfo.lineId)) Operating Status")
         statAlert.addButton(withTitle: genLocalizationString(zhHans: "嗯", en: "OK"))
-        
+
         if lineInfo.operatingStatus == .normal {
             statAlert.informativeText = genLocalizationString(zhHans: "\(generateDisplayName(lineInfo.lineId))当前运行正常。\n\n上次更新于：\(OperationStatusManager.lastUpdateTime ?? "未知")", en: "\(generateDisplayName(lineInfo.lineId)) is operating normally.\n\nLast Update Time: \(OperationStatusManager.lastUpdateTime ?? "Unknown")")
             statAlert.alertStyle = NSAlert.Style.informational

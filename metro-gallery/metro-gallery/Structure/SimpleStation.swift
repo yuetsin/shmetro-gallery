@@ -9,7 +9,11 @@
 import Foundation
 
 
-class SimpleStation {
+class SimpleStation: Equatable {
+    static func == (lhs: SimpleStation, rhs: SimpleStation) -> Bool {
+        return lhs.stationName == rhs.stationName
+    }
+    
     
     init(StationKeyStr: String, StationName: String) {
         stationKeyStr = StationKeyStr

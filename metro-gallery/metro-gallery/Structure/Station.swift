@@ -8,7 +8,10 @@
 
 import Foundation
 
-class Station {
+class Station: Equatable {
+    static func == (lhs: Station, rhs: Station) -> Bool {
+        return lhs.stationCode == rhs.stationCode
+    }
     
     init() {
         

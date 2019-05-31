@@ -9,13 +9,19 @@
 import Cocoa
 import Foundation
 
-class Line {
+class Line: Equatable {
+    
+    static func == (lhs: Line, rhs: Line) -> Bool {
+        return lhs.lineId == rhs.lineId
+    }
+    
     
     init(LineId: Int, PrimColor: NSColor, BgColor: NSColor) {
         lineId = LineId
         primaryColor = PrimColor
         bgColor = BgColor
     }
+    
     
     var lineId: Int = -1
     // Numeric, 浦江线 referred as Line 41
