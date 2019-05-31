@@ -112,7 +112,9 @@ class ViewController: NSViewController, L11nRefreshDelegate {
         if ViewController.lastResult.count != 0 {
             let next = ViewController.lastResult[ViewController.lastIndex]
             outlineView.selectRowIndexes(IndexSet(integer: next.0), byExtendingSelection: false)
+            outlineView.scrollRowToVisible(next.0)
             tableView.selectRowIndexes(IndexSet(integer: next.1), byExtendingSelection: false)
+            tableView.scrollRowToVisible(next.1)
         }
     }
 
