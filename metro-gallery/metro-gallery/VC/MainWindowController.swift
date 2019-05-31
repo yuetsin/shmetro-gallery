@@ -20,7 +20,10 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
     
     @IBOutlet weak var windowToolBar: NSToolbar!
     @IBOutlet weak var prefToolBarItem: NSToolbarItem!
+    
+    @IBOutlet weak var statusIcon: NSButton!
     @IBOutlet weak var statusToolBarItem: NSToolbarItem!
+    @IBOutlet weak var stationSearchField: NSSearchField!
     @IBOutlet weak var updateStatusToolBarItem: NSToolbarItem!
     
     @IBAction func openPreferencePanel(_ sender: NSToolbarItem) {
@@ -34,6 +37,20 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
         }
     }
     
+    @IBAction func searchTapped(_ sender: NSSearchField) {
+        
+        let requestedString = sender.stringValue
+        
+        if requestedString != "" {
+            (self.window?.contentViewController as! ViewController).searchStation(requestedString)
+            stationSearchField.recentSearches.append(requestedString)
+        }
+    }
+    
+    @IBAction func clickedOperatingStatus(_ sender: NSButton) {
+        (self.window?.contentViewController as! ViewController).clickStatusDetail()
+    }
+    
     @IBAction func updateOperatingStatus(_ sender: NSToolbarItem) {
         (self.window?.contentViewController as! ViewController).flushOperatingStatus()
     }
@@ -44,11 +61,11 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
     
     func setStatusIcon(_ stat: OperatingStatus) {
         if stat == .normal {
-            statusToolBarItem.image = NSImage(named: "NSStatusAvailable")
+            statusIcon.image = NSImage(named: "NSStatusAvailable")
         } else if stat == .abnormal {
-            statusToolBarItem.image = NSImage(named: "NSStatusUnavailable")
+            statusIcon.image = NSImage(named: "NSStatusUnavailable")
         } else {
-            statusToolBarItem.image = NSImage(named: "NSStatusNone")
+            statusIcon.image = NSImage(named: "NSStatusNone")
         }
     }
     
@@ -56,6 +73,7 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
         prefToolBarItem.label = genLocalizationString(zhHans: "偏好设定", en: "Preferences")
         statusToolBarItem.label = genLocalizationString(zhHans: "运营情况", en: "Operating Status")
         updateStatusToolBarItem.label = genLocalizationString(zhHans: "刷新运营状态", en: "Refresh Status")
+        stationSearchField.placeholderString = genLocalizationString(zhHans: "站点名称", en: "Station Name")
         self.window?.title = genLocalizationString(zhHans: "上海轨道交通", en: "Shanghai Metro")
         (self.contentViewController as! ViewController).flushUILocalization()
     }

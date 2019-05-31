@@ -56,7 +56,11 @@ class ViewController: NSViewController, L11nRefreshDelegate {
 
         delegate?.setStatusIcon(currentLine.operatingStatus)
     }
-
+    
+    func searchStation(_ stationName: String) {
+        
+    }
+    
     func clickStatusDetail() {
         if outlineView.selectedRow < 0 {
             return
