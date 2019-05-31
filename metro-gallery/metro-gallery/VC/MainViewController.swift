@@ -102,7 +102,7 @@ class ViewController: NSViewController, L11nRefreshDelegate {
                         ViewController.lastResult.append(((ViewController.metroLines.firstIndex(of: line)!), line.stationInLines.firstIndex(of: station)!))
                     }
                 } else {
-                    if station.stationNameEn.contains(stationName) {
+                    if station.stationNameEn.lowercased().contains(stationName.lowercased()) {
                         ViewController.lastResult.append(((ViewController.metroLines.firstIndex(of: line)!), line.stationInLines.firstIndex(of: station)!))
                     }
                 }
