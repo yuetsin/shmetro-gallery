@@ -60,3 +60,19 @@
 此 App 包含 [Image2Icon](http://www.img2icnsapp.com) App （版本 `2.9.2 (821)`）  生成的图标文件。
 
 > Copyright © 2019 Shiny Frog Ltd. 保留所有权利。
+
+## 许可协议
+
+![GitHub](https://img.shields.io/github/license/yuetsin/shmetro-gallery.svg?style=flat-square)
+
+---
+
+![Commercial Use yes](https://img.shields.io/badge/Commercial%20use-yes-green.svg?style=flat-square)
+![Modification yes](https://img.shields.io/badge/Modification-yes-green.svg?style=flat-square)
+![Distribution yes](https://img.shields.io/badge/Distribution-yes-green.svg?style=flat-square)
+![Patent Use yes](https://img.shields.io/badge/Patent%20use-yes-green.svg?style=flat-square)
+![Private Use yes](https://img.shields.io/badge/Private%20use-yes-green.svg?style=flat-square)
+
+![Liability no](https://img.shields.io/badge/Liability-no-red.svg?style=flat-square)
+![Warranty no](https://img.shields.io/badge/Warranty-no-red.svg?style=flat-square)
+
