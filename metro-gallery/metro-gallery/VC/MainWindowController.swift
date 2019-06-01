@@ -25,6 +25,8 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
     @IBOutlet weak var statusToolBarItem: NSToolbarItem!
     @IBOutlet weak var stationSearchField: NSSearchField!
     @IBOutlet weak var updateStatusToolBarItem: NSToolbarItem!
+    @IBOutlet weak var searchToolBarItem: NSToolbarItem!
+    @IBOutlet weak var operatingStatusItem: NSToolbarItem!
     
     @IBAction func openPreferencePanel(_ sender: NSToolbarItem) {
         let storyboard = NSStoryboard(name: NSStoryboard.Name("Main"), bundle: nil)
@@ -71,9 +73,19 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
     
     func flushUILocalization() {
         prefToolBarItem.label = genLocalizationString(zhHans: "偏好设定", en: "Preferences")
-        statusToolBarItem.label = genLocalizationString(zhHans: "运营情况", en: "Operating Status")
+        prefToolBarItem.paletteLabel = genLocalizationString(zhHans: "偏好设定", en: "Preferences")
+        
+        operatingStatusItem.label = genLocalizationString(zhHans: "运营情况", en: "Operating Status")
+        operatingStatusItem.paletteLabel = genLocalizationString(zhHans: "运营情况", en: "Operating Status")
+        
         updateStatusToolBarItem.label = genLocalizationString(zhHans: "刷新运营状态", en: "Refresh Status")
+        updateStatusToolBarItem.paletteLabel = genLocalizationString(zhHans: "刷新运营状态", en: "Refresh Status")
+        
         stationSearchField.placeholderString = genLocalizationString(zhHans: "站点名称", en: "Station Name")
+        
+        searchToolBarItem.label = genLocalizationString(zhHans: "搜索站点", en: "Search Station")
+        searchToolBarItem.paletteLabel = genLocalizationString(zhHans: "搜索站点", en: "Search Station")
+        
         self.window?.title = genLocalizationString(zhHans: "上海轨道交通", en: "Shanghai Metro")
         (self.contentViewController as! ViewController).flushUILocalization()
     }

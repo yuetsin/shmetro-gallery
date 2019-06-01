@@ -703,11 +703,6 @@
                                         <action selector="openPreferencePanel:" target="B8D-0N-5wS" id="LQN-zx-eXH"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6EFE2C4F-8566-43CB-906C-EC55FCC30CCA" label="运营情况" paletteLabel="运营情况" tag="-1" image="NSStatusNone" autovalidates="NO" id="YL7-Ul-0Y8">
-                                    <connections>
-                                        <action selector="showOpStatusItem:" target="B8D-0N-5wS" id="Fd1-bs-ken"/>
-                                    </connections>
-                                </toolbarItem>
                                 <toolbarItem implicitItemIdentifier="CFE8C5C4-943D-444B-B595-2AE2EF4915BA" label="更新运营状态" paletteLabel="更新运营状态" tag="-1" image="NSInfo" autovalidates="NO" id="CVi-Bx-CgR">
                                     <size key="minSize" width="32" height="32"/>
                                     <size key="maxSize" width="32" height="32"/>
@@ -730,12 +725,12 @@
                                         </connections>
                                     </searchField>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="E6101D79-B09C-4BDB-A06C-962C0EAC56D2" label="运营情况" paletteLabel="运营情况" sizingBehavior="auto" id="urT-0B-sDV">
+                                <toolbarItem implicitItemIdentifier="E6101D79-B09C-4BDB-A06C-962C0EAC56D2" label="运营情况" paletteLabel="运营情况" image="NSStatusAvailable" sizingBehavior="auto" id="urT-0B-sDV">
                                     <nil key="toolTip"/>
                                     <button key="view" id="Bs7-37-8qQ">
                                         <rect key="frame" x="2" y="14" width="48" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="yVG-wR-bUv">
+                                        <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSStatusAvailable" imagePosition="only" alignment="center" inset="2" id="yVG-wR-bUv">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -763,10 +758,11 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="operatingStatusItem" destination="urT-0B-sDV" id="voR-D4-e6n"/>
                         <outlet property="prefToolBarItem" destination="uLK-FS-9K1" id="YEe-Qs-1Pw"/>
+                        <outlet property="searchToolBarItem" destination="z35-tj-7ds" id="vjk-Ul-a0J"/>
                         <outlet property="stationSearchField" destination="7tk-3D-q6o" id="RRe-us-VGx"/>
                         <outlet property="statusIcon" destination="Bs7-37-8qQ" id="Smx-RF-JuU"/>
-                        <outlet property="statusToolBarItem" destination="YL7-Ul-0Y8" id="4wE-jA-6bv"/>
                         <outlet property="updateStatusToolBarItem" destination="CVi-Bx-CgR" id="89z-bs-9Mi"/>
                         <outlet property="windowToolBar" destination="k7j-GG-b3Z" id="ng5-Fu-jjM"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
@@ -841,7 +837,7 @@
                                                                 </connections>
                                                             </popUpButton>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I2V-LC-Srp">
-                                                                <rect key="frame" x="18" y="60" width="102" height="44"/>
+                                                                <rect key="frame" x="18" y="60" width="100" height="44"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="06:05" id="GJs-wU-gQa">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -852,7 +848,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-jl-Qqx">
-                                                                <rect key="frame" x="311" y="60" width="102" height="44"/>
+                                                                <rect key="frame" x="313" y="60" width="100" height="44"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="00:03" id="WE6-xu-qZZ">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -863,7 +859,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="770-eN-D89">
-                                                                <rect key="frame" x="279" y="66" width="31" height="17"/>
+                                                                <rect key="frame" x="281" y="66" width="31" height="17"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="次日" id="FHI-Gv-PPF">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1044,7 +1040,7 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gbm-a0-KQC">
-                                <rect key="frame" x="264" y="333" width="8" height="8"/>
+                                <rect key="frame" x="260" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="JPF-uy-6RL"/>
                                     <constraint firstAttribute="height" constant="8" id="PFT-vz-oiB"/>
@@ -1060,7 +1056,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HMo-LQ-Aqj">
-                                <rect key="frame" x="277" y="333" width="8" height="8"/>
+                                <rect key="frame" x="273" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="UC4-ud-QUd"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="Zp9-Uw-Zz7"/>
@@ -1076,7 +1072,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vwd-KW-D0X">
-                                <rect key="frame" x="290" y="333" width="8" height="8"/>
+                                <rect key="frame" x="286" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="2SV-ow-9vl"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="yoX-2H-eYO"/>
@@ -1092,7 +1088,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="F0g-W0-K8E">
-                                <rect key="frame" x="303" y="333" width="8" height="8"/>
+                                <rect key="frame" x="299" y="333" width="8" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="F2J-Mq-VJN"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="q0i-79-1p5"/>
@@ -1108,7 +1104,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-Of-qmU">
-                                <rect key="frame" x="126" y="329" width="135" height="24"/>
+                                <rect key="frame" x="126" y="329" width="131" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="徐家汇Xujiahui" id="bc1-pQ-52k">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1292,7 +1288,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BP6-Qi-hV2">
-                                <rect key="frame" x="322" y="163" width="94" height="25"/>
+                                <rect key="frame" x="323" y="163" width="92" height="25"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="偏好设定" id="ihN-Eo-3Qz">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1572,6 +1568,6 @@ DQ
         <image name="NSAddTemplate" width="11" height="11"/>
         <image name="NSInfo" width="32" height="32"/>
         <image name="NSPreferencesGeneral" width="32" height="32"/>
-        <image name="NSStatusNone" width="16" height="16"/>
+        <image name="NSStatusAvailable" width="16" height="16"/>
     </resources>
 </document>
