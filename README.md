@@ -1,6 +1,16 @@
+
 # shmetro-gallery
 
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="MS-DOS logo" src="https://raw.githubusercontent.com/yuetsin/shmetro-gallery/master/icons/shmetro-icon/icon.iconset/icon_256x256.png">   
+
 上海轨道交通非官方 macOS 客户端。
+
+> 此 App 包含发布于 [http://www.shmetro.com](http://www.shmetro.com) 页面上的公开数据。
+
+> 是上海申通地铁地铁集团有限公司的商标。
+
+> 版权所有 2008 - 2019 保留所有权利。
+
 
 ---
 
@@ -40,3 +50,13 @@
 * [marmelroy/Localize-Swift](https://github.com/marmelroy/Localize-Swift) · ![GitHub](https://img.shields.io/github/license/marmelroy/Localize-Swift.svg?style=social)
 
 * [JackZhouCn/JZLocationConverter-Swift](https://github.com/JackZhouCn/JZLocationConverter-Swift)
+
+## 数据源
+
+此 App 包含来自 [http://www.shmetro.com](http://www.shmetro.com) 页面上的公开数据。
+
+> 上海申通地铁地铁集团有限公司 版权所有 2008 - 2019 保留所有权利。
+
+此 App 包含 [Image2Icon](http://www.img2icnsapp.com) App （版本 `2.9.2 (821)`）  生成的图标文件。
+
+> Copyright © 2019 Shiny Frog Ltd. 保留所有权利。
