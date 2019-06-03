@@ -32,6 +32,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
     @IBOutlet var isNextDayText: NSTextField!
 
     @IBOutlet var lineAndDestSelector: NSPopUpButton!
+    @IBOutlet var facilitiesPopUpButton: NSPopUpButton!
 
     @IBOutlet var generalTabItem: NSTabViewItem!
     @IBOutlet var locationTabItem: NSTabViewItem!
@@ -42,10 +43,99 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
     @IBOutlet var nextDayLabel: NSTextField!
     @IBOutlet var toiletRadioButton: NSButton!
     @IBOutlet var elevatorRadioButton: NSButton!
+    @IBOutlet var exitRadioButton: NSButtonCell!
+    @IBOutlet weak var promptTinyLabel: NSTextField!
+    
+    var facilityStrings: [String] = []
 
     @IBAction func capabilitiesSelected(_ sender: NSButton) {
+        facilityStrings.removeAll()
+        if SuperManager.UILanguage == .chinese {
+            switch sender.tag {
+            case 43:
+                // Toilet Facilities
+                facilityStrings += (self.stations.first!.toiletPosition.replacingOccurrences(of: ":", with: "：").replacingOccurrences(of: " ", with: "").components(separatedBy: "<br/>"))
+                //                NSLog(self.stations.first!.toiletPosition)
+                break
+            case 44:
+                // Exit Facilities
+                facilityStrings += (self.stations.first!.entranceInfo.replacingOccurrences(of: ":", with: "：").components(separatedBy: ","))
+//                NSLog(self.stations.first!.entranceInfo)
+
+                break
+            case 45:
+                // Elevator Facilities
+                facilityStrings += (self.stations.first!.elevatorInfo.replacingOccurrences(of: ":", with: "：").components(separatedBy: "<br />"))
+                
+                NSLog(self.stations.first!.elevatorInfo)
+                break
+            default:
+                return
+            }
+        } else {
+            switch sender.tag {
+            case 43:
+                // Toilet Facilities
+                facilityStrings += (self.stations.first!.toiletPositionEn.components(separatedBy: "<br />"))
+//                NSLog(self.stations.first!.toiletPositionEn)
+                break
+            case 44:
+                // Exit Facilities
+                facilityStrings += (self.stations.first!.entranceInfoEn.components(separatedBy: ","))
+//                NSLog(self.stations.first!.entranceInfoEn)
+                break
+            case 45:
+                // Elevator Facilities
+                break
+            default:
+                return
+            }
+        }
+        facilitiesPopUpButton.removeAllItems()
+        facilitiesPopUpButton.addItems(withTitles: facilityStrings)
+        adjustWindowSize()
+        selectNewItem(NSPopUpButton())
+    }
+    
+    func adjustWindowSize() {
+        var frame: NSRect = (self.view.window?.frame)!
+        
+        frame.origin.y += 17
+        
+        let width = min(max(Int(facilitiesPopUpButton.fittingSize.width) + 81, 493), 800)
+        frame.size = NSSize(width: width, height: 384)
+        
+        self.view.window?.setFrame(frame, display: true, animate: true)
     }
 
+    @IBAction func selectNewItem(_ sender: NSPopUpButton) {
+        if facilitiesPopUpButton.itemArray.count == 0 {
+            facilitiesPopUpButton.isHidden = true
+            if toiletRadioButton.state == .on {
+                promptTinyLabel.stringValue = genLocalizationString(zhHans: "没有卫生间信息",
+                    en: "Toilet Info Unavailable")
+            } else if elevatorRadioButton.state == .on {
+                promptTinyLabel.stringValue = genLocalizationString(zhHans: "没有卫生间信息无障碍电梯信息",
+                    en: "Elevator Info Unavailable")
+            } else if exitRadioButton.state == .on {
+                promptTinyLabel.stringValue = genLocalizationString(zhHans: "正没有出口信息",
+                    en: "Entrance Info Unavailable")
+            }
+        } else {
+            facilitiesPopUpButton.isHidden = false
+            if toiletRadioButton.state == .on {
+                promptTinyLabel.stringValue = genLocalizationString(zhHans: "正在查看第 \(facilitiesPopUpButton.indexOfSelectedItem + 1) 条卫生间信息",
+                    en: "Toilet Info #\(facilitiesPopUpButton.indexOfSelectedItem + 1)")
+            } else if elevatorRadioButton.state == .on {
+                promptTinyLabel.stringValue = genLocalizationString(zhHans: "正在查看第 \(facilitiesPopUpButton.indexOfSelectedItem + 1) 条无障碍电梯信息",
+                    en: "Elevator Info #\(facilitiesPopUpButton.indexOfSelectedItem + 1)")
+            } else if exitRadioButton.state == .on {
+                promptTinyLabel.stringValue = genLocalizationString(zhHans: "正在查看第 \(facilitiesPopUpButton.indexOfSelectedItem + 1) 条出口信息",
+                    en: "Entrance Info #\(facilitiesPopUpButton.indexOfSelectedItem + 1)")
+            }
+        }
+    }
+    
     func flushUILocalization() {
 //        loadDetail()
         renderTimeTable()
@@ -57,6 +147,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
         lastTrainLabel.stringValue = genLocalizationString(zhHans: "末班车", en: "Last Train")
         nextDayLabel.stringValue = genLocalizationString(zhHans: "次日", en: "Next Day")
         toiletRadioButton.title = genLocalizationString(zhHans: "卫生间", en: "Toilet")
+        exitRadioButton.title = genLocalizationString(zhHans: "出口", en: "Exit")
         elevatorRadioButton.title = genLocalizationString(zhHans: "无障碍电梯", en: "Elevator")
     }
 
@@ -149,7 +240,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
         lineAndDestSelector.removeAllItems()
 
         var lineIds: [Int] = []
-        
+
         for timePiece in timetables {
             let itemTitle = generateSelectTime(timePiece["line"].intValue, timePiece["description"].stringValue)
             timetableStrings.append(itemTitle)
@@ -186,6 +277,8 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
             stationName = stations[0].stationNameEn
             stationNameEn = stations[0].stationName
         }
+        
+        capabilitiesSelected(toiletRadioButton)
     }
 
     func setAnnotation(_ gcj2Point: CLLocationCoordinate2D) {
@@ -261,29 +354,28 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
     }
 }
 
-
 @objc extension NSPopUpButton {
     func addItemsWithSeparator(withTitles items: [String], _ lineIds: [Int]) {
         var lastLine: String?
-        
+
         if items.count != lineIds.count {
             NSLog("items and lineIds count mismatch")
         }
-        
+
         var counter = 0
-        
+
         for item in items {
             if SuperManager.UILanguage == .chinese {
                 let currentLine = item.components(separatedBy: "线")[0]
                 if lastLine == nil {
                     lastLine = currentLine
-                    self.addItem(withTitle: item)
+                    addItem(withTitle: item)
                 } else {
                     if lastLine == currentLine {
-                        self.addItem(withTitle: item)
+                        addItem(withTitle: item)
                     } else {
-                        self.addItem(withTitle: "---TIMETABLE--ITEM--SEPARATOR---")
-                        self.addItem(withTitle: item)
+                        addItem(withTitle: "---TIMETABLE--ITEM--SEPARATOR---")
+                        addItem(withTitle: item)
                         lastLine = currentLine
                     }
                 }
@@ -293,18 +385,18 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
                     .components(separatedBy: ",")[0]
                 if lastLine == nil {
                     lastLine = currentLine
-                    self.addItem(withTitle: item)
+                    addItem(withTitle: item)
                 } else {
                     if lastLine == currentLine {
-                        self.addItem(withTitle: item)
+                        addItem(withTitle: item)
                     } else {
-                        self.addItem(withTitle: "---TIMETABLE--ITEM--SEPARATOR---")
-                        self.addItem(withTitle: item)
+                        addItem(withTitle: "---TIMETABLE--ITEM--SEPARATOR---")
+                        addItem(withTitle: item)
                         lastLine = currentLine
                     }
                 }
             }
-            
+
             var drawColorSprite: NSImage?
             for line in ViewController.metroLines {
                 if line.lineId == lineIds[counter] {
@@ -313,7 +405,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
                 }
             }
             if drawColorSprite != nil {
-                (self.menu as! MenuWithSeparator).setItemImage(withTitle: item, image: drawColorSprite!)
+                (menu as! MenuWithSeparator).setItemImage(withTitle: item, image: drawColorSprite!)
             }
             counter += 1
         }
