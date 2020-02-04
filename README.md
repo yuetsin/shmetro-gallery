@@ -1,7 +1,7 @@
 
 # shmetro-gallery
 
-<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="MS-DOS logo" src="https://raw.githubusercontent.com/yuetsin/shmetro-gallery/master/icons/shmetro-icon/icon.iconset/icon_256x256.png">   
+<img width="150" height="150" align="left" style="float: left; margin: 0 10px 0 0;" alt="Shanghai Metro Logo" src="https://raw.githubusercontent.com/yuetsin/shmetro-gallery/master/icons/shmetro-icon/icon.iconset/icon_256x256.png">   
 
 上海轨道交通非官方 macOS 客户端。
 
