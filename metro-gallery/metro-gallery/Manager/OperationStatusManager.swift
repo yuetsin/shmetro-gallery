@@ -45,7 +45,7 @@ class OperationStatusManager {
 
         let errContent = statusJson?.dictionary!["content"]
         OperationStatusManager.errCode = statusCode
-        OperationStatusManager.errInfo = genLocalizationString(zhHans: "故障信息：\(errContent!)", en: "Detail Message (in Chinese): \(errContent!)")
+        OperationStatusManager.errInfo = genLocalizationString(zhHans: "\(errContent!)", en: "Detail Message (in Chinese): \(errContent!)")
         return .abnormal
     }
 

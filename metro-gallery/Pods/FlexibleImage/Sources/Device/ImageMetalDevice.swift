@@ -123,6 +123,7 @@
                 height: height,
                 mipmapped: false
             )
+            descriptor.usage = [.shaderRead, .shaderWrite]
 
             #if swift(>=4.0)
                 guard let texture = self.device.makeTexture(descriptor: descriptor) else { return }

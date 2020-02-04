@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14845" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
-        <plugIn identifier="com.apple.MapKitIBPlugin" version="14490.70"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14845"/>
+        <plugIn identifier="com.apple.MapKitIBPlugin" version="14845"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -680,7 +680,7 @@
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="0.0"/>
+            <point key="canvasLocation" x="3" y="-126"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -838,7 +838,7 @@
                                                                 </connections>
                                                             </popUpButton>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I2V-LC-Srp">
-                                                                <rect key="frame" x="18" y="60" width="102" height="44"/>
+                                                                <rect key="frame" x="18" y="61" width="102" height="43"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="06:05" id="GJs-wU-gQa">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -849,7 +849,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tnx-jl-Qqx">
-                                                                <rect key="frame" x="311" y="60" width="102" height="44"/>
+                                                                <rect key="frame" x="311" y="61" width="102" height="43"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="00:03" id="WE6-xu-qZZ">
                                                                     <font key="font" metaFont="system" size="36"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -860,7 +860,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="770-eN-D89">
-                                                                <rect key="frame" x="279" y="66" width="31" height="17"/>
+                                                                <rect key="frame" x="279" y="67" width="31" height="16"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="次日" id="FHI-Gv-PPF">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -871,7 +871,7 @@
                                                                 </connections>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EPg-UA-eeT">
-                                                                <rect key="frame" x="18" y="41" width="44" height="17"/>
+                                                                <rect key="frame" x="18" y="43" width="44" height="16"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="首班车" id="pUM-wK-CYU">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -879,7 +879,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gpo-6o-lqw">
-                                                                <rect key="frame" x="369" y="41" width="44" height="17"/>
+                                                                <rect key="frame" x="369" y="43" width="44" height="16"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="right" title="末班车" id="npg-DJ-OQn">
                                                                     <font key="font" metaFont="system"/>
                                                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -887,7 +887,7 @@
                                                                 </textFieldCell>
                                                             </textField>
                                                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="1cQ-gv-Wgz">
-                                                                <rect key="frame" x="20" y="58" width="391" height="5"/>
+                                                                <rect key="frame" x="20" y="59" width="391" height="5"/>
                                                             </box>
                                                         </subviews>
                                                         <constraints>
@@ -924,7 +924,7 @@
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uW8-tc-e1q">
                                                                 <rect key="frame" x="185" y="79" width="61" height="14"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="第 1 条信息" id="hys-a7-466">
-                                                                    <font key="font" metaFont="smallSystem"/>
+                                                                    <font key="font" metaFont="message" size="11"/>
                                                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
@@ -1130,7 +1130,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pPC-Of-qmU">
-                                <rect key="frame" x="126" y="334" width="135" height="24"/>
+                                <rect key="frame" x="126" y="335" width="135" height="23"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="徐家汇Xujiahui" id="bc1-pQ-52k">
                                     <font key="font" metaFont="system" size="20"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1224,7 +1224,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="HzI-4U-1eQ">
-                                <rect key="frame" x="118" y="83" width="129" height="18"/>
+                                <rect key="frame" x="118" y="84" width="129" height="18"/>
                                 <buttonCell key="cell" type="check" title="不使用颜色来区分" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ybf-Yx-Xm6">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -1235,18 +1235,18 @@
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fZY-FX-Eyk">
-                                <rect key="frame" x="139" y="49" width="592" height="28"/>
+                                <rect key="frame" x="139" y="50" width="592" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="35N-aZ-zmN"/>
                                 </constraints>
                                 <textFieldCell key="cell" alignment="left" title="打开此开关后，将不绘制标识色来区分地铁线路。将绘制辅助符号来标记线路。" id="1Kp-5Q-gIz">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="message" size="11"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <gridView xPlacement="leading" yPlacement="fill" rowAlignment="none" rowSpacing="0.0" columnSpacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JhV-eG-G9P">
-                                <rect key="frame" x="120" y="131" width="144" height="16"/>
+                                <rect key="frame" x="120" y="132" width="144" height="16"/>
                                 <rows>
                                     <gridRow id="GgT-jO-DhO"/>
                                 </rows>
@@ -1286,7 +1286,7 @@
                                 </gridCells>
                             </gridView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eoA-Bj-2JN">
-                                <rect key="frame" x="-2" y="131" width="113" height="17"/>
+                                <rect key="frame" x="-2" y="133" width="113" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="109" id="ooX-TS-RX7"/>
                                 </constraints>
@@ -1297,7 +1297,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="b2U-yr-7iK">
-                                <rect key="frame" x="-2" y="84" width="113" height="17"/>
+                                <rect key="frame" x="-2" y="86" width="113" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="lkr-B6-Zzw"/>
                                     <constraint firstAttribute="width" constant="109" id="olD-qm-pqO"/>
@@ -1309,15 +1309,15 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Bez-e6-ZDd">
-                                <rect key="frame" x="139" y="109" width="274" height="14"/>
+                                <rect key="frame" x="139" y="110" width="274" height="14"/>
                                 <textFieldCell key="cell" alignment="left" title="需要重新打开线路详情窗口以查看新的界面显示语言。" id="Eg8-Uc-ZIA">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="message" size="11"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BP6-Qi-hV2">
-                                <rect key="frame" x="322" y="163" width="94" height="25"/>
+                                <rect key="frame" x="322" y="164" width="94" height="24"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" title="偏好设定" id="ihN-Eo-3Qz">
                                     <font key="font" metaFont="system" size="21"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1340,7 +1340,7 @@ DQ
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-RO-z9V">
                                 <rect key="frame" x="151" y="32" width="435" height="14"/>
                                 <textFieldCell key="cell" alignment="center" title="Copyright © 2008 - 2019 上海申通地铁集团有限公司 版权所有 All Rights Reserved." id="r39-nv-wDy">
-                                    <font key="font" metaFont="smallSystem"/>
+                                    <font key="font" metaFont="message" size="11"/>
                                     <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
@@ -1407,12 +1407,12 @@ DQ
                                                     <subviews>
                                                         <outlineView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="sourceList" multipleSelection="NO" autosaveColumns="NO" rowHeight="36" rowSizeStyle="large" viewBased="YES" indentationPerLevel="20" indentationMarkerFollowsCell="NO" outlineTableColumn="yvq-NP-WA1" id="Djq-8V-BbS">
                                                             <rect key="frame" x="0.0" y="0.0" width="156" height="413"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="1" height="3"/>
                                                             <color key="backgroundColor" name="_sourceListBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="155" minWidth="16" maxWidth="1000" id="yvq-NP-WA1">
+                                                                <tableColumn width="155" minWidth="20" maxWidth="1000" id="yvq-NP-WA1">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <font key="font" metaFont="smallSystem"/>
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1492,7 +1492,7 @@ DQ
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" alternatingRowBackgroundColors="YES" columnSelection="YES" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="22" rowSizeStyle="small" headerView="1bZ-y3-N4q" viewBased="YES" id="33L-H7-YFs">
                                                             <rect key="frame" x="0.0" y="0.0" width="449" height="389"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>

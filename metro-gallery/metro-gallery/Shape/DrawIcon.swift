@@ -11,6 +11,7 @@ import Foundation
 import FlexibleImage
 
 func drawIconByColor(_ color: NSColor) -> NSImage? {
+//    return nil
     if SuperManager.acessibilityMode {
         return nil
     }
@@ -23,14 +24,13 @@ func drawIconByColor(_ color: NSColor) -> NSImage? {
         .margin(EdgeInsets(top: 5, left: 5, bottom: 5, right: 5))
         .padding(EdgeInsets(top: 25, left: 25, bottom: 25, right: 25))
         .normal(color: color)
-        .image()!
-        .adjust()
         .background(color: NSColor.clear)
         .image()
 }
 
 
 func drawMiniIconByColor(_ color: NSColor) -> NSImage? {
+//    return nil
     if SuperManager.acessibilityMode {
         return nil
     }
@@ -40,8 +40,6 @@ func drawMiniIconByColor(_ color: NSColor) -> NSImage? {
         )!
         .adjust()
         .normal(color: color)
-        .image()!
-        .adjust()
         .background(color: NSColor.clear)
         .image()
 }

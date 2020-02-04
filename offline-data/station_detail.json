@@ -12,13 +12,13 @@
         "y": 0.6264,
         "station_pic": "莘庄.jpg",
         "toilet_inside": false,
-        "toilet_position": "费区外 站外50米，北广场公共厕所",
-        "toilet_position_en": "Outside the north entrance",
-        "entrance_info": "南出入口:梅陇西路都市路,北一出入口:莘建东路水清南路,北二出入口:莘建东路水清南路",
-        "entrance_info_en": "South Exit:West Meilong Rd Dushi Rd,North Exit 1:East Xinjian Rd South Shuiqing Rd,North Exit 2:East Xinjian Rd South Shuiqing Rd",
+        "toilet_position": "费区外：站外50米，北广场公共厕所",
+        "toilet_position_en": "Outside the North Entrance",
+        "entrance_info": "南出入口：梅陇西路都市路；北一出入口：莘建东路水清南路；北二出入口：莘建东路水清南路",
+        "entrance_info_en": "South Exit: West Meilong Rd Dushi Rd;North Exit 1: East Xinjian Rd South Shuiqing Rd;North Exit 2: East Xinjian Rd South Shuiqing Rd",
         "street_pic": null,
-        "elevator": "1号线\r\n<br />1#斜挂梯：站厅至站台——站厅东面，往富锦路方向车头（非自助）\r\n<br />2#直升电梯：站台至站厅——往莘庄方向车尾，站厅东面（自助）\r\n<br />5号线\r\n<br />1#直升电梯：站厅至站台——站厅西面，往闵行开发区方向车头（非自助）\r\n<br />2#直升电梯：站台至站厅——站台中部，站厅中部（自助）\r\n<br />3#直升电梯：地面至站厅——北2出口，站厅西面（非自助）",
-        "elevator_en": "Line 1\r\n1# Inclined lift-Station hall to Platform——the station hall at the east end, at the head of the train bound for Fujin Road at the platform(non self-service)\r\n<br />2# Elevator-Station hall to Platform——at the rear of the train bound for Xinzhuang at the platform, the station hall at the east end(self-service)\r\nLine 5\r\n1# Elevator-Station hall to Platform——the station hall at the west end, at the head of the train bound for Minhang Development Zone at the platform(non self-service)\r\n<br />2# Elevator-Platform to Station hall——at the mid of platform, at the mid of station hall(self-service)\r\n<br />3# Elevator-Ground to Station hall——north exit 2, the station hall at the west end(non self-service)"
+        "elevator": "一号线；斜挂梯，站厅至站台：站厅东面，往富锦路方向车头（非自助）；直升电梯，站台至站厅：往莘庄方向车尾，站厅东面（自助）；五号线；直升电梯，站厅至站台：站厅西面，往闵行开发区方向车头（非自助）；直升电梯（站台至站厅）站台中部，站厅中部（自助）直升电梯（地面至站厅）北2出口，站厅西面（非自助）",
+        "elevator_en": "Line 1;Inclined lift, Station hall to Platform: the station hall at the east end, at the head of the train bound for Fujin Road at the platform (non self-service);Elevator, Station hall to Platform: at the rear of the train bound for Xinzhuang at the platform, the station hall at the east end (self-service);Line 5;Elevator, Station hall to Platform: the station hall at the west end, at the head of the train bound for Minhang Development Zone at the platform(non self-service);Elevator, Platform to Station hall: at the mid of platform, at the mid of station hall(self-service);Elevator, Ground to Station hall: north exit 2, the station hall at the west end (non self-service)"
     },
     {
         "stat_id": "112",
@@ -33,13 +33,13 @@
         "y": 0.6162,
         "station_pic": "外环路.jpg",
         "toilet_inside": false,
-        "toilet_position": "费区外 站外100米，南广场与北广场公交站点厕所",
-        "toilet_position_en": "Line 1:Outside of a station  Outside the north entrance",
-        "entrance_info": "北2出入口:沪闵路 虹莘路 龙茗路 报春路 新梅广场 新梅公寓 新梅花苑 沪闵高架路,南1出入口:罗锦路 梅陇西路",
+        "toilet_position": "费区外：站外100米，南广场与北广场公交站点厕所",
+        "toilet_position_en": "",
+        "entrance_info": "北2出入口：沪闵路 虹莘路 龙茗路 报春路 新梅广场 新梅公寓 新梅花苑 沪闵高架路；南1出入口：罗锦路 梅陇西路",
         "entrance_info_en": "North Exit 2:Humin Rd Hongxin Rd Longming Rd Baochun Rd Xinmei Plaza Xinmei Apartment Xinmei Flower Garden Humin Elevated Rd,South Exit 1:Luojin Rd West Meilong Rd",
         "street_pic": null,
-        "elevator": "1#斜挂梯：通道至站台——通道内，往富锦路方向车尾（非自助）\r\n<br />2#斜挂梯：地面至通道——北出口（非自助）\r\n<br />3#升降平台：地面至站台——北2口，往莘庄方向进闸机口（非自助）",
-        "elevator_en": "Inclined Lift 1  Channel-Platform——in the Channel，Rear End of Platform bound for Fujin Road（Non Self-service）<br />\r\nInclined Lift 2  Ground-Channel——North Exit（Non Self-service）\r\n\r\n<br />Lift Platform 3  Ground-Station Hall-Platform——North Exit 2，Turnstile Entrance bond for Xinzhuang（Non Self-service）"
+        "elevator": "斜挂梯，通道至站台：通道内，往富锦路方向车尾（非自助）；斜挂梯，地面至通道：北出口（非自助）；升降平台，地面至站台：北2口，往莘庄方向进闸机口（非自助）",
+        "elevator_en": "Inclined Lift, Channel - Platform: in the Channel, Rear End of Platform bound for Fujin Road (Non Self-service);Inclined Lift, Ground - Channel: North Exit (Non Self-service);Lift Platform, Ground - Station Hall Platform: North Exit 2，Turnstile Entrance bond for Xinzhuang (Non Self-service)"
     },
     {
         "stat_id": "113",
@@ -54,10 +54,10 @@
         "y": 0.6068,
         "station_pic": "莲花路.jpg",
         "toilet_inside": false,
-        "toilet_position": "费区外 站外100米，南广场公交站点厕所\r\n<br/>费区外 站外500米，北广场公交站点厕所",
-        "toilet_position_en": "Line 1:Outside of a station  3 entrance outside",
-        "entrance_info": "北2口:沪闵路古方路,北3口:泸闵路万源路,南1口:梅陇西路莲花路,南2口:梅陇西路罗秀路,南3口:梅陇西路罗秀路",
-        "entrance_info_en": "North Exit 2:Humin Rd Gufang Rd,North Exit 3:Humin Rd Wanyuan Rd,South Exit 1:West Meilong Rd Lianhua Rd,South Exit 2:West Meilong Rd Luoxiu Rd,South Exit 3:West Meilong Rd Luoxiu Rd",
+        "toilet_position": "费区外：站外100米，南广场公交站点厕所；费区外：站外500米，北广场公交站点厕所",
+        "toilet_position_en": "",
+        "entrance_info": "北2口：沪闵路古方路；北3口：泸闵路万源路；南1口：梅陇西路莲花路；南2口：梅陇西路罗秀路，南3口：梅陇西路罗秀路",
+        "entrance_info_en": "North Exit 2: Humin Rd Gufang Rd;North Exit 3: Humin Rd Wanyuan Rd;South Exit 1: West Meilong Rd Lianhua Rd;South Exit 2: West Meilong Rd Luoxiu Rd;South Exit 3: West Meilong Rd Luoxiu Rd",
         "street_pic": null,
         "elevator": "1#斜挂梯：地面至站厅——北2口，通道内（非自助）\r\n<br />2#斜挂梯：地面至站台——通道内，往富锦路方向车头（非自助）\r\n<br />3#斜挂梯：通道至地面——南1出口，往莘庄方向站台（非自助)\r\n<br />4#升降平台：地面至站台——北2口，往莘庄方向进闸机口（非自助）",
         "elevator_en": "Inclined Lift 1  Ground-Station Hall——North Exit 2，in the Channel（Non Self-service）<br />\r\nInclined Lift 2  Ground-Platform——in the Channel，Front End of Platform bound for Fujin Road（Non Self-service）<br />\r\nInclined Lift 3  Channel-Ground——South Exit 1，the Platform bound for Xinzhuang（Non Self-service)\r\n<br />\r\nLift Platform 4  Ground-Station Hall-Platform——North Exit 2，Turnstile Entrance bond for Xinzhuang（Non Self-service）"

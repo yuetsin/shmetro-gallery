@@ -666,7 +666,7 @@ open class ImageChain {
         let scale = self.device.imageScale
         
         self.device.beginGenerate(self.isAlphaProcess)
-        
+
         self.filterList.forEach { filter in
             _ = filter.process(device: self.device)
         }

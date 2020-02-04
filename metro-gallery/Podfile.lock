@@ -1,19 +1,19 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.9.1)
   - FlexibleImage (1.10)
   - Localize-Swift (2.0.0)
-  - SwiftHEXColors (1.1.2)
-  - SwiftyJSON (4.2.0)
+  - SwiftHEXColors (1.3.1)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
-  - FlexibleImage (~> 1.9)
+  - FlexibleImage
   - Localize-Swift (~> 2.0)
   - SwiftHEXColors
   - SwiftyJSON
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - FlexibleImage
     - Localize-Swift
@@ -21,12 +21,12 @@ SPEC REPOS:
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   FlexibleImage: 22bf26c42f1b6299b94bc5001e6ec310c94e6786
   Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
-  SwiftHEXColors: 7f9f7e6bdce888d821e11749279733e5ddff5f51
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwiftHEXColors: 7cc78ce189ddaff81f2ec1259b6b1dffdcda7643
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: d003e773c76004e79d3ef783587eb83538055d2e
+PODFILE CHECKSUM: d3c72ef7129f7c38379de69e37bff40c76cf79d8
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4
