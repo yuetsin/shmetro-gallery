@@ -54,19 +54,23 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
             switch sender.tag {
             case 43:
                 // Toilet Facilities
-                facilityStrings += (self.stations.first!.toiletPosition.replacingOccurrences(of: ":", with: "：").replacingOccurrences(of: " ", with: "").components(separatedBy: "<br/>"))
+                for facil in self.stations.first!.toiletPosition.components(separatedBy: "<br />") {
+                    facilityStrings += facil.components(separatedBy: CharacterSet(charactersIn: "\r\n,；"))
+                }
                 //                NSLog(self.stations.first!.toiletPosition)
                 break
             case 44:
                 // Exit Facilities
-                facilityStrings += (self.stations.first!.entranceInfo.replacingOccurrences(of: ":", with: "：").components(separatedBy: ","))
-//                NSLog(self.stations.first!.entranceInfo)
+                for facil in self.stations.first!.entranceInfo.components(separatedBy: "<br />") {
+                    facilityStrings += facil.components(separatedBy: CharacterSet(charactersIn: "\r\n,；"))
+                }
 
                 break
             case 45:
                 // Elevator Facilities
-                facilityStrings += (self.stations.first!.elevatorInfo.replacingOccurrences(of: ":", with: "：").components(separatedBy: "<br />"))
-                
+                for facil in self.stations.first!.elevatorInfo.components(separatedBy: "<br />") {
+                    facilityStrings += facil.components(separatedBy: CharacterSet(charactersIn: "\r\n,；"))
+                }
                 NSLog(self.stations.first!.elevatorInfo)
                 break
             default:
@@ -76,20 +80,31 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
             switch sender.tag {
             case 43:
                 // Toilet Facilities
-                facilityStrings += (self.stations.first!.toiletPositionEn.components(separatedBy: "<br />"))
+                for facil in self.stations.first!.toiletPositionEn.components(separatedBy: "<br />") {
+                    facilityStrings += facil.components(separatedBy: CharacterSet(charactersIn: "\r\n,；"))
+                }
 //                NSLog(self.stations.first!.toiletPositionEn)
                 break
             case 44:
                 // Exit Facilities
-                facilityStrings += (self.stations.first!.entranceInfoEn.components(separatedBy: ","))
+                for facil in self.stations.first!.entranceInfoEn.components(separatedBy: "<br />") {
+                    facilityStrings += facil.components(separatedBy: CharacterSet(charactersIn: "\r\n,；"))
+                }
 //                NSLog(self.stations.first!.entranceInfoEn)
                 break
             case 45:
                 // Elevator Facilities
+                for facil in self.stations.first!.elevatorInfoEn.components(separatedBy: "<br />") {
+                    facilityStrings += facil.components(separatedBy: CharacterSet(charactersIn: "\r\n,；"))
+                }
                 break
             default:
                 return
             }
+        }
+        
+        facilityStrings.removeAll { (str) -> Bool in
+            return str.replacingOccurrences(of: " ", with: "").isEmpty
         }
         facilitiesPopUpButton.removeAllItems()
         facilitiesPopUpButton.addItems(withTitles: facilityStrings)
@@ -100,7 +115,7 @@ class StationDetailViewController: NSViewController, L11nRefreshDelegate {
     func adjustWindowSize() {
         var frame: NSRect = (self.view.window?.frame)!
         
-        frame.origin.y += 17
+        frame.origin.y += 23
         
         let width = min(max(Int(facilitiesPopUpButton.fittingSize.width) + 81, 493), 800)
         frame.size = NSSize(width: width, height: 384)

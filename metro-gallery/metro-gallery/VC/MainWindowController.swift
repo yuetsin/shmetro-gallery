@@ -61,14 +61,16 @@ class MainWindowController: NSWindowController, L11nRefreshDelegate, StatusOpera
         (self.window?.contentViewController as! ViewController).clickStatusDetail()
     }
     
+    
     func setStatusIcon(_ stat: OperatingStatus) {
         if stat == .normal {
-            statusIcon.image = NSImage(named: "NSStatusAvailable")
+            statusIcon.image = NSImage(named: "checkmark.circle")
         } else if stat == .abnormal {
-            statusIcon.image = NSImage(named: "NSStatusUnavailable")
+            statusIcon.image = NSImage(named: "exclamationmark.circle")
         } else {
-            statusIcon.image = NSImage(named: "NSStatusNone")
+            statusIcon.image = NSImage(named: "questionmark.circle")
         }
+        statusIcon.imageScaling = .scaleProportionallyUpOrDown
     }
     
     func flushUILocalization() {
